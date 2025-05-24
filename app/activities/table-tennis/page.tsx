@@ -1,0 +1,542 @@
+"use client"
+
+import { useState } from "react"
+import Image from "next/image"
+import { motion, AnimatePresence } from "framer-motion"
+import { FaBrain, FaWeight, FaUsers, FaArrowRight, FaQuoteRight } from "react-icons/fa"
+import { MdSportsHandball } from "react-icons/md"
+
+interface GalleryImage {
+  src: string
+  alt: string
+  title: string
+}
+
+const TableTennisPage = () => {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
+
+  const galleryImages = [
+    {
+      src: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
+      alt: "Table Tennis Training",
+      title: "Professional Coaching",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
+      alt: "Table Tennis Equipment",
+      title: "Premium Equipment",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1584813539806-2538b8d918c6",
+      alt: "Table Tennis Match",
+      title: "Tournament Play",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c",
+      alt: "Table Tennis Practice",
+      title: "Regular Practice",
+    },
+  ]
+
+  const benefits = [
+    {
+      icon: <MdSportsHandball className="w-10 h-10" />,
+      title: "Improved Hand-Eye Coordination",
+      description: "Enhance your reflexes and coordination through regular practice",
+      image: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c",
+    },
+    {
+      icon: <FaBrain className="w-10 h-10" />,
+      title: "Improved Brain Functioning",
+      description: "Boost cognitive abilities and mental alertness",
+      image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
+    },
+    {
+      icon: <FaWeight className="w-10 h-10" />,
+      title: "Weight Loss",
+      description: "Effective cardio workout for maintaining fitness",
+      image: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
+    },
+    {
+      icon: <FaUsers className="w-10 h-10" />,
+      title: "Improved Social Life",
+      description: "Connect with fellow players and build lasting friendships",
+      image: "https://images.unsplash.com/photo-1584813539806-2538b8d918c6",
+    },
+  ]
+
+  const levels = [
+    {
+      title: "Beginners",
+      description: "Perfect for those just starting their table tennis journey",
+      features: ["Basic techniques", "Proper grip and stance", "Fundamental rules"],
+      image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
+    },
+    {
+      title: "Intermediate",
+      description: "For players with basic knowledge looking to improve",
+      features: ["Advanced techniques", "Game strategies", "Tournament preparation"],
+      image: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
+    },
+    {
+      title: "Advanced",
+      description: "Professional training for competitive players",
+      features: ["Professional techniques", "Mental conditioning", "Competition strategies"],
+      image: "https://images.unsplash.com/photo-1584813539806-2538b8d918c6",
+    },
+  ]
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Professional Design */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23f39318' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+        </div>
+
+        {/* Content Container */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 p-6 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              {/* Professional Badge */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="inline-block"
+              >
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white shadow-lg">
+                  ⭐ Professional Table Tennis Academy
+                </span>
+              </motion.div>
+
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                  <span className="block text-white mb-2">Master Table Tennis</span>
+                  <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
+                    With Expert Coaching
+                  </span>
+                </h1>
+                <div className="w-24 h-1 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full"></div>
+              </div>
+
+              {/* Professional Description */}
+              <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
+                Transform your game with professional table tennis coaching in Pune. Our certified coaches provide
+                personalized training programs designed to elevate your skills from beginner to championship level.
+              </p>
+
+              {/* Key Features */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#f39318]">500+</div>
+                  <div className="text-sm text-gray-400">Students Trained</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#f39318]">15+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#f39318]">98%</div>
+                  <div className="text-sm text-gray-400">Success Rate</div>
+                </div>
+              </div>
+
+              {/* Professional CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl min-w-[200px]"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Book Free Assessment
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2 min-w-[200px]"
+                >
+                  View Programs
+                  <FaArrowRight className="text-sm" />
+                </motion.button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center gap-6 pt-6 border-t border-gray-700">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-400">Certified Coaches</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-400">Modern Facilities</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-400">Flexible Timings</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Professional Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative">
+                {/* Main Image */}
+                <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827"
+                    alt="Professional Table Tennis Training"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                </div>
+
+                {/* Floating Cards */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
+                      <MdSportsHandball className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Expert Training</div>
+                      <div className="text-sm text-gray-600">Professional Coaches</div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
+                      <FaUsers className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Community</div>
+                      <div className="text-sm text-gray-600">Join 500+ Players</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+       
+      </div>
+
+      {/* Image Gallery */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+          >
+            Our Facility
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {galleryImages.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
+                <div className="relative h-64 overflow-hidden rounded-xl ring-2 ring-transparent group-hover:ring-[#f39318] transition-all duration-300">
+                  <Image
+                    src={image.src || "/placeholder.svg"}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold">{image.title}</h3>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits with Images */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+          >
+            Benefits of Table Tennis
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                key={index}
+                className="relative group"
+              >
+                <div className="relative h-64 rounded-2xl overflow-hidden mb-6 ring-2 ring-transparent group-hover:ring-[#f39318] transition-all duration-300">
+                  <Image
+                    src={benefit.image || "/placeholder.svg"}
+                    alt={benefit.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/80 via-[#FF5500]/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="text-orange-200 mb-3">{benefit.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-gray-200">{benefit.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Training Levels with Images */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+          >
+            Training Levels
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {levels.map((level, index) => (
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                key={index}
+                className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 ring-2 ring-transparent hover:ring-[#f39318]"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={level.image || "/placeholder.svg"}
+                    alt={level.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 via-[#FF5500]/30 to-transparent" />
+                  <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">{level.title}</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-6">{level.description}</p>
+                  <ul className="space-y-3">
+                    {level.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <FaArrowRight className="text-[#f39318] mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-24 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827')] bg-cover bg-center opacity-20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold mb-8"
+            >
+              Ready to Start Your Journey?
+            </motion.h2>
+            <motion.p
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-xl mb-8 text-orange-100"
+            >
+              Join hundreds of students who have improved their game with our expert coaching
+            </motion.p>
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <button className="bg-white text-[#f39318] px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
+                Book Free Trial
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
+                Contact Us
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials with Images */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+          >
+            What Our Students Say
+          </motion.h2>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 text-6xl text-[#f39318] opacity-25">
+                <FaQuoteRight />
+              </div>
+              <div className="bg-white p-12 rounded-2xl shadow-xl relative z-10 ring-2 ring-[#f39318]/10">
+                <blockquote className="text-xl text-gray-700 italic leading-relaxed mb-8">
+                  The Life Sports is a very vibrant and active place with a friendly atmosphere. And it was great
+                  knowing Mr. Ganesh Nimhan –The Founder of The Life Sports. His Dedication towards Sports and Health
+                  for the society is a very commendable factor.
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                    P
+                  </div>
+                  <div className="ml-4">
+                    <p className="font-semibold text-lg">Parvez</p>
+                    <p className="text-gray-500">Advanced Level Student</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {[
+              {
+                question: "How do I Find the Best Table Tennis Coaching in Pune?",
+                answer:
+                  "If you are passionate about table tennis and would like to hone your skills with help from experienced coaches, then we recommend you look no further than The Life Sports, situated in Someshwar, near Sunny's world for the best table tennis coaching center in Pune.",
+              },
+              {
+                question: "What is the Fee Charge for Table Tennis Coaching Classes in Pune?",
+                answer:
+                  "The fees charged for table tennis classes in Pune will vary from place to place. If you wish to train at a table tennis academy in Pune at a fee that is reasonable and easy on your pockets, then we suggest you approach us at The Life Sports.",
+              },
+            ].map((faq, index) => (
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ring-2 ring-transparent hover:ring-[#f39318]/20"
+              >
+                <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.5 }}
+              className="relative max-w-4xl w-full aspect-video"
+            >
+              <Image
+                src={selectedImage.src || "/placeholder.svg"}
+                alt={selectedImage.alt}
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+export default TableTennisPage

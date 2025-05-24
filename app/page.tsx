@@ -195,6 +195,27 @@ export default function HomePage() {
     setShowScrollTop(scrollY > 400)
   }, [scrollY])
 
+  // Handle initial hash navigation
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.replace("#", "")
+        const element = document.getElementById(id)
+        if (element) {
+          setTimeout(() => {
+            const yOffset = -80 // Navbar height offset
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+            window.scrollTo({ top: y, behavior: "smooth" })
+          }, 100)
+        }
+      }
+    }
+
+    handleHashScroll()
+    window.addEventListener('hashchange', handleHashScroll)
+    return () => window.removeEventListener('hashchange', handleHashScroll)
+  }, [])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -331,7 +352,7 @@ export default function HomePage() {
 
           {/* Scroll Indicator */}
           <motion.div 
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/80"
+            className="absolute bottom-8 w-full  flex flex-col items-center gap-2 text-white/80"
             animate={{ 
               y: [0, 10, 0],
               opacity: [0.8, 1, 0.8]
@@ -671,7 +692,7 @@ export default function HomePage() {
 
 
       {/* Floating Buttons */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
         <motion.div
           animate={{
             scale: showScrollTop ? 1 : 0.8,

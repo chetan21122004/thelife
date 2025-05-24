@@ -1,10 +1,11 @@
 "use client"
 
-import { Preloader } from "@/components/preloader"
 import { Navbar } from "@/components/navbar"
+
 import { Footer } from "@/components/footer"
 import { useState, useEffect } from "react"
 import "./globals.css"
+import { Preloader } from "@/components/preloader"
 
 export default function RootLayout({
   children,
@@ -35,10 +36,10 @@ export default function RootLayout({
           <Footer />
         </div>
         
-        {/* Preloader with conditional rendering
+        {/* Preloader with conditional rendering */}
         {isLoading && (
           <Preloader onLoadingComplete={() => setIsLoading(false)} />
-        )} */}
+        )}
       </body>
     </html>
   )

@@ -381,7 +381,7 @@ export default function RentAStudio() {
                   className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-500 text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
                 >
                   <motion.span 
-                    className="relative z-10 inline-flex items-center gap-2"
+                    className="relative z-10  inline-flex items-center gap-2"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.3 }}
                   >
