@@ -129,12 +129,12 @@ export function Preloader({ onLoadingComplete }: PreloaderProps) {
       <div className="relative z-10 flex flex-col items-center max-w-lg w-full px-8">
         {/* Logo */}
         <div ref={logoRef} className="mb-8 relative">
-          <div className="w-24 h-40 relative">
+          <div className="w-36 relative">
             <Image
               src="/logo.jpg"
               alt="Life Sports Logo"
-              width={96}
-              height={160}
+              width={192}
+              height={320}
               className="object-contain filter drop-shadow-lg"
               priority
             />
