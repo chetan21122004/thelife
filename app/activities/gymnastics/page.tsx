@@ -16,6 +16,7 @@ import {
   FaUsers,
   FaClock,
 } from "react-icons/fa"
+import Link from "next/link"
 
 const testimonials = [
   {
@@ -146,13 +147,17 @@ export default function GymnasticsPage() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                <FaPlay className="mr-2" />
-                Watch Video
-              </button>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  <FaPlay className="mr-2" />
+                  Watch Video
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -375,9 +380,11 @@ export default function GymnasticsPage() {
 
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-[#f39318]">{program.price}</div>
-                    <button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                      Choose Plan
-                    </button>
+                    <Link href="/contact">
+                      <button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                        Choose Plan
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

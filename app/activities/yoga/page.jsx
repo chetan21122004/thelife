@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Heart, Users, Award, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function YogaAcademyPage() {
   return (
@@ -23,12 +24,14 @@ export default function YogaAcademyPage() {
               <p className="text-xl md:text-2xl mb-8 opacity-90">
                 Transform your mind, body, and spirit with The Life Sports Academy
               </p>
-              <Button
-                size="lg"
-                className="bg-white text-[#f39318] hover:bg-gray-100 text-lg px-8 py-6 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
-              >
-                ENROLL FOR TRIAL SESSION !
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-white text-[#f39318] hover:bg-gray-100 text-lg px-8 py-6 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+                >
+                  ENROLL FOR TRIAL SESSION !
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -229,12 +232,14 @@ export default function YogaAcademyPage() {
             techniques.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-[#f39318] hover:bg-gray-100 text-lg px-8 py-6 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
-            >
-              Book Trial Session
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-white text-[#f39318] hover:bg-gray-100 text-lg px-8 py-6 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+              >
+                Book Trial Session
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

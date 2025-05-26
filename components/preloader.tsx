@@ -127,7 +127,7 @@ export function Preloader({ onLoadingComplete }: PreloaderProps) {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-lg w-full px-8">
-        {/* Logo */}
+        {/* Logo */} 
         <div ref={logoRef} className="mb-8 relative">
           <div className="w-36 relative">
             <Image

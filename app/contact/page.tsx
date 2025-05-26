@@ -85,7 +85,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card className="shadow-lg border-0">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Enroll For This Activity</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Enroll For Activity</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input

@@ -6,7 +6,6 @@ import {
   Trophy,
   Users,
   Clock,
-  MapPin,
   Star,
   CheckCircle,
   Target,
@@ -69,7 +68,7 @@ export default function BadmintonCourtPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-gray-900"
+                  className="text-lg px-8 py-6 border-white  hover:bg-white text-gray-900"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now

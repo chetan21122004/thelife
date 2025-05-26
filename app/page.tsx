@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import {
@@ -318,34 +319,19 @@ export default function HomePage() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Button className="group relative overflow-hidden bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-bold px-8 py-6 text-lg min-w-[200px] transition-all duration-300 shadow-lg">
-                    <motion.span 
-                      className="absolute inset-0 bg-white/20" 
-                      initial={{ x: "-100%" }}
-                      whileHover={{ x: "100%" }}
-                      transition={{ duration: 0.7, ease: "easeInOut" }}
-                    />
-                    <span className="relative z-10">Start Free Trial</span>
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="group relative overflow-hidden bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-bold px-8 py-6 text-lg min-w-[200px] transition-all duration-300 shadow-lg">
+                      <motion.span 
+                        className="absolute inset-0 bg-white/20" 
+                        initial={{ x: "-100%" }}
+                        whileHover={{ x: "100%" }}
+                        transition={{ duration: 0.7, ease: "easeInOut" }}
+                      />
+                      <span className="relative z-10">Enroll for Trial Session</span>
+                    </Button>
+                  </Link>
                 </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button className="relative overflow-hidden bg-gradient-to-l from-[#f39318] to-[#FF5500] backdrop-blur-sm text-white font-bold px-3 py-6 text-lg min-w-[200px] transition-all duration-300 shadow-lg">
-                    <motion.span 
-                      className="absolute inset-0 bg-white/20" 
-                      initial={{ x: "-100%" }}
-                      whileHover={{ x: "100%" }}
-                      transition={{ duration: 0.7, ease: "easeInOut" }}
-                    />
-                    <span className="relative z-10 flex items-center justify-center gap-1">
-                      Explore Programs
-                      <ChevronRight className="h-5 w-5" />
-                    </span>
-                  </Button>
-                </motion.div>
+               
               </motion.div>
             </motion.div>
           </div>

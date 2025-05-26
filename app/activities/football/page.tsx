@@ -89,16 +89,20 @@ export default function FootballAcademy() {
                 Life Sports and transform your passion into professional excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-[#f39318] hover:bg-gray-100 font-semibold">
-                  Start Your Journey
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#f39318]"
-                >
-                  Learn More
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-white text-[#f39318] hover:bg-gray-100 font-semibold">
+                    Start Your Journey
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-[#f39318]"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </div>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
@@ -235,9 +239,11 @@ export default function FootballAcademy() {
                   </div>
                 ))}
               </div>
-              <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8850f] hover:to-[#e64d00] text-white">
-                Join Our Academy
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8850f] hover:to-[#e64d00] text-white">
+                  Join Our Academy
+                </Button>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Image
@@ -310,14 +316,18 @@ export default function FootballAcademy() {
             to begin your professional football training.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#f39318] hover:bg-gray-100 font-semibold">
-              <Phone className="h-5 w-5 mr-2" />
-              Call Now
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#f39318]">
-              <Mail className="h-5 w-5 mr-2" />
-              Send Message
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-[#f39318] hover:bg-gray-100 font-semibold">
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#f39318]">
+                <Mail className="h-5 w-5 mr-2" />
+                Send Message
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBrain, FaWeight, FaUsers, FaArrowRight, FaQuoteRight } from "react-icons/fa"
 import { MdSportsHandball } from "react-icons/md"
+import Link from "next/link"
 
 interface GalleryImage {
   src: string
@@ -157,25 +158,29 @@ const TableTennisPage = () => {
 
               {/* Professional CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl min-w-[200px]"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Book Free Assessment
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl min-w-[200px]"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      Book Free Assessment
+                      <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </motion.button>
+                </Link>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2 min-w-[200px]"
-                >
-                  View Programs
-                  <FaArrowRight className="text-sm" />
-                </motion.button>
+                <Link href="#ttprogram">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2 min-w-[200px]"
+                  >
+                    View Programs
+                    <FaArrowRight className="text-sm" />
+                  </motion.button>
+                </Link>
               </div>
 
               {/* Trust Indicators */}
@@ -338,7 +343,7 @@ const TableTennisPage = () => {
       </section>
 
       {/* Training Levels with Images */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
+      <section id="ttprogram" className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
@@ -414,12 +419,16 @@ const TableTennisPage = () => {
               transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <button className="bg-white text-[#f39318] px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
-                Book Free Trial
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
-                Contact Us
-              </button>
+              <Link href="/contact">
+                <button className="bg-white text-[#f39318] px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
+                  Book Free Trial
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
+                  Contact Us
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>

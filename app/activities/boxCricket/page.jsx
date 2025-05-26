@@ -19,6 +19,7 @@ import {
   Mail,
 } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function PuneCricketGround() {
   const benefits = [
@@ -134,14 +135,16 @@ export default function PuneCricketGround() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white hover:shadow-2xl text-lg px-10 py-6 rounded-full font-bold transform hover:scale-105 transition-all duration-300 group"
-              >
-                <Play className="mr-3 h-6 w-6" />
-                START TRIAL
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white hover:shadow-2xl text-lg px-10 py-6 rounded-full font-bold transform hover:scale-105 transition-all duration-300 group"
+                >
+                  <Play className="mr-3 h-6 w-6" />
+                  START TRIAL
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
@@ -261,10 +264,12 @@ export default function PuneCricketGround() {
                 </div>
               </div>
 
-              <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-6 rounded-full text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Explore Facilities
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-6 rounded-full text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  Explore Facilities
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
 
             <div className="relative">
@@ -446,10 +451,12 @@ export default function PuneCricketGround() {
                 </div>
               </div>
 
-              <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-6 rounded-full text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Book Your Session
-                <Calendar className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-8 py-6 rounded-full text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  Book Your Session
+                  <Calendar className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
 
             <div className="relative">

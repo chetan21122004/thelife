@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Users, Zap, MapPin, Calendar, Star } from "lucide-react"
+import Link from "next/link"
 
 export default function CricketNetPage() {
   return (
@@ -65,13 +66,15 @@ export default function CricketNetPage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button
-              size="lg"
-              className="group bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#f39318]/90 hover:to-[#FF5500]/90 text-white text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
-            >
-              <span className="mr-2">BOOK NOW</span>
-              <div className="w-2 h-2 bg-white rounded-full group-hover:animate-ping"></div>
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="group bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#f39318]/90 hover:to-[#FF5500]/90 text-white text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
+              >
+                <span className="mr-2">BOOK NOW</span>
+                <div className="w-2 h-2 bg-white rounded-full group-hover:animate-ping"></div>
+              </Button>
+            </Link>
 
             <Button
               size="lg"
