@@ -105,7 +105,7 @@ export default function YogaAcademyPage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1506629905607-d9c297d3d75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+                  src="https://www.thelifesports.in/wp-content/uploads/2020/06/img1-1.jpg"
                   alt="Yoga practice at The Life Sports Academy"
                   className="w-full h-[500px] object-cover"
                 />
@@ -154,7 +154,7 @@ export default function YogaAcademyPage() {
             <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-64">
                 <img
-                  src="https://images.unsplash.com/photo-1506629905607-d9c297d3d75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+                  src="https://arohanyoga.com/wp-content/uploads/2024/03/Meditation-vs.-Yoga.jpg"
                   alt="Meditation"
                   className="w-full h-full object-cover"
                 />

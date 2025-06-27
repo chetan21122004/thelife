@@ -283,15 +283,15 @@ const TableTennisPage = () => {
                 className="relative group cursor-pointer"
                 onClick={() => setSelectedImage(image)}
               >
-                <div className="relative h-64 overflow-hidden rounded-xl ring-2 ring-transparent group-hover:ring-[#f39318] transition-all duration-300">
+                <div className="relative h-64 overflow-hidden rounded-xl ring-2 ring-transparent ring-[#f39318] transition-all duration-300">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 to-transparent  opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white  duration-300">
                     <h3 className="text-lg font-semibold">{image.title}</h3>
                   </div>
                 </div>

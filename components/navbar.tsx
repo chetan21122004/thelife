@@ -27,7 +27,7 @@ const activities = [
   },
   {
     name: "Gymnastics",
-    image: "https://images.unsplash.com/photo-1566241832378-917a0f30db2c?w=500&auto=format&fit=crop&q=60",
+    image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
     description: "All levels welcome",
     features: ["Safe environment", "Certified trainers", "Modern equipment"],
     color: "from-green-400 to-teal-600",
@@ -67,7 +67,7 @@ const activities = [
   },
   {
     name: "Cricket Net",
-    image: "https://images.unsplash.com/photo-1589801258579-38c1a2dc2700?w=500&auto=format&fit=crop&q=60",
+    image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
     description: "Professional practice nets",
     features: ["Professional nets", "Bowling machines", "Expert coaching"],
     color: "from-red-400 to-rose-600",

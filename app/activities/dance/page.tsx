@@ -24,7 +24,7 @@ const danceStyles = [
 		description:
 			"Vibrant Indian dance style combining classical and contemporary elements",
 		image:
-			"https://images.unsplash.com/photo-1533450718592-29d45635f0a9?w=800&auto=format&fit=crop&q=60",
+			"https://blog.dancevision.com/hs-fs/hubfs/Dance%20Vision/Blog/Body%20Images/Screenshot%20(565).png?width=1726&height=971&name=Screenshot%20(565).png",
 		features: ["Popular music", "Expressive movements", "Fun choreography"],
 		color: "from-[#FF5500] to-[#f39318]",
 	},

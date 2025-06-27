@@ -255,7 +255,7 @@ export default function BadmintonCourtPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="https://www.thelifesports.in/wp-content/uploads/2020/06/img9-.jpg"
                 alt="BWF approved badminton courts"
                 className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
               />
@@ -291,7 +291,7 @@ export default function BadmintonCourtPage() {
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1723074832950-9fb031b0f4ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Tournament preparation"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -374,7 +374,7 @@ export default function BadmintonCourtPage() {
             <div className="space-y-6">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1626721105368-a69248e93b32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFkbWludG9ufGVufDB8fDB8fHww"
                   alt="Fitness training session"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />

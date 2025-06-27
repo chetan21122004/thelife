@@ -36,10 +36,6 @@ export default function RootLayout({
           <Footer />
         </div>
         
-        {/* Preloader with conditional rendering */}
-        {isLoading && (
-          <Preloader onLoadingComplete={() => setIsLoading(false)} />
-        )}
       </body>
     </html>
   )

@@ -398,32 +398,32 @@ export default function HomePage() {
                 {
                   title: "BADMINTON COURT | BADMINTON ACADEMY IN PUNE",
                   description: "Smash it up with the World Badminton Federation approved synthetic flooring. The Life Sports welcomes players from all age groups to join the fun.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/best-football-club-in-pune-1.jpg",
+                  image: "https://img3.khelomore.com/venues/1753/coverphoto/1040x490/IMG-20240101-WA0013.jpg",
                 },
                 {
                   title: "TABLE TENNIS COURT IN PUNE",
                   description: "Rooted in the core principles of excellence and passion, the Life Sports Academy aspires to offer the best Table Tennis Coaching in Pune.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/WhatsApp-Image-2022-05-10-at-5.52.45-PM.jpg",
+                  image: "https://st3.depositphotos.com/1006542/15792/i/450/depositphotos_157923648-stock-photo-table-tennis-rackets-and-ball.jpg",
                 },
                 {
                   title: "GYMNASTICS CLASSES | GYMNASTICS ACADEMY IN PUNE",
                   description: "The Life Sport is one of the best academy for Gymnastics Coaching in Pune. At Life Sports Gymnastics Academy in Pune, each student is trained diversion better and without limitations.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/DSC_0569-1__1582550125_103.51.93.157.jpg",
+                  image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
                 },
                 {
                   title: "DANCE",
                   description: "Standing among the reputed dance classes in Pune, the Life sports academy provides a platform to learn various dance forms and encourages various dancers to showcase their talent through various competitions.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/Lifesports-Banner-2-1.jpg",
+                  image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img24.jpg",
                 },
                 {
                   title: "BOX CRICKET",
                   description: "Cricket in India needs no introduction! The passion, thrill, and craze are just unmatchable. Cricket is one such game that can be played both socially and competitively.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/best-football-club-in-pune-1.jpg",
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMq6U5EUHZr6Dy_4nmpIWBknpRzvf42EslWw&s",
                 },
                 {
                   title: "CRICKET NET",
                   description: "Cricket net is a practice net used by players to improve cricketing techniques. Cricket nets are enclosed by nets on either side and optionally the roof.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/02/WhatsApp-Image-2022-05-10-at-5.52.45-PM.jpg",
+                  image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
                 },
               ].map((activity, index) => (
                 <motion.div 

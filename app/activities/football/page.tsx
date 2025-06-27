@@ -94,15 +94,7 @@ export default function FootballAcademy() {
                     Start Your Journey
                   </Button>
                 </Link>
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-[#f39318]"
-                  >
-                    Learn More
-                  </Button>
-                </Link>
+               
               </div>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
@@ -254,7 +246,7 @@ export default function FootballAcademy() {
                 className="rounded-xl shadow-lg"
               />
               <Image
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                src="https://st2.depositphotos.com/4318427/6334/i/450/depositphotos_63345113-stock-photo-football-match-for-children-training.jpg"
                 alt="Football training"
                 width={300}
                 height={200}
@@ -322,12 +314,7 @@ export default function FootballAcademy() {
                 Call Now
               </Button>
             </Link>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#f39318]">
-                <Mail className="h-5 w-5 mr-2" />
-                Send Message
-              </Button>
-            </Link>
+           
           </div>
         </div>
       </section>
