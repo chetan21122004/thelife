@@ -488,7 +488,7 @@ export default function HomePage() {
               <div className="mb-6">
                 <AnimatedText 
                   text="Invest One Hour a Day" 
-                  className="mb-2 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl drop-shadow-lg"
+                  className="mb-2 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl drop-shadow-lg"
                 />
                 <AnimatedText 
                   text="Transform Your Life" 
