@@ -4,14 +4,14 @@ import Link from "next/link"
 import { Phone, MapPin, Mail, Facebook, Twitter, Instagram, Youtube, Clock, Award, Users } from "lucide-react"
 
 const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "Blogs", href: "/blogs" },
-  { name: "Book My Court", href: "/book-court" },
-  { name: "Contact", href: "/contact" },
-  { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "Sitemap", href: "/sitemap" },
+  { name: "HOME", href: "/" },
+  { name: "ABOUT US", href: "/#about" },
+  { name: "CORPORATE EVENTS", href: "/#corporate-events" },
+  { name: "RENT A STUDIO", href: "/rent-a-studio" },
+  { name: "TESTIMONIALS", href: "/#testimonials" },
+  { name: "MEDIA", href: "/media" },
+  { name: "CONTACT", href: "/contact" },
+  { name: "BOOK MY COURT", href: "/book-court" },
 ]
 
 const activities = [
@@ -19,22 +19,17 @@ const activities = [
   { name: "Table Tennis Coaching", href: "/activities/table-tennis", popular: false },
   { name: "Gymnastics Classes", href: "/activities/gymnastics", popular: true },
   { name: "Dance Classes", href: "/activities/dance", popular: false },
-  { name: "Box Cricket Ground", href: "/activities/box-cricket", popular: true },
-  { name: "Football Academy", href: "/activities/football", popular: false },
   { name: "Yoga Classes", href: "/activities/yoga", popular: false },
-  { name: "Cricket Net Practice", href: "/activities/cricket-net", popular: true },
+  { name: "Cricket Net with Auto Machine", href: "/activities/cricketNet", popular: true },
+  { name: "Pickle Ball Courts", href: "/activities/pickle-ball", popular: true },
+  { name: "Mini Pro Turf", href: "/activities/mini-pro-turf", popular: false },
 ]
 
 const contactInfo = [
   { type: "phone", value: "+91 97677 55977", href: "tel:+919767755977", label: "Primary" },
   { type: "phone", value: "+91 99220 84730", href: "tel:+919922084730", label: "Secondary" },
   { type: "phone", value: "+91 97672 72100", href: "tel:+919767272100", label: "Support" },
-  {
-    type: "email",
-    value: "lifesportsenquiry@gmail.com",
-    href: "mailto:lifesportsenquiry@gmail.com",
-    label: "General Inquiry",
-  },
+  { type: "email", value: "lifesportsenquiry@gmail.com", href: "mailto:lifesportsenquiry@gmail.com", label: "General Inquiry"},
 ]
 
 const socialLinks = [
@@ -51,16 +46,130 @@ const socialLinks = [
 
 const stats = [
   { icon: Users, value: "5000+", label: "Happy Members" },
-  { icon: Award, value: "15+", label: "Sports Activities" },
+  { icon: Award, value: "8+", label: "Sports Activities" },
   { icon: Clock, value: "10+", label: "Years Experience" },
 ]
 
 export function Footer() {
   return (
-    <footer className="relative bg-white border-t border-[#f39318]">
+    <footer className="relative bg-white">
+      {/* Location Section */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center mb-4">
+              <div className="h-px w-8 bg-gradient-to-r from-[#f39318] to-[#FF5500]"></div>
+              <span className="mx-4 text-3xl uppercase tracking-wider font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                Visit Us
+              </span>
+              <div className="h-px w-8 bg-gradient-to-r from-[#FF5500] to-[#f39318]"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Find Us at Our
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> Location</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Located in the heart of Pune, our state-of-the-art facility is easily accessible and equipped with world-class amenities
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Map */}
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1657.6194500767551!2d73.80375698325506!3d18.546112192459038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf19ab9178b9%3A0xaf8c256266a1aaff!2sThe%20Life%20Sports%20%7C%20Sports%20Academy%20%7C%20Badminton%20Court%20in%20Pune!5e1!3m2!1sen!2sin!4v1762101502482!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="400" 
+                  style={{border: 0}} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-96 md:h-[400px]"
+                  title="The Life Sports Academy Location"
+                />
+              </div>
+            </div>
+
+            {/* Location Details */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-xl flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Address</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      19/1B/1, Near Hotel Green Park,<br />
+                      Someshwarwadi Road, Someshwarwadi<br />
+                      Pune-411008, Maharashtra, India
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-xl flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Operating Hours</h3>
+                    <div className="space-y-1 text-gray-600">
+                      <p><span className="font-medium">Monday - Sunday:</span> 6:00 AM - 12:00 AM</p>
+                      <p><span className="font-medium">All Days:</span> Open 365 Days</p>
+                      <p className="text-sm text-[#f39318] font-medium">Call ahead for special bookings</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Contact Numbers</h3>
+                    <div className="space-y-1">
+                      <Link href="tel:+919767755977" className="block text-gray-600 hover:text-[#f39318] transition-colors">
+                        <span className="font-medium">Primary:</span> +91 97677 55977
+                      </Link>
+                      <Link href="tel:+919922084730" className="block text-gray-600 hover:text-[#f39318] transition-colors">
+                        <span className="font-medium">Secondary:</span> +91 99220 84730
+                      </Link>
+                      <Link href="tel:+919767272100" className="block text-gray-600 hover:text-[#f39318] transition-colors">
+                        <span className="font-medium">Support:</span> +91 97672 72100
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                  href="https://maps.google.com/?q=The+Life+Sports+Academy+Pune"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <button className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Get Directions
+                  </button>
+                </Link>
+                <Link href="/contact" className="flex-1">
+                  <button className="w-full border-2 border-[#f39318] text-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Footer */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-[#f39318]">
+
 
         {/* Main Content */}
         <div className="container mx-auto px-6 py-16">
@@ -209,12 +318,7 @@ export function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center gap-2 text-slate-500 text-sm">
-              <span>Powered by</span>
-              <span className="font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
-                Skovian Ventures
-              </span>
-            </div>
+
           </div>
         </div>
       </div>

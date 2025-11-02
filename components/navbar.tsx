@@ -42,22 +42,6 @@ const activities = [
     href: "/activities/dance"
   },
   {
-    name: "Football",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500&auto=format&fit=crop&q=60",
-    description: "Professional academy",
-    features: ["Expert coaching", "Regular matches", "All age groups"],
-    color: "from-emerald-400 to-green-600",
-    href: "/activities/football"
-  },
-  {
-    name: "Box Cricket",
-    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format&fit=crop&q=60",
-    description: "Indoor cricket facility",
-    features: ["Indoor arena", "Practice nets", "Tournament hosting"],
-    color: "from-yellow-400 to-orange-600",
-    href: "/activities/boxCricket"
-  },
-  {
     name: "Yoga",
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format&fit=crop&q=60",
     description: "Mind and body wellness",
@@ -68,10 +52,26 @@ const activities = [
   {
     name: "Cricket Net",
     image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
-    description: "Professional practice nets",
-    features: ["Professional nets", "Bowling machines", "Expert coaching"],
+    description: "Professional practice nets with auto machine",
+    features: ["Professional nets", "Auto bowling machines", "Expert coaching"],
     color: "from-red-400 to-rose-600",
     href: "/activities/cricketNet"
+  },
+  {
+    name: "Pickle Ball",
+    image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60",
+    description: "Fast-paced paddle sport",
+    features: ["Professional courts", "Equipment provided", "All skill levels"],
+    color: "from-emerald-400 to-green-600",
+    href: "/activities/pickle-ball"
+  },
+  {
+    name: "Mini Pro Turf",
+    image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500&auto=format&fit=crop&q=60",
+    description: "Professional synthetic turf",
+    features: ["Premium turf surface", "Multi-sport facility", "Weather resistant"],
+    color: "from-lime-400 to-emerald-600",
+    href: "/activities/mini-pro-turf"
   },
 ]
 

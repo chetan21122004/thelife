@@ -14,10 +14,205 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { CorporateEventsSection } from "@/components/corporate-events-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 
 import { Hero3DScene } from "@/components/Hero3DScene"
+
+// AutoplayCarousel Component
+function AutoplayCarousel() {
+  const [api, setApi] = useState<any>()
+  const [isHovered, setIsHovered] = useState(false)
+
+  useEffect(() => {
+    if (!api) return
+
+    let autoplay: NodeJS.Timeout
+
+    const startAutoplay = () => {
+      autoplay = setInterval(() => {
+        api.scrollNext()
+      }, 3000)
+    }
+
+    const stopAutoplay = () => {
+      if (autoplay) {
+        clearInterval(autoplay)
+      }
+    }
+
+    if (!isHovered) {
+      startAutoplay()
+    } else {
+      stopAutoplay()
+    }
+
+    return () => stopAutoplay()
+  }, [api, isHovered])
+
+  const activities = [
+    {
+      title: "BADMINTON COURT | BADMINTON ACADEMY IN PUNE",
+      description: "Smash it up with the World Badminton Federation approved synthetic flooring. The Life Sports welcomes players from all age groups to join the fun.",
+      image: "https://img3.khelomore.com/venues/1753/coverphoto/1040x490/IMG-20240101-WA0013.jpg",
+      href: "/activities/badminton",
+    },
+    {
+      title: "TABLE TENNIS COURT IN PUNE",
+      description: "Rooted in the core principles of excellence and passion, the Life Sports Academy aspires to offer the best Table Tennis Coaching in Pune.",
+      image: "https://st3.depositphotos.com/1006542/15792/i/450/depositphotos_157923648-stock-photo-table-tennis-rackets-and-ball.jpg",
+      href: "/activities/table-tennis",
+    },
+    {
+      title: "GYMNASTICS CLASSES | GYMNASTICS ACADEMY IN PUNE",
+      description: "The Life Sport is one of the best academy for Gymnastics Coaching in Pune. At Life Sports Gymnastics Academy in Pune, each student is trained diversion better and without limitations.",
+      image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
+      href: "/activities/gymnastics",
+    },
+    {
+      title: "DANCE CLASSES IN PUNE",
+      description: "Standing among the reputed dance classes in Pune, the Life sports academy provides a platform to learn various dance forms and encourages various dancers to showcase their talent through various competitions.",
+      image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img24.jpg",
+      href: "/activities/dance",
+    },
+    {
+      title: "YOGA CLASSES IN PUNE",
+      description: "Find inner peace and physical wellness through our comprehensive yoga programs. Expert instructors guide you through various yoga forms in a peaceful environment.",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format&fit=crop&q=60",
+      href: "/activities/yoga",
+    },
+    {
+      title: "CRICKET NET WITH AUTO MACHINE",
+      description: "Professional cricket nets with auto bowling machines for practice. Perfect for improving batting techniques with consistent ball delivery and expert coaching support.",
+      image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
+      href: "/activities/cricketNet",
+    },
+    {
+      title: "PICKLE BALL COURTS IN PUNE",
+      description: "Experience the fastest-growing paddle sport at our premium pickle ball courts. Professional equipment, expert coaching, and a welcoming community for all skill levels.",
+      image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60",
+      href: "/activities/pickle-ball",
+    },
+    {
+      title: "MINI PRO TURF FACILITY",
+      description: "Premium synthetic turf designed for multiple sports. Weather-resistant, professional-grade surface perfect for football, cricket, and various outdoor activities.",
+      image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500&auto=format&fit=crop&q=60",
+      href: "/activities/mini-pro-turf",
+    },
+  ]
+
+  return (
+    <Carousel
+      setApi={setApi}
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      className="w-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CarouselContent className="-ml-2 md:-ml-4">
+        {activities.map((activity, index) => (
+          <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+            <motion.div 
+              variants={fadeInUp}
+              custom={index % 3}
+              transition={{ delay: (index % 3) * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="h-full"
+            >
+              <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl bg-white/80 backdrop-blur-sm border-0 ring-1 ring-black/5 flex flex-col h-full">
+                <CardHeader className="p-0">
+                  <div className="relative h-56 w-full overflow-hidden">
+                    <Image
+                      src={activity.image}
+                      alt={activity.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      priority={index < 3}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-white/90 hover:bg-white text-[#f39318] backdrop-blur-sm border-0 text-xs font-medium px-2.5 py-0.5 tracking-wide">
+                        Sports Academy
+                      </Badge>
+                    </div>
+
+                    {/* Floating Title */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#f39318] transition-colors duration-300">
+                        {activity.title}
+                      </h3>
+                    </div>
+                  </div>
+                </CardHeader>
+                <div className="flex flex-col flex-1">
+                  <CardContent className="p-6 flex-1">
+                    <div className="space-y-4">
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                        {activity.description}
+                      </p>
+                      
+                      {/* Features List - simplified */}
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {['Professional Coaching', 'All Age Groups', 'Modern Facilities'].map((feature, idx) => (
+                          <Badge 
+                            key={idx}
+                            variant="secondary" 
+                            className="bg-[#f39318]/10 text-[#f39318] hover:bg-[#f39318]/20"
+                          >
+                            {feature}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="p-6 pt-0 flex gap-3 mt-auto border-t border-gray-100">
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex-1"
+                    >
+                      <Link href="/contact">
+                        <Button 
+                          className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:opacity-90 text-white transition-all duration-300 shadow-lg font-medium"
+                        >
+                          <span className="relative z-10">Enquire Now</span>
+                        </Button>
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex-[0.6]"
+                    >
+                      <Link href={activity.href}>
+                        <Button 
+                          variant="outline" 
+                          className="w-full border border-[#f39318]/30 hover:border-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white transition-all duration-300 font-medium"
+                        >
+                          Details
+                        </Button>
+                      </Link>
+                    </motion.div>
+                  </CardFooter>
+                </div>
+              </Card>
+            </motion.div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 hover:bg-white border-[#f39318]/30 hover:border-[#f39318] text-[#f39318] hover:text-[#f39318]" />
+      <CarouselNext className="hidden md:flex -right-12 bg-white/90 hover:bg-white border-[#f39318]/30 hover:border-[#f39318] text-[#f39318] hover:text-[#f39318]" />
+    </Carousel>
+  )
+}
 
 // Animation variants for scroll effects
 const fadeInUp = {
@@ -389,129 +584,11 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div 
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
               initial="hidden"
               animate={activitiesInView ? "visible" : "hidden"}
-              variants={staggerContainer}
+              variants={fadeInUp}
             >
-              {[
-                {
-                  title: "BADMINTON COURT | BADMINTON ACADEMY IN PUNE",
-                  description: "Smash it up with the World Badminton Federation approved synthetic flooring. The Life Sports welcomes players from all age groups to join the fun.",
-                  image: "https://img3.khelomore.com/venues/1753/coverphoto/1040x490/IMG-20240101-WA0013.jpg",
-                },
-                {
-                  title: "TABLE TENNIS COURT IN PUNE",
-                  description: "Rooted in the core principles of excellence and passion, the Life Sports Academy aspires to offer the best Table Tennis Coaching in Pune.",
-                  image: "https://st3.depositphotos.com/1006542/15792/i/450/depositphotos_157923648-stock-photo-table-tennis-rackets-and-ball.jpg",
-                },
-                {
-                  title: "GYMNASTICS CLASSES | GYMNASTICS ACADEMY IN PUNE",
-                  description: "The Life Sport is one of the best academy for Gymnastics Coaching in Pune. At Life Sports Gymnastics Academy in Pune, each student is trained diversion better and without limitations.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
-                },
-                {
-                  title: "DANCE",
-                  description: "Standing among the reputed dance classes in Pune, the Life sports academy provides a platform to learn various dance forms and encourages various dancers to showcase their talent through various competitions.",
-                  image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img24.jpg",
-                },
-                {
-                  title: "BOX CRICKET",
-                  description: "Cricket in India needs no introduction! The passion, thrill, and craze are just unmatchable. Cricket is one such game that can be played both socially and competitively.",
-                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMq6U5EUHZr6Dy_4nmpIWBknpRzvf42EslWw&s",
-                },
-                {
-                  title: "CRICKET NET",
-                  description: "Cricket net is a practice net used by players to improve cricketing techniques. Cricket nets are enclosed by nets on either side and optionally the roof.",
-                  image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
-                },
-              ].map((activity, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={fadeInUp}
-                  custom={index % 3} // Only use 3 different animation delays
-                  transition={{ delay: (index % 3) * 0.1 }}
-                  whileHover={{ y: -5 }}
-                >
-                  <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl bg-white/80 backdrop-blur-sm border-0 ring-1 ring-black/5 flex flex-col">
-                    <CardHeader className="p-0">
-                      <div className="relative h-56 w-full overflow-hidden">
-                        <Image
-                          src={activity.image}
-                          alt={activity.title}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          priority={index < 3}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-300"></div>
-                        
-                        {/* Category Badge */}
-                        <div className="absolute top-4 left-4">
-                          <Badge className="bg-white/90 hover:bg-white text-[#f39318] backdrop-blur-sm border-0 text-xs font-medium px-2.5 py-0.5 tracking-wide">
-                            Sports Academy
-                          </Badge>
-                        </div>
-
-                        {/* Floating Title */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#f39318] transition-colors duration-300">
-                            {activity.title}
-                          </h3>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <div className="flex flex-col flex-1">
-                      <CardContent className="p-6 flex-1">
-                        <div className="space-y-4">
-                          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                            {activity.description}
-                          </p>
-                          
-                          {/* Features List - simplified */}
-                          <div className="flex flex-wrap gap-2 pt-2">
-                            {['Professional Coaching', 'All Age Groups', 'Modern Facilities'].map((feature, idx) => (
-                              <Badge 
-                                key={idx}
-                                variant="secondary" 
-                                className="bg-[#f39318]/10 text-[#f39318] hover:bg-[#f39318]/20"
-                              >
-                                {feature}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </CardContent>
-                      <CardFooter className="p-6 pt-0 flex gap-3 mt-auto border-t border-gray-100">
-                        <motion.div
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          transition={{ duration: 0.2 }}
-                          className="flex-1"
-                        >
-                          <Button 
-                            className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:opacity-90 text-white transition-all duration-300 shadow-lg font-medium"
-                          >
-                            <span className="relative z-10">Enquire Now</span>
-                          </Button>
-                        </motion.div>
-                        <motion.div
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          transition={{ duration: 0.2 }}
-                          className="flex-[0.6]"
-                        >
-                          <Button 
-                            variant="outline" 
-                            className="w-full border border-[#f39318]/30 hover:border-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white transition-all duration-300 font-medium"
-                          >
-                            Details
-                          </Button>
-                        </motion.div>
-                      </CardFooter>
-                    </div>
-                  </Card>
-                </motion.div>
-              ))}
+              <AutoplayCarousel />
             </motion.div>
           </div>
         </section>

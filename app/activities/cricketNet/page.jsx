@@ -321,8 +321,7 @@ export default function CricketNetPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#f39318] text-xl px-12 py-7 rounded-2xl font-bold transition-all duration-300"
+                className="bg-white text-[#f39318] hover:bg-gray-50 text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
               >
                 View Pricing
               </Button>
