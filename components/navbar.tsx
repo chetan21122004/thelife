@@ -11,15 +11,15 @@ import { usePathname } from "next/navigation"
 const activities = [
   {
     name: "Badminton",
-    image: "https://www.thelifesports.in/wp-content/uploads/2020/02/newbadmin2.jpg",
-    description: "Professional coaching",
-    features: ["World-class courts", "Expert coaches", "All age groups"],
+    image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Professional coaching with K9 Badminton World",
+    features: ["BWF approved courts", "K9 expert coaches", "Olympic certified training"],
     color: "from-orange-400 to-pink-600",
     href: "/activities/badminton"
   },
   {
     name: "Table Tennis",
-    image: "https://www.thelifesports.in/wp-content/uploads/2022/07/table-tennis-coaching-in-pune-1.jpg",
+    image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Expert training",
     features: ["Professional tables", "Tournament training", "Beginners welcome"],
     color: "from-blue-400 to-indigo-600",
@@ -27,7 +27,7 @@ const activities = [
   },
   {
     name: "Gymnastics",
-    image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "All levels welcome",
     features: ["Safe environment", "Certified trainers", "Modern equipment"],
     color: "from-green-400 to-teal-600",
@@ -35,7 +35,7 @@ const activities = [
   },
   {
     name: "Dance",
-    image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img23-1.jpg",
+    image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Various styles",
     features: ["Multiple dance forms", "Professional choreographers", "Regular events"],
     color: "from-purple-400 to-pink-600",
@@ -43,7 +43,7 @@ const activities = [
   },
   {
     name: "Yoga",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Mind and body wellness",
     features: ["Experienced instructors", "All levels welcome", "Peaceful environment"],
     color: "from-cyan-400 to-blue-600",
@@ -51,7 +51,7 @@ const activities = [
   },
   {
     name: "Cricket Net",
-    image: "https://www.shutterstock.com/image-photo/front-view-cricket-batsman-action-600nw-2341675921.jpg",
+    image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Professional practice nets with auto machine",
     features: ["Professional nets", "Auto bowling machines", "Expert coaching"],
     color: "from-red-400 to-rose-600",
@@ -59,7 +59,7 @@ const activities = [
   },
   {
     name: "Pickle Ball",
-    image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Fast-paced paddle sport",
     features: ["Professional courts", "Equipment provided", "All skill levels"],
     color: "from-emerald-400 to-green-600",
@@ -67,11 +67,19 @@ const activities = [
   },
   {
     name: "Mini Pro Turf",
-    image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     description: "Professional synthetic turf",
     features: ["Premium turf surface", "Multi-sport facility", "Weather resistant"],
     color: "from-lime-400 to-emerald-600",
     href: "/activities/mini-pro-turf"
+  },
+  {
+    name: "Boxing",
+    image: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Boxing fitness with Fittera Gym",
+    features: ["National level trainers", "1-hour fitness sessions", "Professional coaching"],
+    color: "from-red-500 to-orange-600",
+    href: "/activities/boxing"
   },
 ]
 
@@ -255,7 +263,7 @@ export function Navbar() {
                           transition={{ duration: 0.2 }}
                           className="absolute  top-full w-[800px] max-w-[90vw] bg-white/95 backdrop-blur-sm text-gray-800 shadow-2xl rounded-2xl overflow-hidden z-50"
                         >
-                          <div className="flex h-[450px]">
+                          <div className="flex h-[550px]">
                             {/* Left sidebar navigation */}
                             <div className="w-1/4 bg-gray-100/80 pt-6 space-y-1">
                               {activities.map((activity) => (

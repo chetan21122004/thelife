@@ -42,19 +42,19 @@ export default function BadmintonCourtPage() {
                 className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none"
               >
                 <Award className="w-4 h-4 mr-2" />
-                BWF Approved Courts - First & Only in Pune
+                In Partnership with K9 Badminton World
               </Badge>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Elevate Your
+                Where Passion Meets
                 <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
-                  Badminton Game
+                  Precision
                 </span>
               </h1>
 
               <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                Train like a champion at Pune's premier badminton academy. 6 BWF approved courts, world-class coaching,
-                and comprehensive fitness programs await you.
+                Experience world-class badminton training with K9 Badminton World. Olympic certified coaches, 
+                BWF approved courts, and expert guidance by Krantivir await you.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -101,6 +101,127 @@ export default function BadmintonCourtPage() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* K9 Badminton World Partnership Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Powered by
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> K9 Badminton World</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              "Igniting Passion, Building Champions" - Experience elite badminton training with our trusted partner
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                    <Trophy className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">K9 Badminton World</h3>
+                    <p className="text-gray-600">Where Passion Meets Precision</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Award className="w-5 h-5 text-[#f39318]" />
+                    <p className="text-gray-700"><span className="font-medium">Chief Coach:</span> Krantivir</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#f39318]" />
+                    <p className="text-gray-700">Olympic Gold Quest (OGQ) Certified - Level 1 & 2</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#f39318]" />
+                    <p className="text-gray-700">BWF Level 1 Certified Coach</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#f39318]" />
+                    <p className="text-gray-700">International Player with India Rankings</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#f39318]" />
+                    <p className="text-gray-700">5+ Years Experience Under Olympian</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+              <img
+                src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=500&auto=format&fit=crop&q=60"
+                alt="K9 Badminton World training"
+                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Training Programs */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Beginner Programs</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">
+                  Regular & Weekend batches for beginners with focus on fundamentals
+                </p>
+                <Badge variant="secondary" className="bg-green-100 text-green-700">
+                  Monday - Sunday Available
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Advanced Training</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">
+                  Intermediate to Advanced level coaching for competitive players
+                </p>
+                <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                  Monday - Saturday
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Trophy className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Corporate Batches</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">
+                  Specialized corporate training programs for working professionals
+                </p>
+                <Badge variant="secondary" className="bg-purple-100 text-purple-700">
+                  Flexible Timing
+                </Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

@@ -53,8 +53,8 @@ function AutoplayCarousel() {
 
   const activities = [
     {
-      title: "BADMINTON COURT | BADMINTON ACADEMY IN PUNE",
-      description: "Smash it up with the World Badminton Federation approved synthetic flooring. The Life Sports welcomes players from all age groups to join the fun.",
+      title: "BADMINTON ACADEMY - K9 BADMINTON WORLD COLLABORATION",
+      description: "Train with Olympic certified coaches at K9 Badminton World. BWF approved courts with expert coaching by Krantivir - where passion meets precision.",
       image: "https://img3.khelomore.com/venues/1753/coverphoto/1040x490/IMG-20240101-WA0013.jpg",
       href: "/activities/badminton",
     },
@@ -99,6 +99,12 @@ function AutoplayCarousel() {
       description: "Premium synthetic turf designed for multiple sports. Weather-resistant, professional-grade surface perfect for football, cricket, and various outdoor activities.",
       image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500&auto=format&fit=crop&q=60",
       href: "/activities/mini-pro-turf",
+    },
+    {
+      title: "BOXING FITNESS - FITTERA COLLABORATION",
+      description: "Experience the best 1-hour boxing fitness in town with Fittera The Boxing Gym. Train with National and International level players under expert guidance.",
+      image: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=500&auto=format&fit=crop&q=60",
+      href: "/activities/boxing",
     },
   ]
 
@@ -454,7 +460,7 @@ export default function HomePage() {
                     opacity: [0.2, 0.3, 0.2],
                   }}
                   transition={{ 
-                    duration: 4,
+                    duration: 2 ,
                     repeat: Infinity,
                     ease: "easeInOut" 
                   }}

@@ -15,7 +15,7 @@ const quickLinks = [
 ]
 
 const activities = [
-  { name: "Badminton Court", href: "/activities/badminton", popular: true },
+  { name: "Badminton - K9 World Collaboration", href: "/activities/badminton", popular: true },
   { name: "Table Tennis Coaching", href: "/activities/table-tennis", popular: false },
   { name: "Gymnastics Classes", href: "/activities/gymnastics", popular: true },
   { name: "Dance Classes", href: "/activities/dance", popular: false },
@@ -23,6 +23,7 @@ const activities = [
   { name: "Cricket Net with Auto Machine", href: "/activities/cricketNet", popular: true },
   { name: "Pickle Ball Courts", href: "/activities/pickle-ball", popular: true },
   { name: "Mini Pro Turf", href: "/activities/mini-pro-turf", popular: false },
+  { name: "Boxing - Fittera Collaboration", href: "/activities/boxing", popular: true },
 ]
 
 const contactInfo = [
@@ -46,7 +47,7 @@ const socialLinks = [
 
 const stats = [
   { icon: Users, value: "5000+", label: "Happy Members" },
-  { icon: Award, value: "8+", label: "Sports Activities" },
+  { icon: Award, value: "9+", label: "Sports Activities" },
   { icon: Clock, value: "10+", label: "Years Experience" },
 ]
 
