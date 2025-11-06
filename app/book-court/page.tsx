@@ -147,30 +147,6 @@ export default function FeeStructure() {
         },
       ],
     },
-    {
-      category: "Football (5 to 8 years)",
-      icon: "⚽",
-      packages: [
-        {
-          schedule: "Mon, Wed, Fri",
-          timings: ["5 pm to 6 pm"],
-          rate: "1800",
-          type: "regular",
-        },
-      ],
-    },
-    {
-      category: "Football (9 to 16 years)",
-      icon: "⚽",
-      packages: [
-        {
-          schedule: "Mon, Wed, Fri",
-          timings: ["6 pm to 7 pm"],
-          rate: "1800",
-          type: "regular",
-        },
-      ],
-    },
   ]
 
   const getPackageStyle = (type) => {
@@ -312,10 +288,6 @@ export default function FeeStructure() {
               <div className="space-y-2 text-blue-800">
                 <div className="flex items-start space-x-2">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                  <p>We charge a one-time admission fee of ₹1000/- for football programs only.</p>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
                   <p>Trial sessions are available at ₹300/- per session for kids and adults.</p>
                 </div>
                 <div className="flex items-start space-x-2">
@@ -327,21 +299,24 @@ export default function FeeStructure() {
           </div>
         </div>
 
-        {/* Contact CTA */}
+        {/* Booking CTA */}
         <div className="mt-8 text-center">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Ready to Get Started?</h3>
-            <p className="text-gray-600 mb-6">
-              Contact us to book your trial session or learn more about our programs.
+          <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-xl shadow-lg p-8 text-white">
+            <h3 className="text-2xl font-bold mb-3">Book Your Court Online</h3>
+            <p className="text-lg mb-2 opacity-95">
+              Bookings for all sports will be available through our website
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                Book Trial Session
-              </button>
-              <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                Contact Us
-              </button>
-            </div>
+            <p className="text-base mb-6 opacity-90">
+              Click below to access our online booking system
+            </p>
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-[#f39318] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Book Now →
+            </a>
           </div>
         </div>
       </div>

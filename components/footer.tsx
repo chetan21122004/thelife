@@ -15,12 +15,12 @@ const quickLinks = [
 ]
 
 const activities = [
-  { name: "Badminton - K9 World Collaboration", href: "/activities/badminton", popular: true },
-  { name: "Table Tennis Coaching", href: "/activities/table-tennis", popular: false },
-  { name: "Gymnastics Classes", href: "/activities/gymnastics", popular: true },
+  { name: "Badminton Coaching - K9 World Collaboration", href: "/activities/badminton", popular: true },
+  { name: "Gymnastics Coaching", href: "/activities/gymnastics", popular: true },
+  { name: "Table Tennis", href: "/activities/table-tennis", popular: false },
   { name: "Dance Classes", href: "/activities/dance", popular: false },
   { name: "Yoga Classes", href: "/activities/yoga", popular: false },
-  { name: "Cricket Net with Auto Machine", href: "/activities/cricketNet", popular: true },
+  { name: "Net Cricket with Bowling Machine", href: "/activities/cricketNet", popular: true },
   { name: "Pickle Ball Courts", href: "/activities/pickle-ball", popular: true },
   { name: "Mini Pro Turf", href: "/activities/mini-pro-turf", popular: false },
   { name: "Boxing - Fittera Collaboration", href: "/activities/boxing", popular: true },
@@ -48,7 +48,7 @@ const socialLinks = [
 const stats = [
   { icon: Users, value: "5000+", label: "Happy Members" },
   { icon: Award, value: "9+", label: "Sports Activities" },
-  { icon: Clock, value: "10+", label: "Years Experience" },
+  { icon: Clock, value: "20+", label: "Years Experience" },
 ]
 
 export function Footer() {
@@ -77,7 +77,7 @@ export function Footer() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Map */}
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute  rounded-2xl "></div>
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1657.6194500767551!2d73.80375698325506!3d18.546112192459038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf19ab9178b9%3A0xaf8c256266a1aaff!2sThe%20Life%20Sports%20%7C%20Sports%20Academy%20%7C%20Badminton%20Court%20in%20Pune!5e1!3m2!1sen!2sin!4v1762101502482!5m2!1sen!2sin" 
@@ -182,8 +182,7 @@ export function Footer() {
                   The Life Sports Academy
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-6">
-                  Premier sports academy in Pune offering world-class facilities and professional coaching across
-                  multiple sports disciplines.
+                  Premier sports academy in Pune offering world-class facilities and professional coaching. Established in 2006, we have been serving the community for over 20 years.
                 </p>
               </div>
 

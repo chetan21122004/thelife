@@ -487,7 +487,7 @@ export default function HomePage() {
                 variants={fadeIn}
               >
                 <span className="h-2 w-2 rounded-full bg-[#f39318] animate-pulse"></span>
-                <span className="text-sm font-medium text-white">Welcome to The Life Sports Academy</span>
+                <span className="text-sm font-medium text-white">Welcome to The Life Sports</span>
               </motion.div>
 
               {/* Main Title - simplified animation */}

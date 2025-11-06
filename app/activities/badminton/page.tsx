@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -27,7 +28,7 @@ export default function BadmintonCourtPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="/images/badminton-1.jpg"
             alt="Professional badminton court"
             className="w-full h-full object-cover"
           />
@@ -36,71 +37,171 @@ export default function BadmintonCourtPage() {
 
         <div className="container mx-auto max-w-6xl px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-8">
+            <div className="text-white space-y-6">
               <Badge
                 variant="secondary"
-                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none px-4 py-2"
               >
                 <Award className="w-4 h-4 mr-2" />
                 In Partnership with K9 Badminton World
               </Badge>
 
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Where Passion Meets
-                <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
-                  Precision
-                </span>
-              </h1>
-
-              <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                Experience world-class badminton training with K9 Badminton World. Olympic certified coaches, 
-                BWF approved courts, and expert guidance by Krantivir await you.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Start Your Journey
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-lg px-8 py-6 border-white  hover:bg-white text-gray-900"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Button>
+              <div className="space-y-4">
+                <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                  Premier Indoor Badminton Courts in
+                  <span className="block mt-2 bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                    Pune
+                  </span>
+                </h1>
+                <p className="text-lg md:text-xl text-[#f39318] font-semibold">
+                  Book Online Now • 6 BWF Approved Courts
+                </p>
               </div>
 
-              <div className="flex items-center space-x-8 pt-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#f39318]">700+</div>
-                  <div className="text-sm text-gray-300">Daily Players</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#f39318]">6</div>
-                  <div className="text-sm text-gray-300">BWF Courts</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#f39318]">18</div>
-                  <div className="text-sm text-gray-300">Hours Open</div>
+              <div className="space-y-4 max-w-xl">
+                <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                  Welcome to The Life Sports, the ultimate destination for badminton enthusiasts in Pune. Experience the game at a professional level on our six BWF Approved Badminton Courts.
+                </p>
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                  We prioritize your safety and performance with knee-friendly, anti-skid sports flooring, setting us apart from other sports facilities.
+                </p>
+                <div className="flex items-center gap-2 pt-2">
+                  <div className="w-2 h-2 rounded-full bg-[#f39318]"></div>
+                  <p className="text-base md:text-lg text-gray-200 font-medium">
+                    Tired of calling? Book your slot instantly with our easy online court booking system.
+                  </p>
                 </div>
               </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <a 
+                  href="https://booking.thelifesports.in/bookings" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all"
+                  >
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book Court Online
+                  </Button>
+                </a>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </Button>
+                </Link>
+              </div>
+
             </div>
 
             <div className="hidden lg:block">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/images/badminton-2.jpg"
                   alt="Badminton players in action"
                   className="relative rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Trophy className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">6 Professional Badminton Courts</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Ample space means more availability for your game. Never wait for your turn!
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">BWF Approved Flooring</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Experience the ultimate soft-on-knees, anti-skid court surface for injury prevention.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Calendar className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">24/7 Online Booking</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Check real-time slot availability and book your badminton court online instantly.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Convenient Location</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Centrally located in Someshwarwadi, easily accessible from all of Pune.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Play & Train</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Ideal for casual pay and play, coaching, leagues, and corporate tournaments.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Professional Lighting</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600">
+                  Play under professional-grade, non-glare LED lighting that eliminates shadows.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -163,7 +264,7 @@ export default function BadmintonCourtPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
-                src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=500&auto=format&fit=crop&q=60"
+                src="/images/badminton-1.jpg"
                 alt="K9 Badminton World training"
                 className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
               />
@@ -222,6 +323,282 @@ export default function BadmintonCourtPage() {
                 </Badge>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* BWF Approved Flooring Section */}
+      <section className="py-20 px-4 bg-gray-900 text-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              6 BWF Approved, Soft-on-Knees
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                {" "}
+                Badminton Courts in Pune
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              At The Life Sports, we believe a great game starts with a great surface.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold">The Flooring: World-Class Safety & Performance</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">BWF Approved Vinyl/Synthetic Flooring</h4>
+                    <p className="text-gray-300">
+                      Our courts adhere to the stringent international standards set by the Badminton World Federation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Soft on Knees</h4>
+                    <p className="text-gray-300">
+                      The specialized multi-layered construction provides superior shock absorption, significantly reducing the impact on your joints and preventing common sports injuries.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Anti-Skid Surface</h4>
+                    <p className="text-gray-300">
+                      The professional-grade, anti-slip court surface ensures maximum grip, allowing for quick movements, precise footing, and absolute player safety during intense rallies.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Optimum Lighting</h4>
+                    <p className="text-gray-300">
+                      Play under professional-grade, non-glare LED lighting that eliminates shadows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+              <img
+                src="/images/badminton-2.jpg"
+                alt="BWF approved badminton court flooring"
+                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Badminton Court Booking
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                {" "}
+                Pricing
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+              BADMINTON COURTS (55 Minutes Session)
+            </p>
+            <p className="text-lg text-gray-500">
+              6 Badminton Courts | World Badminton Federation Approved | Anti-skid Flooring, Gentle on Knees
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <Card className="border-0 shadow-xl">
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Time</th>
+                        <th className="px-6 py-4 text-left font-semibold">Days</th>
+                        <th className="px-6 py-4 text-center font-semibold">Charges</th>
+                        <th className="px-6 py-4 text-center font-semibold">Total (incl. GST)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">06:00 AM – 06:55 AM</td>
+                        <td className="px-6 py-4">
+                          <Badge className="bg-green-100 text-green-700">Monday to Sunday (Happy Hour)</Badge>
+                        </td>
+                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">07:00 AM – 08:55 AM</td>
+                        <td className="px-6 py-4">Monday to Friday</td>
+                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">09:00 AM – 04:55 PM</td>
+                        <td className="px-6 py-4">
+                          <Badge className="bg-green-100 text-green-700">Monday to Friday (Happy Hour)</Badge>
+                        </td>
+                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">05:00 PM – 11:55 PM</td>
+                        <td className="px-6 py-4">Monday to Friday</td>
+                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">07:00 AM – 11:55 AM</td>
+                        <td className="px-6 py-4">Saturday to Sunday</td>
+                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">12:00 PM – 03:55 PM</td>
+                        <td className="px-6 py-4">
+                          <Badge className="bg-green-100 text-green-700">Saturday to Sunday (Happy Hour)</Badge>
+                        </td>
+                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">04:00 PM – 11:55 PM</td>
+                        <td className="px-6 py-4">Saturday to Sunday</td>
+                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Court Online Now
+              </Button>
+            </a>
+            <p className="mt-4 text-sm text-gray-600">
+              Bookings for all sports will be available through our website
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Online Booking Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Instant Badminton Court Booking
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                {" "}
+                | Check Real-Time Slots & Pay Online
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Don't wait! Secure your slot instantly with our seamless online booking system.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 text-center">
+              <CardHeader className="pb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-white">1</span>
+                </div>
+                <CardTitle className="text-xl">Check Availability</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  View the live schedule for all 6 badminton courts on your desktop or mobile.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 text-center">
+              <CardHeader className="pb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-white">2</span>
+                </div>
+                <CardTitle className="text-xl">Select & Pay</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Choose your preferred time slot and complete your booking using our secure payment gateway (UPI, Card, Wallet).
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 text-center">
+              <CardHeader className="pb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-white">3</span>
+                </div>
+                <CardTitle className="text-xl">Play!</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Receive an instant confirmation and walk straight onto one of Pune's best indoor badminton courts.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-gray-700 mb-6">
+              <strong>Keywords:</strong> Pay and play badminton in Someshwarwadi, Badminton court hourly booking, Badminton membership Pune
+            </p>
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Court Online Now
+              </Button>
+            </a>
+            <p className="mt-4 text-sm text-gray-600">
+              Bookings for all sports will be available through our website
+            </p>
           </div>
         </div>
       </section>
@@ -376,7 +753,7 @@ export default function BadmintonCourtPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
-                src="https://www.thelifesports.in/wp-content/uploads/2020/06/img9-.jpg"
+                src="/images/badminton-3.jpg"
                 alt="BWF approved badminton courts"
                 className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
               />
@@ -386,7 +763,7 @@ export default function BadmintonCourtPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/images/badminton-1.jpg"
                 alt="Professional coaching session"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -399,7 +776,7 @@ export default function BadmintonCourtPage() {
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/images/badminton-2.jpg"
                 alt="Training sessions"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -412,7 +789,7 @@ export default function BadmintonCourtPage() {
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1723074832950-9fb031b0f4ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/badminton-3.jpg"
                 alt="Tournament preparation"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -495,7 +872,7 @@ export default function BadmintonCourtPage() {
             <div className="space-y-6">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1626721105368-a69248e93b32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFkbWludG9ufGVufDB8fDB8fHww"
+                  src="/images/badminton-1.jpg"
                   alt="Fitness training session"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
@@ -614,22 +991,33 @@ export default function BadmintonCourtPage() {
             world-class facilities
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book Your Court Now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
-            >
-              <Phone className="w-6 h-6 mr-3" />
-              Call Us Today
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Court Now
+              </Button>
+            </a>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                Call Us Today
+              </Button>
+            </Link>
           </div>
+          <p className="mt-6 text-sm text-gray-400">
+            Bookings for all sports will be available through our website
+          </p>
         </div>
       </section>
 

@@ -152,12 +152,7 @@ export default function GymnasticsPage() {
                   Start Free Trial
                 </button>
               </Link>
-              <Link href="/contact">
-                <button className="flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  <FaPlay className="mr-2" />
-                  Watch Video
-                </button>
-              </Link>
+            
             </motion.div>
           </div>
         </div>
@@ -467,13 +462,7 @@ export default function GymnasticsPage() {
               Join hundreds of students who have transformed their lives through gymnastics at The Life Sport
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-[#f39318] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
-              >
-                Book Free Trial Class
-              </motion.button>
+           
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

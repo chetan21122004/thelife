@@ -563,17 +563,24 @@ const TableTennisPage = () => {
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/book-court">
+                <a 
+                  href="https://booking.thelifesports.in/bookings" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   <button className="w-full sm:w-auto bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Book Your Table Now
                   </button>
-                </Link>
+                </a>
                 <Link href="/contact">
                   <button className="w-full sm:w-auto border-2 border-[#f39318] text-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1">
                     Contact for Details
                   </button>
                 </Link>
               </div>
+              <p className="mt-4 text-center text-sm text-gray-600">
+                Bookings for all sports will be available through our website
+              </p>
             </motion.div>
           </div>
         </div>

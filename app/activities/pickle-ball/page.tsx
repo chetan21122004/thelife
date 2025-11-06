@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
 import {
   Trophy,
   Users,
@@ -323,10 +324,19 @@ export default function PickleBallPage() {
                 </div>
               </div>
 
-              <Button className="mt-8 bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-8 py-6">
-                Book Your Court
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <a 
+                href="https://booking.thelifesports.in/bookings" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-8 bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-8 py-6">
+                  Book Your Court
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </a>
+              <p className="mt-4 text-sm text-gray-600">
+                Bookings for all sports will be available through our website
+              </p>
             </div>
 
             <div className="space-y-6">
@@ -370,21 +380,33 @@ export default function PickleBallPage() {
             Join our growing pickle ball community and discover why it's the fastest-growing sport in the world
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-10 py-6"
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book Your Court Now
-            </Button>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-10 py-6"
-            >
-              <Phone className="w-6 h-6 mr-3" />
-              Call Us Today
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Court Now
+              </Button>
+            </a>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                Call Us Today
+              </Button>
+            </Link>
           </div>
+          <p className="mt-6 text-sm text-gray-400">
+            Bookings for all sports will be available through our website
+          </p>
         </div>
       </section>
 

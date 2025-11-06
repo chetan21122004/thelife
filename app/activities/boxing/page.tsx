@@ -383,13 +383,19 @@ export default function BoxingPage() {
             Join Fittera The Boxing Gym at The Life Sports Academy and experience the best boxing fitness training in Pune
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-lg px-10 py-6"
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book Your Session
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Session
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"
@@ -399,6 +405,9 @@ export default function BoxingPage() {
               Follow @fitteraboxinggym
             </Button>
           </div>
+          <p className="mt-6 text-sm text-gray-400">
+            Bookings for all sports will be available through our website
+          </p>
         </div>
       </section>
 

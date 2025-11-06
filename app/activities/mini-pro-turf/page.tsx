@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
 import {
   Trophy,
   Users,
@@ -431,22 +432,33 @@ export default function MiniProTurfPage() {
             Experience the difference of professional-grade synthetic turf. Book your session today!
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-lime-400 to-emerald-600 hover:from-lime-500 hover:to-emerald-700 text-lg px-10 py-6"
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book Your Turf Now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
-            >
-              <Phone className="w-6 h-6 mr-3" />
-              Call Us Today
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-lime-400 to-emerald-600 hover:from-lime-500 hover:to-emerald-700 text-lg px-10 py-6"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Turf Now
+              </Button>
+            </a>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                Call Us Today
+              </Button>
+            </Link>
           </div>
+          <p className="mt-6 text-sm text-gray-400">
+            Bookings for all sports will be available through our website
+          </p>
         </div>
       </section>
 

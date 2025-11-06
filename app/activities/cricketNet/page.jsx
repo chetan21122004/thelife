@@ -38,79 +38,69 @@ export default function CricketNetPage() {
         <div className="relative z-10 text-center py-3 text-white px-6 max-w-6xl mx-auto">
           {/* Breadcrumb */}
           <div className="mb-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
-            <div className="w-2 h-2 bg-[#f39318] rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium tracking-wide">Home</span>
-            <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+           
             <span className="text-sm font-medium tracking-wide">Cricket Net</span>
           </div>
 
-          {/* Main Heading */}
+          {/* Main Heading - SEO Optimized H1 */}
           <div className="mb-8">
-            <h1 className="text-8xl gap-6 flex md:text-9xl lg:text-[12rem] font-black leading-none tracking-tighter mb-4">
-              <span className="block bg-gradient-to-r from-white via-white to-white/80 text-transparent bg-clip-text">
-                CRICKET
-              </span>
-              <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text ">
-                NET
-              </span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight mb-4 text-white">
+              Unleash Your Potential: Premier Cricket Practice Net with Automatic Bowling Machine in Pune
             </h1>
           </div>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-white/90 max-w-5xl mx-auto leading-relaxed font-light">
-            Professional cricket practice facilities with{" "}
-            <span className="font-semibold bg-gradient-to-r w-fit from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
-              state-of-the-art astroturf net
-            </span>
+          <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-white/95 max-w-5xl mx-auto leading-relaxed font-medium">
+            Consistent, Professional, All-Weather Training. Book Your Slot Today!
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Link href="/contact">
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#f39318]/90 hover:to-[#FF5500]/90 text-white text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
               >
-                <span className="mr-2">BOOK NOW</span>
+                <span className="mr-2">➡ Book a Net Session</span>
                 <div className="w-2 h-2 bg-white rounded-full group-hover:animate-ping"></div>
               </Button>
-            </Link>
+            </a>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-[#f39318] text-xl px-12 py-7 rounded-2xl font-bold transition-all duration-300 hover:scale-105"
-            >
-              EXPLORE FACILITY
-            </Button>
+            <Link href="#pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-[#f39318] text-xl px-12 py-7 rounded-2xl font-bold transition-all duration-300 hover:scale-105"
+              >
+                See Pricing
+              </Button>
+            </Link>
           </div>
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-3xl font-bold text-[#f39318] mb-2">3</div>
-              <div className="text-sm text-white/80 font-medium">Premium Astroturf Nets</div>
+              <div className="text-3xl font-bold text-[#f39318] mb-2">1</div>
+              <div className="text-sm text-white/80 font-medium">Premium Cricket Net</div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#f39318] mb-2">Auto</div>
+              <div className="text-sm text-white/80 font-medium">Bowling Machine</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="text-3xl font-bold text-[#f39318] mb-2">24/7</div>
-              <div className="text-sm text-white/80 font-medium">Online Booking Available</div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-3xl font-bold text-[#f39318] mb-2">5★</div>
-              <div className="text-sm text-white/80 font-medium">Customer Rating</div>
+              <div className="text-sm text-white/80 font-medium">Online Booking</div>
             </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-xs font-medium tracking-wider">SCROLL</div>
-            <div className="w-px h-8 bg-gradient-to-b from-white/60 to-transparent"></div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Stats Bar */}
@@ -118,8 +108,12 @@ export default function CricketNetPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
-              <div className="text-3xl font-bold text-[#f39318]">3</div>
-              <div className="text-sm text-gray-300">Astroturf Nets</div>
+              <div className="text-3xl font-bold text-[#f39318]">1</div>
+              <div className="text-sm text-gray-300">Premium Net</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-[#f39318]">Auto</div>
+              <div className="text-sm text-gray-300">Bowling Machine</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-[#f39318]">24/7</div>
@@ -128,10 +122,6 @@ export default function CricketNetPage() {
             <div>
               <div className="text-3xl font-bold text-[#f39318]">500+</div>
               <div className="text-sm text-gray-300">Happy Players</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#f39318]">5★</div>
-              <div className="text-sm text-gray-300">Rating</div>
             </div>
           </div>
         </div>
@@ -145,28 +135,16 @@ export default function CricketNetPage() {
               <Star className="w-4 h-4" />
               Professional Training
             </div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">What is a Cricket Net?</h2>
+            <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">The Future of Cricket Training: Precision and Consistency</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Cricket net is a practice net used by players to improve cricketing techniques. Cricket nets are enclosed
-              by nets on either side and optionally the roof. These nets are very important for cricket practice and are
-              used at every stage of cricket.
+              Experience professional cricket training with our state-of-the-art cricket practice net equipped with an automatic bowling machine. Perfect for solo batting practice, coaches, and full cricket academy training. Our fully-enclosed cricket practice net system ensures safety and focused training in all weather conditions.
             </p>
-            <div className="flex items-center gap-4">
-              <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#f39318]/90 hover:to-[#FF5500]/90 text-white px-8 py-3 rounded-xl font-semibold">
-                Learn More
-              </Button>
-              <Button
-                variant="outline"
-                className="border-[#f39318] text-[#f39318] hover:bg-[#f39318] hover:text-white px-8 py-3 rounded-xl font-semibold"
-              >
-                View Gallery
-              </Button>
-            </div>
+            
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                src="/images/cricket-net.jpg"
                 alt="Professional cricket practice nets"
                 className="w-full h-[500px] object-cover"
               />
@@ -313,20 +291,30 @@ export default function CricketNetPage() {
               practice session today and experience the difference professional facilities make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-white text-[#f39318] hover:bg-gray-50 text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
+              <a 
+                href="https://booking.thelifesports.in/bookings" 
+                target="_blank" 
+                rel="noopener noreferrer"
               >
-                Book Your Session
-              </Button>
-              <Button
-                size="lg"
-                className="bg-white text-[#f39318] hover:bg-gray-50 text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                View Pricing
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-white text-[#f39318] hover:bg-gray-50 text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Book Your Session
+                </Button>
+              </a>
+              <Link href="/book-court">
+                <Button
+                  size="lg"
+                  className="bg-white text-[#f39318] hover:bg-gray-50 text-xl px-12 py-7 rounded-2xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  View Pricing
+                </Button>
+              </Link>
             </div>
-            <p className="mt-8 text-lg opacity-90">Available for booking 24/7 through our online platform</p>
+            <p className="mt-8 text-lg opacity-90">
+              Bookings for all sports will be available through our website
+            </p>
           </div>
         </div>
       </section>
