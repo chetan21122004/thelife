@@ -88,13 +88,7 @@ export default function RentAStudio() {
             <span className="text-base font-medium text-white tracking-wide">Premium Studio Spaces</span>
           </motion.div>
           
-          <motion.h1 
-            variants={fadeInUp}
-            className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-10 drop-shadow-2xl"
-          >
-            <span className="block mb-3">RENT A</span>
-            <span className="bg-gradient-to-r from-[#f39318] to-orange-500 bg-clip-text text-transparent drop-shadow-xl">STUDIO</span>
-          </motion.h1>
+         
           
           <motion.p 
             variants={fadeInUp}
@@ -178,7 +172,7 @@ export default function RentAStudio() {
             >
               <div className="h-80 relative overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1578762560042-46ad127c95ea?q=80&w=2070"
+                  src="/images/rythm_studio.jpg"
                   alt="Rhythm Studio"
                   fill
                   className="object-cover transition-transform duration-[2s] group-hover:scale-110"
@@ -198,7 +192,7 @@ export default function RentAStudio() {
                   <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-[#f39318] transition-colors">
                     Rhythm Studio
                   </h3>
-                  <p className="text-white/90 text-lg">1000 sq. ft. Air-Conditioned Space</p>
+                  <p className="text-white/90 text-lg">1000 SQ FT (AC) - Available for hourly/monthly bookings</p>
                 </div>
               </div>
               <div className="p-8">
@@ -280,7 +274,7 @@ export default function RentAStudio() {
               </div>
             </motion.div>
 
-            {/* Vibe Studio */}
+            {/* Beats Studio */}
             <motion.div 
               className="group relative bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
               initial="hidden"
@@ -290,8 +284,8 @@ export default function RentAStudio() {
             >
               <div className="h-80 relative overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070"
-                  alt="Vibe Studio"
+                  src="/images/beat_studio.jpg"
+                  alt="Beats Studio"
                   fill
                   className="object-cover transition-transform duration-[2s] group-hover:scale-110"
                 />
@@ -308,9 +302,9 @@ export default function RentAStudio() {
                 </motion.div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
-                    Vibe Studio
+                    Beats Studio
                   </h3>
-                  <p className="text-white/90 text-lg">800 sq. ft. Well-Ventilated Space</p>
+                  <p className="text-white/90 text-lg">800 SQ FT (Non AC) - Available for hourly/monthly bookings</p>
                 </div>
               </div>
               <div className="p-8">
@@ -385,7 +379,7 @@ export default function RentAStudio() {
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Book Vibe Studio
+                    Book Beats Studio
                     <span>→</span>
                   </motion.span>
                 </Link>
@@ -690,7 +684,7 @@ export default function RentAStudio() {
                     >
                       <option value="">Select a studio</option>
                       <option value="rhythm">Rhythm Studio (AC)</option>
-                      <option value="vibe">Vibe Studio (Non-AC)</option>
+                      <option value="beats">Beats Studio (Non-AC)</option>
                     </select>
                   </motion.div>
                   
@@ -786,7 +780,7 @@ export default function RentAStudio() {
               {[
                 {
                   question: "Are there any dance studios for rent in Pune available from owners?",
-                  answer: "Yes, you can have a dance studio on rent in Pune from the owners at Rhythm studio or at Vibe studio offered by Life Sports, a leading sports academy in town. You can book these dance studios on a per session basis or even monthly basis. There are various packages available in these well maintained dance studios."
+                  answer: "Yes, you can have a dance studio on rent in Pune from the owners at Rhythm studio or at Beats studio offered by Life Sports, a leading sports academy in town. You can book these dance studios on a per session basis or even monthly basis. There are various packages available in these well maintained dance studios."
                 },
                 {
                   question: "How to choose a good dance studio in Pune?",

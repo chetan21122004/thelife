@@ -476,6 +476,109 @@ const TableTennisPage = () => {
         </div>
       </section>
 
+      {/* Booking Information Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
+              Table Tennis Booking
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Book your table tennis sessions and enjoy our premium facilities with flexible timing
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-xl border border-orange-100"
+            >
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">Operating Hours</h3>
+                      <p className="text-gray-600">Available 7 days a week</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                      <span className="font-semibold text-gray-900">Monday to Sunday</span>
+                      <span className="text-[#f39318] font-bold">6:00 AM - 11:55 PM</span>
+                    </div>
+                    
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <h4 className="font-semibold text-gray-900 mb-2">Booking Features:</h4>
+                      <ul className="space-y-2 text-gray-600">
+                        <li className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          Online booking available
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          Hourly slot bookings
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          Professional equipment included
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          Flexible cancellation policy
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&auto=format&fit=crop&q=60"
+                    alt="Table Tennis Booking"
+                    className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/book-court">
+                  <button className="w-full sm:w-auto bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Book Your Table Now
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="w-full sm:w-auto border-2 border-[#f39318] text-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1">
+                    Contact for Details
+                  </button>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container mx-auto px-4">
