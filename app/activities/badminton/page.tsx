@@ -25,7 +25,7 @@ export default function BadmintonCourtPage() {
     <div className="min-h-screen bg-background">
   
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/badminton-1.jpg"
@@ -35,9 +35,9 @@ export default function BadmintonCourtPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         </div>
 
-        <div className="container mx-auto max-w-6xl px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-6">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 relative z-10 py-12 sm:py-0">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-white space-y-4 sm:space-y-6">
               <Badge
                 variant="secondary"
                 className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none px-4 py-2"
@@ -46,34 +46,34 @@ export default function BadmintonCourtPage() {
                 In Partnership with K9 Badminton World
               </Badge>
 
-              <div className="space-y-4">
-                <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                   Premier Indoor Badminton Courts in
                   <span className="block mt-2 bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                     Pune
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-[#f39318] font-semibold">
+                <p className="text-base sm:text-lg md:text-xl text-[#f39318] font-semibold">
                   Book Online Now • 6 BWF Approved Courts
                 </p>
               </div>
 
-              <div className="space-y-4 max-w-xl">
-                <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 max-w-xl">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
                   Welcome to The Life Sports, the ultimate destination for badminton enthusiasts in Pune. Experience the game at a professional level on our six BWF Approved Badminton Courts.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                   We prioritize your safety and performance with knee-friendly, anti-skid sports flooring, setting us apart from other sports facilities.
                 </p>
-                <div className="flex items-center gap-2 pt-2">
-                  <div className="w-2 h-2 rounded-full bg-[#f39318]"></div>
-                  <p className="text-base md:text-lg text-gray-200 font-medium">
+                <div className="flex items-start gap-2 pt-2">
+                  <div className="w-2 h-2 rounded-full bg-[#f39318] mt-2 flex-shrink-0"></div>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-200 font-medium">
                     Tired of calling? Book your slot instantly with our easy online court booking system.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <a 
                   href="https://booking.thelifesports.in/bookings" 
                   target="_blank" 
@@ -116,9 +116,9 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -207,19 +207,19 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* K9 Badminton World Partnership Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
               Powered by
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> K9 Badminton World</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               "Igniting Passion, Building Champions" - Experience elite badminton training with our trusted partner
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <div className="flex items-center gap-4 mb-6">
@@ -262,17 +262,17 @@ export default function BadmintonCourtPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
                 src="/images/badminton-1.jpg"
                 alt="K9 Badminton World training"
-                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+                className="relative rounded-2xl shadow-2xl w-full h-64 sm:h-80 object-cover"
               />
             </div>
           </div>
 
           {/* Training Programs */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -328,24 +328,24 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* BWF Approved Flooring Section */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
               6 BWF Approved, Soft-on-Knees
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Badminton Courts in Pune
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               At The Life Sports, we believe a great game starts with a great surface.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold">The Flooring: World-Class Safety & Performance</h3>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="space-y-4 sm:space-y-6">
+              <h3 className="text-2xl sm:text-3xl font-bold">The Flooring: World-Class Safety & Performance</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -399,11 +399,11 @@ export default function BadmintonCourtPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
                 src="/images/badminton-2.jpg"
                 alt="BWF approved badminton court flooring"
-                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+                className="relative rounded-2xl shadow-2xl w-full h-64 sm:h-80 object-cover"
               />
             </div>
           </div>
@@ -411,77 +411,77 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
               Badminton Court Booking
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Pricing
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-3 sm:mb-4 px-4">
               BADMINTON COURTS (55 Minutes Session)
             </p>
-            <p className="text-lg text-gray-500">
+            <p className="text-base sm:text-lg text-gray-500 px-4">
               6 Badminton Courts | World Badminton Federation Approved | Anti-skid Flooring, Gentle on Knees
             </p>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-4 sm:mx-0">
             <Card className="border-0 shadow-xl">
               <CardContent className="p-0">
                 <div className="overflow-x-auto">
-                  <table className="w-full">
+                  <table className="w-full min-w-[600px]">
                     <thead>
                       <tr className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
-                        <th className="px-6 py-4 text-left font-semibold">Time</th>
-                        <th className="px-6 py-4 text-left font-semibold">Days</th>
-                        <th className="px-6 py-4 text-center font-semibold">Charges</th>
+                        <th className="px-4 sm:px-6 py-3 sm:py-4 text-left text-sm sm:text-base font-semibold">Time</th>
+                        <th className="px-4 sm:px-6 py-3 sm:py-4 text-left text-sm sm:text-base font-semibold">Days</th>
+                        <th className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-semibold">Charges</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr className="hover:bg-orange-50 transition-colors">
-                        <td className="px-6 py-4 font-medium">06:00 AM – 06:55 AM</td>
-                        <td className="px-6 py-4">
-                          <Badge className="bg-orange-100 text-orange-700">Monday to Sunday (Happy Hour)</Badge>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">06:00 AM – 06:55 AM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4">
+                          <Badge className="bg-orange-100 text-orange-700 text-xs sm:text-sm">Monday to Sunday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
-                        <td className="px-6 py-4 font-medium">07:00 AM – 08:55 AM</td>
-                        <td className="px-6 py-4">Monday to Friday</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">07:00 AM – 08:55 AM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Monday to Friday</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
-                        <td className="px-6 py-4 font-medium">09:00 AM – 04:55 PM</td>
-                        <td className="px-6 py-4">
-                          <Badge className="bg-orange-100 text-orange-700">Monday to Friday (Happy Hour)</Badge>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">09:00 AM – 04:55 PM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4">
+                          <Badge className="bg-orange-100 text-orange-700 text-xs sm:text-sm">Monday to Friday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
-                        <td className="px-6 py-4 font-medium">05:00 PM – 11:55 PM</td>
-                        <td className="px-6 py-4">Monday to Friday</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">05:00 PM – 11:55 PM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Monday to Friday</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
-                        <td className="px-6 py-4 font-medium">07:00 AM – 11:55 AM</td>
-                        <td className="px-6 py-4">Saturday to Sunday</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">07:00 AM – 11:55 AM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Saturday to Sunday</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
-                        <td className="px-6 py-4 font-medium">12:00 PM – 03:55 PM</td>
-                        <td className="px-6 py-4">
-                          <Badge className="bg-orange-100 text-orange-700">Saturday to Sunday (Happy Hour)</Badge>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">12:00 PM – 03:55 PM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4">
+                          <Badge className="bg-orange-100 text-orange-700 text-xs sm:text-sm">Saturday to Sunday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
-                        <td className="px-6 py-4 font-medium">04:00 PM – 11:55 PM</td>
-                        <td className="px-6 py-4">Saturday to Sunday</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium">04:00 PM – 11:55 PM</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Saturday to Sunday</td>
+                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-center text-sm sm:text-base font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                     </tbody>
                   </table>
@@ -512,22 +512,22 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Online Booking Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-orange-50 to-red-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
               Instant Badminton Court Booking
-              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent block sm:inline">
                 {" "}
                 | Check Real-Time Slots & Pay Online
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Don't wait! Secure your slot instantly with our seamless online booking system.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 text-center">
               <CardHeader className="pb-4">
                 <div className="w-20 h-20 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -596,19 +596,19 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
               Why Champions Choose
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> Us</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Experience the difference with our world-class facilities and expert coaching programs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -698,25 +698,25 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Facilities Showcase */}
-      <section id="facilities" className="py-20 px-4 bg-gray-900 text-white">
+      <section id="facilities" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 px-4">
               World-Class
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Facilities
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Experience badminton at its finest with our state-of-the-art courts and premium amenities
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold">BWF Approved Excellence</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
+            <div className="space-y-4 sm:space-y-6">
+              <h3 className="text-2xl sm:text-3xl font-bold">BWF Approved Excellence</h3>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 Our 6 BWF approved courts feature professional-grade wooden flooring, optimal lighting conditions, and
                 precise court dimensions that meet international standards. Every detail is designed to enhance your
                 playing experience.
@@ -754,17 +754,17 @@ export default function BadmintonCourtPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="relative group overflow-hidden rounded-xl">
               <img
                 src="/images/badminton_plyr1.jpg"
                 alt="Professional coaching session"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-4 left-4">
-                <h4 className="text-lg font-bold">Expert Coaching</h4>
-                <p className="text-sm text-gray-300">Professional guidance</p>
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4">
+                <h4 className="text-base sm:text-lg font-bold">Expert Coaching</h4>
+                <p className="text-xs sm:text-sm text-gray-300">Professional guidance</p>
               </div>
             </div>
 
@@ -772,25 +772,25 @@ export default function BadmintonCourtPage() {
               <img
                 src="/images/badminton-2.jpg"
                 alt="Training sessions"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-4 left-4">
-                <h4 className="text-lg font-bold">Training Programs</h4>
-                <p className="text-sm text-gray-300">All skill levels</p>
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4">
+                <h4 className="text-base sm:text-lg font-bold">Training Programs</h4>
+                <p className="text-xs sm:text-sm text-gray-300">All skill levels</p>
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl">
+            <div className="relative group overflow-hidden rounded-xl sm:col-span-2 md:col-span-1">
               <img
                 src="/images/badminton-3.jpg"
                 alt="Tournament preparation"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-4 left-4">
-                <h4 className="text-lg font-bold">Tournaments</h4>
-                <p className="text-sm text-gray-300">Competitive events</p>
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4">
+                <h4 className="text-base sm:text-lg font-bold">Tournaments</h4>
+                <p className="text-xs sm:text-sm text-gray-300">Competitive events</p>
               </div>
             </div>
           </div>
@@ -798,11 +798,11 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Coaching Programs */}
-      <section id="coaching" className="py-20 px-4 bg-white">
+      <section id="coaching" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
                 Transform Your Game with
                 <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Expert Coaching
@@ -892,33 +892,33 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#f39318] to-[#FF5500]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-r from-[#f39318] to-[#FF5500]">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">What Our Champions Say</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12 px-4">What Our Champions Say</h2>
 
           <Card className="bg-white/10 backdrop-blur border-white/20 text-white">
-            <CardContent className="p-12">
-              <div className="flex justify-center mb-6">
+            <CardContent className="p-6 sm:p-8 md:p-12">
+              <div className="flex justify-center mb-4 sm:mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 text-yellow-300 fill-current" />
+                  <Star key={i} className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-300 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-2xl font-light italic mb-6 leading-relaxed">
+              <blockquote className="text-lg sm:text-xl md:text-2xl font-light italic mb-4 sm:mb-6 leading-relaxed px-2">
                 "This place is equivalent to mental peace. After home, I feel this is the place for me to find the peace
                 I want. Love the Badminton Court…!"
               </blockquote>
-              <cite className="text-xl font-semibold">- Arvind Yadav</cite>
-              <p className="text-white/80 mt-2">Regular Player</p>
+              <cite className="text-base sm:text-lg md:text-xl font-semibold">- Arvind Yadav</cite>
+              <p className="text-white/80 mt-2 text-sm sm:text-base">Regular Player</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
               Frequently Asked
               <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 Questions
@@ -972,19 +972,19 @@ export default function BadmintonCourtPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Ready to Become a
             <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
               Champion?
             </span>
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
             Join Pune's premier badminton academy and experience the difference of professional training with
             world-class facilities
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
             <a 
               href="https://booking.thelifesports.in/bookings" 
               target="_blank" 

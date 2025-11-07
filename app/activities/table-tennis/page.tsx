@@ -1,16 +1,65 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBrain, FaWeight, FaUsers, FaArrowRight, FaQuoteRight } from "react-icons/fa"
 import { MdSportsHandball } from "react-icons/md"
 import Link from "next/link"
+import useEmblaCarousel from "embla-carousel-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface GalleryImage {
   src: string
   alt: string
   title: string
+}
+
+// Carousel Component for Cards
+const CardCarousel = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" })
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+
+  const scrollPrev = () => emblaApi?.scrollPrev()
+  const scrollNext = () => emblaApi?.scrollNext()
+
+  const onSelect = () => {
+    if (!emblaApi) return
+    setPrevBtnDisabled(!emblaApi.canScrollPrev())
+    setNextBtnDisabled(!emblaApi.canScrollNext())
+  }
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
+    emblaApi.on("reInit", onSelect)
+  }, [emblaApi])
+
+  return (
+    <div className={`relative ${className}`}>
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex gap-4 sm:gap-6">{children}</div>
+      </div>
+      <button
+        onClick={scrollPrev}
+        disabled={prevBtnDisabled}
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#f39318]" />
+      </button>
+      <button
+        onClick={scrollNext}
+        disabled={nextBtnDisabled}
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#f39318]" />
+      </button>
+    </div>
+  )
 }
 
 const TableTennisPage = () => {
