@@ -90,7 +90,7 @@ export default function GymnasticsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-     
+
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen overflow-hidden">
@@ -152,7 +152,7 @@ export default function GymnasticsPage() {
                   Start Free Trial
                 </button>
               </Link>
-            
+
             </motion.div>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function GymnasticsPage() {
         </motion.div>
       </section>
 
-  
+
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
@@ -270,7 +270,7 @@ export default function GymnasticsPage() {
         </div>
       </section>
 
-     
+
 
       {/* Batch Details Section */}
       <section id="batches" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -479,10 +479,6 @@ export default function GymnasticsPage() {
           </div>
         </div>
       </section>
-
-    
-
-    
     </div>
   )
 }

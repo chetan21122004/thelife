@@ -54,7 +54,7 @@ function AutoplayCarousel() {
   const activities = [
     {
       title: "Badminton Academy",
-      description: "Train with Olympic certified coaches at K9 Badminton World. BWF approved courts with expert coaching by Krantivir - where passion meets precision.",
+      description: "Train with Olympic certified coaches at K9 Badminton World. 6 BWF approved courts with expert coaching by Krantivir. Programs: Beginner, Basic, Higher Basic, Intermediate & Corporate batches available.",
       image: "/images/badminton_plyr1.jpg",
       href: "/activities/badminton",
     },

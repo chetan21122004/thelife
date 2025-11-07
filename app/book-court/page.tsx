@@ -3,153 +3,198 @@ import { Clock, Calendar, IndianRupee, Star, Info } from "lucide-react"
 export default function FeeStructure() {
   const feeData = [
     {
-      category: "Badminton Coaching (Children)",
+      category: "Badminton Coaching - Beginner",
       icon: "🏸",
       packages: [
         {
+          schedule: "Mon to Fri",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "5310",
+          type: "regular",
+          unit: "5 Days/Week (including GST)",
+        },
+        {
           schedule: "Mon, Wed, Fri",
-          timings: ["4 pm to 5 pm", "7 pm to 8 pm"],
-          rate: "2500",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "3540",
           type: "regular",
+          unit: "3 Days/Week (including GST)",
         },
         {
-          schedule: "Tue, Thurs, Sat",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm"],
-          rate: "2500",
-          type: "regular",
-        },
-        {
-          schedule: "Sat, Sun",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm", "10 am to 11 am", "11 am to 12 pm"],
-          rate: "2200",
-          type: "weekend",
-        },
-        {
-          schedule: "Tue, Thurs",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm"],
-          rate: "1700",
+          schedule: "Tue, Thu",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "2360",
           type: "budget",
-        },
-        {
-          schedule: "Mon, Wed, Fri",
-          timings: ["5 pm to 6 pm", "6 pm to 7 pm"],
-          rate: "3000",
-          type: "prime",
-          label: "Prime Batch",
+          unit: "2 Days/Week (including GST)",
         },
       ],
     },
     {
-      category: "Badminton Coaching (Adults)",
+      category: "Badminton Coaching - Basic",
       icon: "🏸",
       packages: [
         {
+          schedule: "Mon to Fri",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "6490",
+          type: "regular",
+          unit: "5 Days/Week (including GST)",
+        },
+        {
           schedule: "Mon, Wed, Fri",
-          timings: ["7 am to 8 am", "8 am to 9 am", "8 pm to 9 pm"],
-          rate: "2800",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "4720",
           type: "regular",
-        },
-        {
-          schedule: "Tue, Thurs, Sat",
-          timings: ["7 pm to 8 pm"],
-          rate: "2800",
-          type: "regular",
-        },
-        {
-          schedule: "Sat, Sun",
-          timings: ["7 pm to 8 pm", "10 am to 11 am", "11 am to 12 pm"],
-          rate: "2500",
-          type: "prime",
-          label: "Prime Batch",
+          unit: "3 Days/Week (including GST)",
         },
       ],
     },
     {
-      category: "Gymnastics Coaching (Kids)",
+      category: "Badminton Coaching - Higher Basic",
+      icon: "🏸",
+      packages: [
+        {
+          schedule: "Mon to Sat",
+          timings: ["4:00 PM – 5:30 PM", "5:00 PM – 6:30 PM"],
+          rate: "7670",
+          type: "prime",
+          unit: "6 Days/Week (including GST)",
+          label: "6 Days a Week",
+        },
+      ],
+    },
+    {
+      category: "Badminton Coaching - Intermediate",
+      icon: "🏸",
+      packages: [
+        {
+          schedule: "6 Days a Week",
+          timings: ["4:00 PM – 5:30 PM", "5:00 PM – 6:30 PM"],
+          rate: "8260",
+          type: "prime",
+          unit: "6 Days/Week (including GST)",
+          label: "Most Popular",
+        },
+        {
+          schedule: "Tue, Thu, Sat",
+          timings: ["4:00 PM – 5:30 PM", "5:00 PM – 6:30 PM"],
+          rate: "5310",
+          type: "regular",
+          unit: "3 Days/Week (including GST)",
+        },
+      ],
+    },
+    {
+      category: "Badminton Coaching - Corporate",
+      icon: "🏸",
+      packages: [
+        {
+          schedule: "Mon to Fri",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "6490",
+          type: "regular",
+          unit: "5 Days/Week (including GST)",
+        },
+        {
+          schedule: "Mon, Wed, Fri",
+          timings: ["5:00 PM – 8:00 PM"],
+          rate: "4130",
+          type: "regular",
+          unit: "3 Days/Week (including GST)",
+        },
+      ],
+    },
+    {
+      category: "Gymnastics Coaching",
       icon: "🤸",
       packages: [
         {
           schedule: "Mon, Wed, Fri",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm"],
-          rate: "2500",
+          timings: ["5:00 PM – 6:00 PM", "6:00 PM – 7:00 PM"],
+          rate: "3186",
           type: "regular",
+          unit: "12 Sessions (including GST)",
+          label: "Batch 1",
         },
         {
-          schedule: "Tue, Thurs, Sat",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm"],
-          rate: "2500",
-          type: "regular",
-        },
-        {
-          schedule: "Tue, Thurs",
-          timings: ["4 pm to 5 pm", "5 pm to 6 pm", "6 pm to 7 pm", "7 pm to 8 pm"],
-          rate: "1700",
+          schedule: "Tue, Thu",
+          timings: ["5:00 PM – 6:00 PM", "6:00 PM – 7:00 PM"],
+          rate: "2124",
           type: "budget",
+          unit: "8 Sessions (including GST)",
+          label: "Batch 2",
+        },
+        {
+          schedule: "Mon to Fri",
+          timings: ["5:00 PM – 6:00 PM", "6:00 PM – 7:00 PM"],
+          rate: "5310",
+          type: "prime",
+          unit: "20 Sessions (including GST)",
+          label: "Batch 3 - Most Popular",
         },
       ],
     },
     {
-      category: "Gymnastics Coaching (Adults)",
-      icon: "🤸",
-      packages: [
-        {
-          schedule: "Mon, Wed, Fri",
-          timings: ["7 am to 8 am", "8 am to 9 am", "7 pm to 8 pm"],
-          rate: "2800",
-          type: "regular",
-        },
-        {
-          schedule: "Tue, Thurs, Sat",
-          timings: ["7 pm to 8 pm"],
-          rate: "2800",
-          type: "regular",
-        },
-        {
-          schedule: "Tue, Thurs",
-          timings: ["7 pm to 8 pm"],
-          rate: "1900",
-          type: "budget",
-        },
-      ],
-    },
-    {
-      category: "Badminton Court Booking",
+      category: "Badminton Court Booking (55 Minutes Session)",
       icon: "🏟️",
       packages: [
         {
-          schedule: "Mon to Fri",
-          timings: ["6 am to 9:55 am"],
-          rate: "400",
-          type: "session",
-          unit: "Per session",
-        },
-        {
-          schedule: "Mon to Fri",
-          timings: ["10 am to 3:55 pm"],
-          rate: "200",
+          schedule: "Monday to Sunday",
+          timings: ["06:00 AM – 06:55 AM"],
+          rate: "354",
           type: "happy-hour",
-          unit: "Per hour",
+          unit: "Happy Hour (including GST)",
           label: "Happy Hour",
         },
         {
-          schedule: "Mon to Fri",
-          timings: ["4 pm to 11:55 pm"],
-          rate: "400",
-          type: "session",
-          unit: "Per hour",
+          schedule: "Monday to Friday",
+          timings: ["07:00 AM – 08:55 AM"],
+          rate: "560",
+          type: "regular",
+          unit: "Per session (including GST)",
         },
         {
-          schedule: "Sat to Sun",
-          timings: ["6 am to 11:55 pm"],
-          rate: "400",
-          type: "session",
-          unit: "Per hour",
+          schedule: "Monday to Friday",
+          timings: ["09:00 AM – 04:55 PM"],
+          rate: "354",
+          type: "happy-hour",
+          unit: "Happy Hour (including GST)",
+          label: "Happy Hour",
+        },
+        {
+          schedule: "Monday to Friday",
+          timings: ["05:00 PM – 11:55 PM"],
+          rate: "560",
+          type: "regular",
+          unit: "Per session (including GST)",
+        },
+        {
+          schedule: "Saturday to Sunday",
+          timings: ["07:00 AM – 11:55 AM"],
+          rate: "560",
+          type: "regular",
+          unit: "Per session (including GST)",
+        },
+        {
+          schedule: "Saturday to Sunday",
+          timings: ["12:00 PM – 03:55 PM"],
+          rate: "354",
+          type: "happy-hour",
+          unit: "Happy Hour (including GST)",
+          label: "Happy Hour",
+        },
+        {
+          schedule: "Saturday to Sunday",
+          timings: ["04:00 PM – 11:55 PM"],
+          rate: "560",
+          type: "regular",
+          unit: "Per session (including GST)",
         },
       ],
     },
   ]
 
-  const getPackageStyle = (type) => {
+  const getPackageStyle = (type: string) => {
     switch (type) {
       case "prime":
         return "border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50"
@@ -164,7 +209,7 @@ export default function FeeStructure() {
     }
   }
 
-  const getTypeLabel = (type) => {
+  const getTypeLabel = (type: string) => {
     switch (type) {
       case "prime":
         return { text: "Prime", color: "text-amber-700 bg-amber-100" }
@@ -233,13 +278,16 @@ export default function FeeStructure() {
                             </div>
                           )}
                         </div>
-                        {getTypeLabel(pkg.type) && (
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeLabel(pkg.type).color}`}
-                          >
-                            {getTypeLabel(pkg.type).text}
-                          </span>
-                        )}
+                        {(() => {
+                          const typeLabel = getTypeLabel(pkg.type)
+                          return typeLabel ? (
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${typeLabel.color}`}
+                            >
+                              {typeLabel.text}
+                            </span>
+                          ) : null
+                        })()}
                       </div>
 
                       {/* Timings */}
