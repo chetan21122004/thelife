@@ -61,7 +61,7 @@ function AutoplayCarousel() {
     {
       title: "Table Tennis Courts",
       description: "Rooted in the core principles of excellence and passion, the Life Sports Academy aspires to offer the best Table Tennis Coaching in Pune.",
-      image: "ttcourt",
+      image: "/images/ttcourt.jpg",
       href: "/activities/table-tennis",
     },
     {

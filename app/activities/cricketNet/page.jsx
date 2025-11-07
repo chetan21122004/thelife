@@ -278,6 +278,65 @@ export default function CricketNetPage() {
           </div>
         </div>
 
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 px-4 max-w-7xl mx-auto mb-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#f39318]/10 text-[#f39318] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <Star className="w-4 h-4" />
+              Flexible Pricing
+            </div>
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">Cricket Net Pricing</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from hourly or half-hourly sessions. All prices include GST.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-xl">
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                      <tr>
+                        <th className="px-6 py-4 text-left font-semibold">Time</th>
+                        <th className="px-6 py-4 text-left font-semibold">Days</th>
+                        <th className="px-6 py-4 text-center font-semibold">Duration</th>
+                        <th className="px-6 py-4 text-center font-semibold">Charges</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">6:00 AM – 6:00 PM</td>
+                        <td className="px-6 py-4">Monday to Sunday</td>
+                        <td className="px-6 py-4 text-center">1 Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹450 (including GST)</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">6:00 AM – 6:00 PM</td>
+                        <td className="px-6 py-4">Monday to Sunday</td>
+                        <td className="px-6 py-4 text-center">Half Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹225 (including GST)</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">6:00 PM – 12:00 AM</td>
+                        <td className="px-6 py-4">Monday to Sunday</td>
+                        <td className="px-6 py-4 text-center">1 Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹600 (including GST)</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">6:00 PM – 12:00 AM</td>
+                        <td className="px-6 py-4">Monday to Sunday</td>
+                        <td className="px-6 py-4 text-center">Half Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹300 (including GST)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <div className="relative overflow-hidden text-center bg-gradient-to-br from-[#f39318] via-[#f39318] to-[#FF5500] rounded-3xl p-16 text-white">
           {/* Background elements */}
