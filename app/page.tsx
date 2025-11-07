@@ -426,7 +426,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] overflow-hidden">
+        <section className="relative min-h-[90vh] overflow-hidden ">
           {/* Background Image and Overlay */}
           <div className="absolute inset-0">
             <div className="relative h-full w-full">
@@ -531,24 +531,7 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          {/* Scroll Indicator */}
-          <motion.div 
-            className="absolute bottom-8 w-full  flex flex-col items-center gap-2 text-white/80"
-            animate={{ 
-              y: [0, 10, 0],
-              opacity: [0.8, 1, 0.8]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <div>
-              <ChevronDown className="h-6 w-6" />
-            </div>
-            <span className="text-sm font-medium">Scroll to explore</span>
-          </motion.div>
+        
         </section>
 
         {/* Activities Section */}
@@ -669,7 +652,7 @@ export default function HomePage() {
                   variants={fadeInUp}
                 >
                   <p className="leading-relaxed">
-                    For over a decade, Life Sports has been at the forefront of sports excellence in Pune, Maharashtra. Our commitment goes beyond training – we're dedicated to making India a sporting nation, one athlete at a time.
+                    Established in 2006, Life Sports has been at the forefront of sports excellence in Pune, Maharashtra for over 20 years. Our commitment goes beyond training – we're dedicated to making India a sporting nation, one athlete at a time.
                   </p>
                   <p className="leading-relaxed">
                     We provide a comprehensive sports environment where both children and adults can enhance their physical abilities and mental fortitude. Our state-of-the-art facilities and expert coaching create the perfect platform for athletic development.
@@ -680,7 +663,7 @@ export default function HomePage() {
                   className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8"
                   variants={fadeInUp}
                 >
-                  <CountUpAnimation end={10} label="Years of Excellence" />
+                  <CountUpAnimation end={20} label="Years of Excellence" />
                   <CountUpAnimation end={5000} duration={3000} label="Happy Athletes" />
                   <CountUpAnimation end={20} label="Expert Coaches" />
                 </motion.div>

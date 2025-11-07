@@ -166,26 +166,7 @@ export default function GymnasticsPage() {
         </motion.div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-[#f39318] to-[#FF5500]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center text-white"
-              >
-                <stat.icon className="text-4xl mb-4 mx-auto" />
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
@@ -289,104 +270,7 @@ export default function GymnasticsPage() {
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section id="programs" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
-              Training Programs
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive programs designed to develop skills, strength, and confidence at every level
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                level: "Beginner",
-                image: "https://www.thelifesports.in/wp-content/uploads/2020/06/img19-.jpg",
-                description: "Perfect foundation for young gymnasts",
-                features: ["Basic movements", "Safety fundamentals", "Flexibility training", "Fun-based learning"],
-                price: "₹3,000/month",
-                popular: false,
-              },
-              {
-                level: "Intermediate",
-                image: "/images/gymnastics2.jpg",
-                description: "Advanced skills and technique development",
-                features: ["Advanced techniques", "Strength building", "Routine development", "Competition prep"],
-                price: "₹4,500/month",
-                popular: true,
-              },
-              {
-                level: "Advanced",
-                image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop",
-                description: "Elite training for competitive gymnasts",
-                features: [
-                  "Professional coaching",
-                  "Competition training",
-                  "Performance optimization",
-                  "Career guidance",
-                ],
-                price: "₹6,000/month",
-                popular: false,
-              },
-            ].map((program, index) => (
-              <motion.div
-                key={program.level}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative bg-white rounded-2xl shadow-xl overflow-hidden border-2 hover:shadow-2xl transition-all duration-300 ${
-                  program.popular ? "border-[#f39318] scale-105" : "border-gray-100"
-                }`}
-              >
-                {program.popular && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                    Most Popular
-                  </div>
-                )}
-
-                <div className="relative h-48">
-                  <Image src={program.image || "/placeholder.svg"} alt={program.level} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold">{program.level}</h3>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <p className="text-gray-600 mb-4">{program.description}</p>
-
-                  <ul className="space-y-2 mb-6">
-                    {program.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <span className="w-2 h-2 bg-[#f39318] rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-[#f39318]">{program.price}</div>
-                    <Link href="/contact">
-                      <button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                        Choose Plan
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Batch Details Section */}
       <section id="batches" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -414,11 +298,13 @@ export default function GymnasticsPage() {
               className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 hover:border-[#f39318] transition-all duration-300 flex flex-col h-full"
             >
               <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold">Batch 1</h3>
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">12 Sessions</span>
+                <div className="mb-2">
+                  <h3 className="text-2xl font-bold mb-2">Batch 1</h3>
+                  <p className="text-sm opacity-90 mb-1">Mon, Wed, Fri</p>
                 </div>
-                <p className="text-lg opacity-90">Mon, Wed, Fri</p>
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <p className="text-sm font-semibold">Total Sessions: 12</p>
+                </div>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="mb-6">
@@ -426,25 +312,18 @@ export default function GymnasticsPage() {
                     <FaClock className="text-[#f39318] mr-2" />
                     <span className="font-semibold">Timings:</span>
                   </div>
-                  <div className="space-y-2 ml-6">
-                    <p className="text-gray-600">5 PM to 6 PM</p>
-                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  <div className="ml-6">
+                    <p className="text-gray-600">5:00 PM – 6:00 PM / 6:00 PM – 7:00 PM</p>
                   </div>
                 </div>
                 <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
                   <div className="mb-4 flex-1">
                     <div className="flex items-center text-gray-700 mb-2">
                       <span className="text-2xl mr-2">💰</span>
-                      <span className="font-semibold">Fees:</span>
+                      <span className="font-semibold">Fees (Including GST):</span>
                     </div>
-                    <div className="ml-8 space-y-2">
-                      <div>
-                        <p className="text-xl font-bold text-[#f39318]">₹3186 (including GST)</p>
-                      </div>
-                      <div className="mt-3 pt-3 border-t border-gray-100">
-                        <p className="text-gray-600 text-sm">8% GST option:</p>
-                        <p className="text-lg font-semibold text-gray-800">₹2124 (including GST)</p>
-                      </div>
+                    <div className="ml-8">
+                      <p className="text-xl font-bold text-[#f39318]">₹3,186/-</p>
                     </div>
                   </div>
                 </div>
@@ -464,11 +343,13 @@ export default function GymnasticsPage() {
               className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 hover:border-[#f39318] transition-all duration-300 flex flex-col h-full"
             >
               <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold">Batch 2</h3>
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">8 Sessions</span>
+                <div className="mb-2">
+                  <h3 className="text-2xl font-bold mb-2">Batch 2</h3>
+                  <p className="text-sm opacity-90 mb-1">Tue, Thu</p>
                 </div>
-                <p className="text-lg opacity-90">Tue, Thu</p>
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <p className="text-sm font-semibold">Total Sessions: 8</p>
+                </div>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="mb-6">
@@ -476,19 +357,18 @@ export default function GymnasticsPage() {
                     <FaClock className="text-[#f39318] mr-2" />
                     <span className="font-semibold">Timings:</span>
                   </div>
-                  <div className="space-y-2 ml-6">
-                    <p className="text-gray-600">5 PM to 6 PM</p>
-                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  <div className="ml-6">
+                    <p className="text-gray-600">5:00 PM – 6:00 PM / 6:00 PM – 7:00 PM</p>
                   </div>
                 </div>
                 <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
                   <div className="mb-4 flex-1">
                     <div className="flex items-center text-gray-700 mb-2">
                       <span className="text-2xl mr-2">💰</span>
-                      <span className="font-semibold">Fees:</span>
+                      <span className="font-semibold">Fees (Including GST):</span>
                     </div>
                     <div className="ml-8">
-                      <p className="text-xl font-bold text-[#f39318]">₹2124 (including GST)</p>
+                      <p className="text-xl font-bold text-[#f39318]">₹2,124/-</p>
                     </div>
                   </div>
                 </div>
@@ -511,11 +391,13 @@ export default function GymnasticsPage() {
                 Most Popular
               </div>
               <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold">Batch 3</h3>
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">20 Sessions</span>
+                <div className="mb-2">
+                  <h3 className="text-2xl font-bold mb-2">Batch 3</h3>
+                  <p className="text-sm opacity-90 mb-1">Mon to Fri</p>
                 </div>
-                <p className="text-lg opacity-90">Mon to Fri</p>
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <p className="text-sm font-semibold">Total Sessions: 20</p>
+                </div>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="mb-6">
@@ -523,19 +405,18 @@ export default function GymnasticsPage() {
                     <FaClock className="text-[#f39318] mr-2" />
                     <span className="font-semibold">Timings:</span>
                   </div>
-                  <div className="space-y-2 ml-6">
-                    <p className="text-gray-600">5 PM to 6 PM</p>
-                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  <div className="ml-6">
+                    <p className="text-gray-600">5:00 PM – 6:00 PM / 6:00 PM – 7:00 PM</p>
                   </div>
                 </div>
                 <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
                   <div className="mb-4 flex-1">
                     <div className="flex items-center text-gray-700 mb-2">
                       <span className="text-2xl mr-2">💰</span>
-                      <span className="font-semibold">Fees:</span>
+                      <span className="font-semibold">Fees (Including GST):</span>
                     </div>
                     <div className="ml-8">
-                      <p className="text-xl font-bold text-[#f39318]">₹5310 (including GST)</p>
+                      <p className="text-xl font-bold text-[#f39318]">₹5,310/-</p>
                     </div>
                   </div>
                 </div>

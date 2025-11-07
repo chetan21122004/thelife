@@ -139,7 +139,7 @@ const TableTennisPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Professional Design */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <div className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -151,14 +151,14 @@ const TableTennisPage = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 p-6 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-6">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               {/* Professional Badge */}
               <motion.div
@@ -167,51 +167,51 @@ const TableTennisPage = () => {
                 transition={{ delay: 0.2 }}
                 className="inline-block"
               >
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white shadow-lg">
+                <span className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white shadow-lg">
                   ⭐ Professional Table Tennis Academy
                 </span>
               </motion.div>
 
               {/* Main Heading */}
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                   <span className="block text-white mb-2">Master Table Tennis</span>
                   <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
                     With Expert Coaching
                   </span>
                 </h1>
-                <div className="w-24 h-1 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full"></div>
+                <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full"></div>
               </div>
 
               {/* Professional Description */}
-              <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
                 Transform your game with professional table tennis coaching in Pune. Our certified coaches provide
                 personalized training programs designed to elevate your skills from beginner to championship level.
               </p>
 
               {/* Key Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 py-4 sm:py-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#f39318]">500+</div>
-                  <div className="text-sm text-gray-400">Students Trained</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">500+</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Students Trained</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#f39318]">15+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">15+</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#f39318]">98%</div>
-                  <div className="text-sm text-gray-400">Success Rate</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">98%</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Success Rate</div>
                 </div>
               </div>
 
               {/* Professional CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-                <Link href="/contact">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <Link href="/contact" className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl min-w-[200px]"
+                    className="group relative w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white text-sm sm:text-base font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Book Free Assessment
@@ -220,11 +220,11 @@ const TableTennisPage = () => {
                   </motion.button>
                 </Link>
 
-                <Link href="#ttprogram">
+                <Link href="#ttprogram" className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2 min-w-[200px]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-white text-sm sm:text-base font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2"
                   >
                     View Programs
                     <FaArrowRight className="text-sm" />
@@ -233,7 +233,7 @@ const TableTennisPage = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-6 pt-6 border-t border-gray-700">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 sm:pt-6 border-t border-gray-700">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
                   <span className="text-sm text-gray-400">Certified Coaches</span>
@@ -254,11 +254,11 @@ const TableTennisPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative hidden lg:block"
             >
               <div className="relative">
                 {/* Main Image */}
-                <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827"
                     alt="Professional Table Tennis Training"
@@ -273,15 +273,15 @@ const TableTennisPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl"
+                  className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-white rounded-xl p-3 sm:p-4 shadow-xl"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
-                      <MdSportsHandball className="w-6 h-6 text-white" />
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
+                      <MdSportsHandball className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Expert Training</div>
-                      <div className="text-sm text-gray-600">Professional Coaches</div>
+                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Expert Training</div>
+                      <div className="text-xs text-gray-600">Professional Coaches</div>
                     </div>
                   </div>
                 </motion.div>
@@ -290,15 +290,15 @@ const TableTennisPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-xl"
+                  className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-white rounded-xl p-3 sm:p-4 shadow-xl"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
-                      <FaUsers className="w-6 h-6 text-white" />
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-lg flex items-center justify-center">
+                      <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Community</div>
-                      <div className="text-sm text-gray-600">Join 500+ Players</div>
+                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Community</div>
+                      <div className="text-xs text-gray-600">Join 500+ Players</div>
                     </div>
                   </div>
                 </motion.div>
@@ -311,17 +311,18 @@ const TableTennisPage = () => {
       </div>
 
       {/* Image Gallery */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+            className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
             Our Facility
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {galleryImages.map((image, index) => (
               <motion.div
                 key={index}
@@ -332,7 +333,7 @@ const TableTennisPage = () => {
                 className="relative group cursor-pointer"
                 onClick={() => setSelectedImage(image)}
               >
-                <div className="relative h-64 overflow-hidden rounded-xl ring-2 ring-transparent ring-[#f39318] transition-all duration-300">
+                <div className="relative h-56 sm:h-64 overflow-hidden rounded-xl ring-2 ring-transparent ring-[#f39318] transition-all duration-300">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
@@ -341,68 +342,55 @@ const TableTennisPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 to-transparent  opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white  duration-300">
-                    <h3 className="text-lg font-semibold">{image.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold">{image.title}</h3>
                   </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+          {/* Mobile Carousel */}
+          <div className="md:hidden px-8">
+            <CardCarousel>
+              {galleryImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative group cursor-pointer flex-[0_0_85%] sm:flex-[0_0_75%]"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <div className="relative h-64 overflow-hidden rounded-xl ring-2 ring-transparent ring-[#f39318] transition-all duration-300">
+                    <Image
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 to-transparent  opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white  duration-300">
+                      <h3 className="text-lg font-semibold">{image.title}</h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </CardCarousel>
           </div>
         </div>
       </section>
 
-      {/* Benefits with Images */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
-          >
-            Benefits of Table Tennis
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                key={index}
-                className="relative group"
-              >
-                <div className="relative h-64 rounded-2xl overflow-hidden mb-6 ring-2 ring-transparent group-hover:ring-[#f39318] transition-all duration-300">
-                  <Image
-                    src={benefit.image || "/placeholder.svg"}
-                    alt={benefit.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/80 via-[#FF5500]/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-orange-200 mb-3">{benefit.icon}</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-200">{benefit.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* Training Levels with Images */}
-      <section id="ttprogram" className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="container mx-auto px-4">
+      <section id="ttprogram" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+            className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
             Training Levels
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {levels.map((level, index) => (
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -412,7 +400,7 @@ const TableTennisPage = () => {
                 key={index}
                 className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 ring-2 ring-transparent hover:ring-[#f39318]"
               >
-                <div className="relative h-48">
+                <div className="relative h-40 sm:h-48">
                   <Image
                     src={level.image || "/placeholder.svg"}
                     alt={level.title}
@@ -420,14 +408,14 @@ const TableTennisPage = () => {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 via-[#FF5500]/30 to-transparent" />
-                  <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">{level.title}</h3>
+                  <h3 className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 text-xl sm:text-2xl font-bold text-white">{level.title}</h3>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-600 mb-6">{level.description}</p>
-                  <ul className="space-y-3">
+                <div className="p-4 sm:p-6">
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">{level.description}</p>
+                  <ul className="space-y-2 sm:space-y-3">
                     {level.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <FaArrowRight className="text-[#f39318] mr-2" />
+                      <li key={idx} className="flex items-center text-sm sm:text-base text-gray-700">
+                        <FaArrowRight className="text-[#f39318] mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -436,19 +424,51 @@ const TableTennisPage = () => {
               </motion.div>
             ))}
           </div>
+          {/* Mobile Carousel */}
+          <div className="md:hidden px-8">
+           
+              {levels.map((level, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 ring-2 ring-transparent hover:ring-[#f39318] flex-[0_0_85%] sm:flex-[0_0_75%]"
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={level.image || "/placeholder.svg"}
+                      alt={level.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 via-[#FF5500]/30 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">{level.title}</h3>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-600 mb-6">{level.description}</p>
+                    <ul className="space-y-3">
+                      {level.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-700">
+                          <FaArrowRight className="text-[#f39318] mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-24 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827')] bg-cover bg-center opacity-20" />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="text-4xl font-bold mb-8"
+              className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8"
             >
               Ready to Start Your Journey?
             </motion.h2>
@@ -457,7 +477,7 @@ const TableTennisPage = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl mb-8 text-orange-100"
+              className="text-lg sm:text-xl mb-6 sm:mb-8 text-orange-100"
             >
               Join hundreds of students who have improved their game with our expert coaching
             </motion.p>
@@ -466,15 +486,15 @@ const TableTennisPage = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
             >
-              <Link href="/contact">
-                <button className="bg-white text-[#f39318] px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-white text-[#f39318] px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
                   Book Free Trial
                 </button>
               </Link>
-              <Link href="/contact">
-                <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
                   Contact Us
                 </button>
               </Link>
@@ -484,13 +504,13 @@ const TableTennisPage = () => {
       </section>
 
       {/* Testimonials with Images */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+            className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
             What Our Students Say
           </motion.h2>
@@ -501,22 +521,22 @@ const TableTennisPage = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="relative">
-              <div className="absolute -top-4 -left-4 text-6xl text-[#f39318] opacity-25">
+              <div className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 text-4xl sm:text-6xl text-[#f39318] opacity-25">
                 <FaQuoteRight />
               </div>
-              <div className="bg-white p-12 rounded-2xl shadow-xl relative z-10 ring-2 ring-[#f39318]/10">
-                <blockquote className="text-xl text-gray-700 italic leading-relaxed mb-8">
+              <div className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-xl relative z-10 ring-2 ring-[#f39318]/10">
+                <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 italic leading-relaxed mb-6 sm:mb-8">
                   The Life Sports is a very vibrant and active place with a friendly atmosphere. And it was great
                   knowing Mr. Ganesh Nimhan –The Founder of The Life Sports. His Dedication towards Sports and Health
                   for the society is a very commendable factor.
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center text-white font-bold text-xl sm:text-2xl">
                     P
                   </div>
-                  <div className="ml-4">
-                    <p className="font-semibold text-lg">Parvez</p>
-                    <p className="text-gray-500">Advanced Level Student</p>
+                  <div className="ml-3 sm:ml-4">
+                    <p className="font-semibold text-base sm:text-lg">Parvez</p>
+                    <p className="text-sm sm:text-base text-gray-500">Advanced Level Student</p>
                   </div>
                 </div>
               </div>
@@ -526,18 +546,18 @@ const TableTennisPage = () => {
       </section>
 
       {/* Booking Information Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-white">
+        <div className="container mx-auto">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
               Table Tennis Booking
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Book your table tennis sessions and enjoy our premium facilities with flexible timing
             </p>
           </motion.div>
@@ -547,31 +567,31 @@ const TableTennisPage = () => {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-xl border border-orange-100"
+              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 sm:p-8 shadow-xl border border-orange-100"
             >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">Operating Hours</h3>
-                      <p className="text-gray-600">Available 7 days a week</p>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Operating Hours</h3>
+                      <p className="text-sm sm:text-base text-gray-600">Available 7 days a week</p>
                     </div>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
-                      <span className="font-semibold text-gray-900">Monday to Sunday</span>
-                      <span className="text-[#f39318] font-bold">6:00 AM - 11:55 PM</span>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-white rounded-lg shadow-sm gap-2">
+                      <span className="text-sm sm:text-base font-semibold text-gray-900">Monday to Sunday</span>
+                      <span className="text-sm sm:text-base text-[#f39318] font-bold">6:00 AM - 11:55 PM</span>
                     </div>
                     
-                    <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <h4 className="font-semibold text-gray-900 mb-2">Booking Features:</h4>
-                      <ul className="space-y-2 text-gray-600">
+                    <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                      <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">Booking Features:</h4>
+                      <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                         <li className="flex items-center gap-2">
                           <svg className="w-4 h-4 text-[#f39318]" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -602,16 +622,16 @@ const TableTennisPage = () => {
                 </div>
 
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+                  <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
                   <img
                     src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&auto=format&fit=crop&q=60"
                     alt="Table Tennis Booking"
-                    className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+                    className="relative rounded-2xl shadow-2xl w-full h-64 sm:h-80 object-cover"
                   />
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <a 
                   href="https://booking.thelifesports.in/bookings" 
                   target="_blank" 
@@ -636,17 +656,17 @@ const TableTennisPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
+            className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
             Frequently Asked Questions
           </motion.h2>
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
             {[
               {
                 question: "How do I Find the Best Table Tennis Coaching in Pune?",
@@ -665,12 +685,12 @@ const TableTennisPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ring-2 ring-transparent hover:ring-[#f39318]/20"
+                className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ring-2 ring-transparent hover:ring-[#f39318]/20"
               >
-                <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}
           </div>

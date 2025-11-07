@@ -25,7 +25,7 @@ export default function BadmintonCourtPage() {
     <div className="min-h-screen bg-background">
   
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden py-5">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/badminton-1.jpg"
@@ -264,65 +264,212 @@ export default function BadmintonCourtPage() {
             <div className="relative">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
-                src="/images/badminton-1.jpg"
+                src="/images/badminton_plyr1.jpg"
                 alt="K9 Badminton World training"
                 className="relative rounded-2xl shadow-2xl w-full h-64 sm:h-80 object-cover"
               />
             </div>
           </div>
 
-          {/* Training Programs */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">Beginner Programs</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">
-                  Regular & Weekend batches for beginners with focus on fundamentals
-                </p>
-                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                  Monday - Sunday Available
-                </Badge>
-              </CardContent>
-            </Card>
+          {/* Coaching Programs Pricing */}
+          <div className="mt-12 sm:mt-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
+              Badminton Coaching Programs
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> & Pricing</span>
+            </h3>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">Advanced Training</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">
-                  Intermediate to Advanced level coaching for competitive players
-                </p>
-                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                  Monday - Saturday
-                </Badge>
-              </CardContent>
-            </Card>
+            <div className="space-y-8 sm:space-y-12">
+              {/* Beginner Program */}
+              <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-[#f39318]/10 to-[#FF5500]/10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900">Beginner</CardTitle>
+                      <p className="text-gray-600 mt-1">Coaching Time: 5:00 PM – 8:00 PM</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-700">Days per Week</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-700">Fees (including GST)</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr className="hover:bg-orange-50">
+                          <td className="py-3 px-4">5 Days a Week (Mon – Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹5,310/-</td>
+                        </tr>
+                        <tr className="hover:bg-orange-50 bg-gray-50">
+                          <td className="py-3 px-4">3 Days a Week (Mon, Wed, Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹3,540/-</td>
+                        </tr>
+                        <tr className="hover:bg-orange-50">
+                          <td className="py-3 px-4">2 Days a Week (Tue, Thu)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹2,360/-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Trophy className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">Corporate Batches</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">
-                  Specialized corporate training programs for working professionals
-                </p>
-                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                  Flexible Timing
-                </Badge>
-              </CardContent>
-            </Card>
+              {/* Basic Program */}
+              <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-[#f39318]/10 to-[#FF5500]/10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <Target className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900">Basic</CardTitle>
+                      <p className="text-gray-600 mt-1">Coaching Time: 5:00 PM – 8:00 PM</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-700">Days per Week</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-700">Fees (including GST)</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr className="hover:bg-orange-50">
+                          <td className="py-3 px-4">5 Days a Week (Mon – Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹6,490/-</td>
+                        </tr>
+                        <tr className="hover:bg-orange-50 bg-gray-50">
+                          <td className="py-3 px-4">3 Days a Week (Mon, Wed, Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹4,720/-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Higher Basic Program */}
+              <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-[#f39318]/10 to-[#FF5500]/10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900">Higher Basic</CardTitle>
+                      <p className="text-gray-600 mt-1">6 Days a Week (Monday to Saturday)</p>
+                      <p className="text-gray-600">Coaching Time: 4:00 PM – 5:30 PM / 5:00 PM – 6:30 PM</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="text-center py-4">
+                    <div className="text-3xl font-bold text-[#f39318] mb-2">₹7,670/-</div>
+                    <p className="text-gray-600">(including GST)</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Intermediate Program */}
+              <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-[#f39318]/10 to-[#FF5500]/10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <Trophy className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900">Intermediate</CardTitle>
+                      <p className="text-gray-600 mt-1">Coaching Time: 4:00 PM – 5:30 PM / 5:00 PM – 6:30 PM</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-700">Days per Week</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-700">Fees (including GST)</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr className="hover:bg-orange-50">
+                          <td className="py-3 px-4">6 Days a Week</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹8,260/-</td>
+                        </tr>
+                        <tr className="hover:bg-orange-50 bg-gray-50">
+                          <td className="py-3 px-4">3 Days a Week (Tue, Thu, Sat)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹5,310/-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Corporate Program */}
+              <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-[#f39318]/10 to-[#FF5500]/10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900">Corporate</CardTitle>
+                      <p className="text-gray-600 mt-1">Coaching Time: 5:00 PM – 8:00 PM</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-700">Days per Week</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-700">Fees (including GST)</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr className="hover:bg-orange-50">
+                          <td className="py-3 px-4">5 Days a Week (Mon – Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹6,490/-</td>
+                        </tr>
+                        <tr className="hover:bg-orange-50 bg-gray-50">
+                          <td className="py-3 px-4">3 Days a Week (Mon, Wed, Fri)</td>
+                          <td className="py-3 px-4 text-right font-bold text-[#f39318]">₹4,130/-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="text-sm text-gray-600">
+                      <strong>Note:</strong> Feather Shuttle: ₹1,000/- extra
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
+                >
+                  <Phone className="w-6 h-6 mr-3" />
+                  Enquire About Coaching
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -746,7 +893,7 @@ export default function BadmintonCourtPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[4/3] w-full">
                 <img
-                  src="/images/badminton_plyr2.jpg"
+                  src="/images/badminton-1.jpg"
                   alt="BWF approved badminton courts"
                   className="w-full h-full object-cover"
                 />
@@ -864,12 +1011,14 @@ export default function BadmintonCourtPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="relative">
-                <img
-                  src="/images/badminton-1.jpg"
-                  alt="Fitness training session"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
+              <div className="relative w-full max-w-[256px] mx-auto lg:mx-0">
+                <div className="relative w-full" style={{ aspectRatio: '2/3' }}>
+                  <img
+                    src="/images/badminton_plyr2.jpg"
+                    alt="Fitness training session"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
               </div>
 
               <div className="grid grid-cols-3 gap-4">
@@ -998,16 +1147,7 @@ export default function BadmintonCourtPage() {
                 Book Your Court Now
               </Button>
             </a>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
-              >
-                <Phone className="w-6 h-6 mr-3" />
-                Call Us Today
-              </Button>
-            </Link>
+                
           </div>
           <p className="mt-6 text-sm text-gray-400">
             Bookings for all sports will be available through our website
