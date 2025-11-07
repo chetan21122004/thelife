@@ -25,10 +25,10 @@ export default function PickleBallPage() {
     <div className="min-h-screen bg-background">
   
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex py-5 items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60"
+            src="https://plus.unsplash.com/premium_photo-1709932754800-051606368c90?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGlja2xlYmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
             alt="Professional pickle ball court"
             className="w-full h-full object-cover"
           />
@@ -40,7 +40,7 @@ export default function PickleBallPage() {
             <div className="text-white space-y-8">
               <Badge
                 variant="secondary"
-                className="bg-gradient-to-r from-emerald-400 to-green-600 text-white border-none"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none"
               >
                 <Award className="w-4 h-4 mr-2" />
                 Professional Pickle Ball Courts - Premium Experience
@@ -48,7 +48,7 @@ export default function PickleBallPage() {
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Master the
-                <span className="block bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Pickle Ball Game
                 </span>
               </h1>
@@ -59,47 +59,57 @@ export default function PickleBallPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-8 py-6"
+                <a 
+                  href="https://booking.thelifesports.in/bookings" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  <Play className="w-5 h-5 mr-2" />
-                  Start Playing Today
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-lg px-8 py-6 border-white hover:bg-white text-gray-900"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Button>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    Start Playing Today
+                  </Button>
+                </a>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-lg px-8 py-6 border-white hover:bg-white text-gray-900"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </Button>
+                </Link>
               </div>
 
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-400">200+</div>
+                  <div className="text-3xl font-bold text-[#f39318]">200+</div>
                   <div className="text-sm text-gray-300">Active Players</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-400">4</div>
+                  <div className="text-3xl font-bold text-[#f39318]">3</div>
                   <div className="text-sm text-gray-300">Premium Courts</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-400">16</div>
+                  <div className="text-3xl font-bold text-[#f39318]">18</div>
                   <div className="text-sm text-gray-300">Hours Open</div>
                 </div>
               </div>
             </div>
 
             <div className="hidden lg:block">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-green-600 rounded-2xl blur opacity-20"></div>
-                <img
-                  src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&auto=format&fit=crop&q=60"
-                  alt="Pickle ball players in action"
-                  className="relative rounded-2xl shadow-2xl"
-                />
+              <div className="relative w-full">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+                <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[4/3] w-full">
+                  <img
+                    src="/images/pickleball1.jpg"
+                    alt="Pickle ball players in action"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +122,7 @@ export default function PickleBallPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our
-              <span className="bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent"> Pickle Ball Courts</span>
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> Pickle Ball Courts</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the perfect blend of fun, fitness, and competition with our premium facilities
@@ -122,21 +132,21 @@ export default function PickleBallPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Professional Courts</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  4 regulation-size pickle ball courts with premium surfaces and professional-grade nets
+                  3 official-size Pickleball courts with international-grade surface, layer system synthetic flooring for perfect bounce and grip
                 </p>
               </CardContent>
             </Card>
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Equipment Provided</CardTitle>
@@ -150,7 +160,7 @@ export default function PickleBallPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Flexible Booking</CardTitle>
@@ -164,7 +174,7 @@ export default function PickleBallPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">All Skill Levels</CardTitle>
@@ -178,7 +188,7 @@ export default function PickleBallPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Community Events</CardTitle>
@@ -192,7 +202,7 @@ export default function PickleBallPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Great Workout</CardTitle>
@@ -213,7 +223,7 @@ export default function PickleBallPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               What is
-              <span className="bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Pickle Ball?
               </span>
@@ -234,32 +244,145 @@ export default function PickleBallPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">20x44</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">20x44</div>
                   <div className="text-sm text-gray-400">Court Size (ft)</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">36"</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">36"</div>
                   <div className="text-sm text-gray-400">Net Height</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">2-4</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">2-4</div>
                   <div className="text-sm text-gray-400">Players</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">11</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">11</div>
                   <div className="text-sm text-gray-400">Points to Win</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-green-600 rounded-2xl blur opacity-20"></div>
-              <img
-                src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60"
-                alt="Pickle ball court layout"
-                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
-              />
+            <div className="relative w-full">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
+              <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[4/3] w-full">
+                <img
+                  src="/images/pickleball1.jpg"
+                  alt="Pickle ball court layout"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              PICKLEBALL COURTS
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                {" "}
+                (55-Minute Session)
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+              3 Courts • Layer system synthetic flooring
+            </p>
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
+              Official-size Pickleball courts with international-grade surface for perfect bounce and grip
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left font-semibold">Time</th>
+                    <th className="px-6 py-4 text-left font-semibold">Days</th>
+                    <th className="px-6 py-4 text-right font-semibold">Charges (Including GST)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-orange-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">06:00 AM – 06:55 AM</td>
+                    <td className="px-6 py-4 text-gray-600">
+                      Monday to Sunday
+                      <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                    <td className="px-6 py-4 font-medium text-gray-900">07:00 AM – 08:55 AM</td>
+                    <td className="px-6 py-4 text-gray-600">Monday to Friday</td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">09:00 AM – 04:55 PM</td>
+                    <td className="px-6 py-4 text-gray-600">
+                      Monday to Friday
+                      <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                    <td className="px-6 py-4 font-medium text-gray-900">05:00 PM – 11:55 PM</td>
+                    <td className="px-6 py-4 text-gray-600">Monday to Friday</td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">07:00 AM – 11:55 AM</td>
+                    <td className="px-6 py-4 text-gray-600">Saturday to Sunday</td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                    <td className="px-6 py-4 font-medium text-gray-900">12:00 PM – 03:55 PM</td>
+                    <td className="px-6 py-4 text-gray-600">
+                      Saturday to Sunday
+                      <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-orange-50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-gray-900">04:00 PM – 11:55 PM</td>
+                    <td className="px-6 py-4 text-gray-600">Saturday to Sunday</td>
+                    <td className="px-6 py-4 text-right">
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <a 
+              href="https://booking.thelifesports.in/bookings" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Your Court Now
+              </Button>
+            </a>
+            <p className="mt-4 text-sm text-gray-600">
+              Bookings for all sports will be available through our website
+            </p>
           </div>
         </div>
       </section>
@@ -271,14 +394,14 @@ export default function PickleBallPage() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Health Benefits of
-                <span className="bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Pickle Ball
                 </span>
               </h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -290,7 +413,7 @@ export default function PickleBallPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -302,7 +425,7 @@ export default function PickleBallPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -314,7 +437,7 @@ export default function PickleBallPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -329,7 +452,7 @@ export default function PickleBallPage() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Button className="mt-8 bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-8 py-6">
+                <Button className="mt-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6">
                   Book Your Court
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -342,71 +465,28 @@ export default function PickleBallPage() {
             <div className="space-y-6">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=60"
+                  src="https://images.unsplash.com/photo-1737476997205-b3336182f215?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                   alt="Pickle ball community"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
               </div>
 
               <div className="grid grid-cols-3 gap-4">
-                <Card className="text-center p-4 border-2 border-emerald-400/20 hover:border-emerald-400 transition-colors">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">Beginner</div>
+                <Card className="text-center p-4 border-2 border-[#f39318]/20 hover:border-[#f39318] transition-colors">
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Beginner</div>
                   <div className="text-sm text-gray-600">Learn the Basics</div>
                 </Card>
-                <Card className="text-center p-4 border-2 border-emerald-400/20 hover:border-emerald-400 transition-colors">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">Inter</div>
+                <Card className="text-center p-4 border-2 border-[#f39318]/20 hover:border-[#f39318] transition-colors">
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Inter</div>
                   <div className="text-sm text-gray-600">Improve Skills</div>
                 </Card>
-                <Card className="text-center p-4 border-2 border-emerald-400/20 hover:border-emerald-400 transition-colors">
-                  <div className="text-2xl font-bold text-emerald-400 mb-1">Advanced</div>
+                <Card className="text-center p-4 border-2 border-[#f39318]/20 hover:border-[#f39318] transition-colors">
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Advanced</div>
                   <div className="text-sm text-gray-600">Competitive Play</div>
                 </Card>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Try
-            <span className="bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">
-              Pickle Ball?
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Join our growing pickle ball community and discover why it's the fastest-growing sport in the world
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="https://booking.thelifesports.in/bookings" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-emerald-400 to-green-600 hover:from-emerald-500 hover:to-green-700 text-lg px-10 py-6"
-              >
-                <Calendar className="w-6 h-6 mr-3" />
-                Book Your Court Now
-              </Button>
-            </a>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
-              >
-                <Phone className="w-6 h-6 mr-3" />
-                Call Us Today
-              </Button>
-            </Link>
-          </div>
-          <p className="mt-6 text-sm text-gray-400">
-            Bookings for all sports will be available through our website
-          </p>
         </div>
       </section>
 

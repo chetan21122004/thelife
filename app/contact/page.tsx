@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { useState } from "react"
+import { sendEmail } from "@/lib/emailService"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,8 @@ export default function ContactPage() {
     couponCode: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -26,10 +29,38 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
+    setIsSubmitting(true)
+    setSubmitMessage("")
+
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        mobile: formData.mobile,
+        message: formData.message,
+        couponCode: formData.couponCode,
+        subject: "New Activity Enrollment Inquiry",
+      })
+
+      setSubmitMessage(result.message)
+      
+      if (result.success) {
+        // Reset form
+        setFormData({
+          name: "",
+          mobile: "",
+          email: "",
+          couponCode: "",
+          message: "",
+        })
+      }
+    } catch (error) {
+      setSubmitMessage("Failed to send email. Please try again or contact us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -147,10 +178,16 @@ export default function ContactPage() {
 
                   <Button
                     type="submit"
-                    className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white border-0 shadow-lg"
+                    disabled={isSubmitting}
+                    className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white border-0 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit
+                    {isSubmitting ? "Sending..." : "Submit"}
                   </Button>
+                  {submitMessage && (
+                    <p className={`text-sm mt-2 ${submitMessage.includes("successfully") || submitMessage.includes("Opening") ? "text-green-600" : "text-red-600"}`}>
+                      {submitMessage}
+                    </p>
+                  )}
                 </form>
               </CardContent>
             </Card>

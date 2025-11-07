@@ -275,7 +275,7 @@ export default function BadmintonCourtPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Beginner Programs</CardTitle>
@@ -284,7 +284,7 @@ export default function BadmintonCourtPage() {
                 <p className="text-gray-600 mb-4">
                   Regular & Weekend batches for beginners with focus on fundamentals
                 </p>
-                <Badge variant="secondary" className="bg-green-100 text-green-700">
+                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                   Monday - Sunday Available
                 </Badge>
               </CardContent>
@@ -292,7 +292,7 @@ export default function BadmintonCourtPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Advanced Training</CardTitle>
@@ -301,7 +301,7 @@ export default function BadmintonCourtPage() {
                 <p className="text-gray-600 mb-4">
                   Intermediate to Advanced level coaching for competitive players
                 </p>
-                <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                   Monday - Saturday
                 </Badge>
               </CardContent>
@@ -309,7 +309,7 @@ export default function BadmintonCourtPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Corporate Batches</CardTitle>
@@ -318,7 +318,7 @@ export default function BadmintonCourtPage() {
                 <p className="text-gray-600 mb-4">
                   Specialized corporate training programs for working professionals
                 </p>
-                <Badge variant="secondary" className="bg-purple-100 text-purple-700">
+                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                   Flexible Timing
                 </Badge>
               </CardContent>
@@ -446,7 +446,7 @@ export default function BadmintonCourtPage() {
                       <tr className="hover:bg-orange-50 transition-colors">
                         <td className="px-6 py-4 font-medium">06:00 AM – 06:55 AM</td>
                         <td className="px-6 py-4">
-                          <Badge className="bg-green-100 text-green-700">Monday to Sunday (Happy Hour)</Badge>
+                          <Badge className="bg-orange-100 text-orange-700">Monday to Sunday (Happy Hour)</Badge>
                         </td>
                         <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
                         <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
@@ -460,7 +460,7 @@ export default function BadmintonCourtPage() {
                       <tr className="hover:bg-orange-50 transition-colors">
                         <td className="px-6 py-4 font-medium">09:00 AM – 04:55 PM</td>
                         <td className="px-6 py-4">
-                          <Badge className="bg-green-100 text-green-700">Monday to Friday (Happy Hour)</Badge>
+                          <Badge className="bg-orange-100 text-orange-700">Monday to Friday (Happy Hour)</Badge>
                         </td>
                         <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
                         <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
@@ -480,7 +480,7 @@ export default function BadmintonCourtPage() {
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                         <td className="px-6 py-4 font-medium">12:00 PM – 03:55 PM</td>
                         <td className="px-6 py-4">
-                          <Badge className="bg-green-100 text-green-700">Saturday to Sunday (Happy Hour)</Badge>
+                          <Badge className="bg-orange-100 text-orange-700">Saturday to Sunday (Happy Hour)</Badge>
                         </td>
                         <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
                         <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
@@ -750,20 +750,22 @@ export default function BadmintonCourtPage() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative w-full">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
-              <img
-                src="/images/badminton-3.jpg"
-                alt="BWF approved badminton courts"
-                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
-              />
+              <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[4/3] w-full">
+                <img
+                  src="/images/badminton_plyr2.jpg"
+                  alt="BWF approved badminton courts"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/badminton-1.jpg"
+                src="/images/badminton_plyr1.jpg"
                 alt="Professional coaching session"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />

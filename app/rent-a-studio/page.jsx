@@ -5,12 +5,64 @@ import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, MailIcon, PhoneIcon, MapPinIcon, ClockIcon } from "lucide-react"
+import { sendEmail } from "@/lib/emailService"
 
 export default function RentAStudio() {
   const [activeAccordion, setActiveAccordion] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    studio: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const toggleAccordion = (index) => {
     setActiveAccordion(activeAccordion === index ? null : index);
+  };
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        studio: formData.studio,
+        subject: "Studio Rental Inquiry",
+      });
+
+      setSubmitMessage(result.message);
+      
+      if (result.success) {
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          studio: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      setSubmitMessage("Failed to send email. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Animation variants
@@ -65,7 +117,7 @@ export default function RentAStudio() {
           }}
         >
           <Image
-            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069"
+            src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGFuY2V8ZW58MHwwfDB8fHwy&auto=format&fit=crop&q=60&w=600"
             alt="Dance Studio"
             fill
             className="object-cover brightness-[0.35]"
@@ -160,7 +212,7 @@ export default function RentAStudio() {
             </motion.p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Rhythm Studio */}
             <motion.div 
               className="group relative bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
@@ -223,36 +275,31 @@ export default function RentAStudio() {
                   </motion.span>
                 </div>
                 
-                <h4 className="font-bold text-gray-900 text-xl mb-6">Price Per Session</h4>
+                <h4 className="font-bold text-gray-900 text-xl mb-6">Price Per Session (Including GST)</h4>
                 <div className="overflow-hidden rounded-2xl mb-8 border border-gray-100">
                   <table className="min-w-full">
                     <thead>
-                      <tr className="bg-gradient-to-r from-[#f39318]/5 to-orange-500/5">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Days</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Time</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Fees</th>
+                      <tr className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                        <th className="px-4 py-3 text-left text-xs font-semibold">Time</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold">Days</th>
+                        <th className="px-4 py-3 text-right text-xs font-semibold">Charges</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
                       <tr className="hover:bg-orange-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekend</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">6am – 12am</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹1,200/session</td>
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 4:00 PM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708/-</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50/50 transition-colors bg-gray-50">
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">4:00 PM – 12:00 AM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,062/-</td>
                       </tr>
                       <tr className="hover:bg-orange-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekdays</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">4pm – 12am</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹900/session</td>
-                      </tr>
-                      <tr className="bg-gradient-to-r from-orange-100/50 to-orange-50/50">
-                        <td className="px-6 py-4 text-sm font-medium text-[#f39318]" colSpan={3}>
-                          Happy Hours!
-                        </td>
-                      </tr>
-                      <tr className="hover:bg-orange-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekdays</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">6am – 4pm</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹600/session</td>
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 12:00 AM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Saturday & Sunday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,416/-</td>
                       </tr>
                     </tbody>
                   </table>
@@ -260,7 +307,7 @@ export default function RentAStudio() {
                 
                 <Link 
                   href="#contact" 
-                  className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-[#f39318] to-orange-500 hover:from-orange-500 hover:to-[#f39318] text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
+                  className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
                 >
                   <motion.span 
                     className="relative z-10 inline-flex items-center gap-2"
@@ -268,6 +315,114 @@ export default function RentAStudio() {
                     transition={{ duration: 0.3 }}
                   >
                     Book Rhythm Studio
+                    <span>→</span>
+                  </motion.span>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Vibe Studio */}
+            <motion.div 
+              className="group relative bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            >
+              <div className="h-80 relative overflow-hidden">
+                <Image
+                  src="/images/vibe-studio.jpg"
+                  alt="Vibe Studio"
+                  fill
+                  className="object-cover transition-transform duration-[2s] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                <motion.div 
+                  className="absolute top-6 left-6"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <span className="bg-[#f39318]/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    Standard
+                  </span>
+                </motion.div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-[#f39318] transition-colors">
+                    Vibe Studio
+                  </h3>
+                  <p className="text-white/90 text-lg">800 SQ FT (Non AC) - Available for hourly/monthly bookings</p>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex flex-wrap gap-3 mb-8">
+                  <motion.span 
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Mirrored Walls
+                  </motion.span>
+                  <motion.span 
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Sound System
+                  </motion.span>
+                  <motion.span 
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Cushioned Floor
+                  </motion.span>
+                  <motion.span 
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Ventilated
+                  </motion.span>
+                </div>
+                
+                <h4 className="font-bold text-gray-900 text-xl mb-6">Price Per Session (Including GST)</h4>
+                <div className="overflow-hidden rounded-2xl mb-8 border border-gray-100">
+                  <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                        <th className="px-4 py-3 text-left text-xs font-semibold">Time</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold">Days</th>
+                        <th className="px-4 py-3 text-right text-xs font-semibold">Charges</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      <tr className="hover:bg-orange-50/50 transition-colors">
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 4:00 PM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354/-</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50/50 transition-colors bg-gray-50">
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">4:00 PM – 12:00 AM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708/-</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50/50 transition-colors">
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 12:00 AM</td>
+                        <td className="px-4 py-3 text-xs text-gray-700">Saturday & Sunday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹944/-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <Link 
+                  href="#contact" 
+                  className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
+                >
+                  <motion.span 
+                    className="relative z-10 inline-flex items-center gap-2"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    Book Vibe Studio
                     <span>→</span>
                   </motion.span>
                 </Link>
@@ -296,12 +451,12 @@ export default function RentAStudio() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <span className="bg-indigo-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                  <span className="bg-[#f39318]/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                     Standard
                   </span>
                 </motion.div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-[#f39318] transition-colors">
                     Beats Studio
                   </h3>
                   <p className="text-white/90 text-lg">800 SQ FT (Non AC) - Available for hourly/monthly bookings</p>
@@ -310,61 +465,44 @@ export default function RentAStudio() {
               <div className="p-8">
                 <div className="flex flex-wrap gap-3 mb-8">
                   <motion.span 
-                    className="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full"
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
                     whileHover={{ scale: 1.05 }}
                   >
                     Mirrored Walls
                   </motion.span>
                   <motion.span 
-                    className="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full"
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
                     whileHover={{ scale: 1.05 }}
                   >
                     Sound System
                   </motion.span>
                   <motion.span 
-                    className="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full"
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
                     whileHover={{ scale: 1.05 }}
                   >
                     Cushioned Floor
                   </motion.span>
                   <motion.span 
-                    className="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full"
+                    className="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full"
                     whileHover={{ scale: 1.05 }}
                   >
                     Ventilated
                   </motion.span>
                 </div>
                 
-                <h4 className="font-bold text-gray-900 text-xl mb-6">Price Per Session</h4>
+                <h4 className="font-bold text-gray-900 text-xl mb-6">Price Per Session (Including GST)</h4>
                 <div className="overflow-hidden rounded-2xl mb-8 border border-gray-100">
                   <table className="min-w-full">
                     <thead>
-                      <tr className="bg-gradient-to-r from-indigo-500/5 to-indigo-300/5">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Days</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Time</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Fees</th>
+                      <tr className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+                        <th className="px-4 py-3 text-left text-xs font-semibold">Days</th>
+                        <th className="px-4 py-3 text-right text-xs font-semibold">Charges</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
-                      <tr className="hover:bg-indigo-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekend</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">6am – 12am</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹800/session</td>
-                      </tr>
-                      <tr className="hover:bg-indigo-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekdays</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">4pm – 12am</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹600/session</td>
-                      </tr>
-                      <tr className="bg-gradient-to-r from-indigo-100/50 to-indigo-50/50">
-                        <td className="px-6 py-4 text-sm font-medium text-indigo-600" colSpan={3}>
-                          Happy Hours!
-                        </td>
-                      </tr>
-                      <tr className="hover:bg-indigo-50/50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Weekdays</td>
-                        <td className="px-6 py-4 text-sm text-gray-700">6am – 4pm</td>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">₹300/session</td>
+                      <tr className="hover:bg-orange-50/50 transition-colors">
+                        <td className="px-4 py-3 text-xs font-medium text-gray-900">Monday to Sunday</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354/-</td>
                       </tr>
                     </tbody>
                   </table>
@@ -372,7 +510,7 @@ export default function RentAStudio() {
                 
                 <Link 
                   href="#contact" 
-                  className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-500 text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
+                  className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
                 >
                   <motion.span 
                     className="relative z-10  inline-flex items-center gap-2"
@@ -515,7 +653,7 @@ export default function RentAStudio() {
                 transition={{ duration: 0.3 }}
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&q=80" 
+                  src="/images/dance-1.jpg" 
                   alt="Yoga Class"
                   fill
                   className="object-cover"
@@ -644,14 +782,17 @@ export default function RentAStudio() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Send Your Inquiry</h3>
-                <form className="space-y-6">
+                <form onSubmit={handleFormSubmit} className="space-y-6">
                   <motion.div variants={fadeInUp}>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                     <input
                       type="text"
                       id="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f39318] focus:border-transparent transition-all duration-300"
                       placeholder="Your name"
+                      required
                     />
                   </motion.div>
                   
@@ -661,8 +802,11 @@ export default function RentAStudio() {
                       <input
                         type="email"
                         id="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f39318] focus:border-transparent transition-all duration-300"
                         placeholder="Your email"
+                        required
                       />
                     </div>
                     <div>
@@ -670,8 +814,11 @@ export default function RentAStudio() {
                       <input
                         type="tel"
                         id="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f39318] focus:border-transparent transition-all duration-300"
                         placeholder="Your phone number"
+                        required
                       />
                     </div>
                   </motion.div>
@@ -680,11 +827,15 @@ export default function RentAStudio() {
                     <label htmlFor="studio" className="block text-sm font-medium text-gray-700 mb-2">Preferred Studio</label>
                     <select
                       id="studio"
+                      value={formData.studio}
+                      onChange={handleInputChange}
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f39318] focus:border-transparent transition-all duration-300"
+                      required
                     >
                       <option value="">Select a studio</option>
-                      <option value="rhythm">Rhythm Studio (AC)</option>
-                      <option value="beats">Beats Studio (Non-AC)</option>
+                      <option value="Rhythm Studio (AC)">Rhythm Studio (AC)</option>
+                      <option value="Vibe Studio (Non-AC)">Vibe Studio (Non-AC)</option>
+                      <option value="Beats Studio (Non-AC)">Beats Studio (Non-AC)</option>
                     </select>
                   </motion.div>
                   
@@ -693,25 +844,34 @@ export default function RentAStudio() {
                     <textarea
                       id="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f39318] focus:border-transparent transition-all duration-300"
                       placeholder="Tell us about your requirements..."
+                      required
                     ></textarea>
                   </motion.div>
                   
                   <motion.div variants={fadeInUp}>
                     <button
                       type="submit"
-                      className="group relative w-full bg-gradient-to-r from-[#f39318] to-orange-500 hover:from-orange-500 hover:to-[#f39318] text-white font-medium px-8 py-5 rounded-xl transition-all duration-300 shadow-lg overflow-hidden"
+                      disabled={isSubmitting}
+                      className="group relative w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-white font-medium px-8 py-5 rounded-xl transition-all duration-300 shadow-lg overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <motion.span 
                         className="relative z-10 inline-flex items-center gap-2"
                         whileHover={{ x: 5 }}
                         transition={{ duration: 0.3 }}
                       >
-                        Submit Inquiry
-                        <span>→</span>
+                        {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                        {!isSubmitting && <span>→</span>}
                       </motion.span>
                     </button>
+                    {submitMessage && (
+                      <p className={`text-sm mt-2 ${submitMessage.includes("successfully") || submitMessage.includes("Opening") ? "text-green-600" : "text-red-600"}`}>
+                        {submitMessage}
+                      </p>
+                    )}
                   </motion.div>
                 </form>
               </motion.div>
@@ -788,7 +948,7 @@ export default function RentAStudio() {
                 },
                 {
                   question: "What is the average size of a dance studio?",
-                  answer: "The average size to rent a dance studio in Pune is 800 square feet to 1000 square feet. Life Sports offers the Rhythm dance studio, it is air-conditioned and 1000 square feet in size. We offer the Vibe dance studio, it is well ventilated and 800 square feet in size."
+                  answer: "The average size to rent a dance studio in Pune is 800 square feet to 1000 square feet. Life Sports offers the Rhythm dance studio, it is air-conditioned and 1000 square feet in size. We offer the Vibe and Beats dance studios, both are well ventilated and 800 square feet in size."
                 },
                 {
                   question: "Can I book the studio for a one-time event?",

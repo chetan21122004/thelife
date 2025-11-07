@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation"
 const activities = [
   {
     name: "Badminton",
-    image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/badminton_plyr2.jpg",
     description: "Professional coaching with K9 Badminton World",
     features: ["BWF approved courts", "K9 expert coaches", "Olympic certified training"],
     color: "from-orange-400 to-pink-600",
@@ -19,7 +19,7 @@ const activities = [
   },
   {
     name: "Table Tennis",
-    image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/ttcourt.jpg",
     description: "Expert training",
     features: ["Professional tables", "Tournament training", "Beginners welcome"],
     color: "from-blue-400 to-indigo-600",
@@ -27,7 +27,7 @@ const activities = [
   },
   {
     name: "Gymnastics",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/gymnastics1.jpg",
     description: "All levels welcome",
     features: ["Safe environment", "Certified trainers", "Modern equipment"],
     color: "from-green-400 to-teal-600",
@@ -42,16 +42,8 @@ const activities = [
     href: "/activities/dance"
   },
   {
-    name: "Yoga",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    description: "Mind and body wellness",
-    features: ["Experienced instructors", "All levels welcome", "Peaceful environment"],
-    color: "from-cyan-400 to-blue-600",
-    href: "/activities/yoga"
-  },
-  {
     name: "Cricket Net",
-    image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/cricket-net.jpg",
     description: "Professional practice nets with auto machine",
     features: ["Professional nets", "Auto bowling machines", "Expert coaching"],
     color: "from-red-400 to-rose-600",
@@ -59,7 +51,7 @@ const activities = [
   },
   {
     name: "Pickle Ball",
-    image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "https://plus.unsplash.com/premium_photo-1709048991125-7d01a4666f79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBpY2tsZWJhbGx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     description: "Fast-paced paddle sport",
     features: ["Professional courts", "Equipment provided", "All skill levels"],
     color: "from-emerald-400 to-green-600",

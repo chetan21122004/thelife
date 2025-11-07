@@ -19,7 +19,6 @@ const activities = [
   { name: "Gymnastics Coaching", href: "/activities/gymnastics", popular: true },
   { name: "Table Tennis", href: "/activities/table-tennis", popular: false },
   { name: "Dance Classes", href: "/activities/dance", popular: false },
-  { name: "Yoga Classes", href: "/activities/yoga", popular: false },
   { name: "Net Cricket with Bowling Machine", href: "/activities/cricketNet", popular: true },
   { name: "Pickle Ball Courts", href: "/activities/pickle-ball", popular: true },
   { name: "Mini Pro Turf", href: "/activities/mini-pro-turf", popular: false },

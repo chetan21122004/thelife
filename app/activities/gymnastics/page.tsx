@@ -250,20 +250,20 @@ export default function GymnasticsPage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative w-full max-w-lg mx-auto lg:max-w-none"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop"
+                  src="/images/gymnastics1.jpg"
                   alt="Gymnastics Facility"
-                  width={600}
-                  height={400}
+                  fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">State-of-the-Art Facility</h3>
-                  <p className="text-lg opacity-90">Professional training environment</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">State-of-the-Art Facility</h3>
+                  <p className="text-base md:text-lg opacity-90">Professional training environment</p>
                 </div>
               </div>
 
@@ -272,15 +272,15 @@ export default function GymnasticsPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100"
+                className="absolute -bottom-6 -left-6 bg-white p-4 md:p-6 rounded-2xl shadow-xl border border-gray-100 z-10"
               >
-                <div className="flex items-center space-x-4">
-                  <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] w-16 h-16 rounded-full flex items-center justify-center">
-                    <FaAward className="text-white text-2xl" />
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                    <FaAward className="text-white text-xl md:text-2xl" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-gray-800">50+</div>
-                    <div className="text-gray-600">Awards Won</div>
+                    <div className="text-xl md:text-2xl font-bold text-gray-800">50+</div>
+                    <div className="text-sm md:text-base text-gray-600">Awards Won</div>
                   </div>
                 </div>
               </motion.div>
@@ -318,7 +318,7 @@ export default function GymnasticsPage() {
               },
               {
                 level: "Intermediate",
-                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                image: "/images/gymnastics2.jpg",
                 description: "Advanced skills and technique development",
                 features: ["Advanced techniques", "Strength building", "Routine development", "Competition prep"],
                 price: "₹4,500/month",
@@ -388,9 +388,170 @@ export default function GymnasticsPage() {
         </div>
       </section>
 
- 
+      {/* Batch Details Section */}
+      <section id="batches" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+              Gymnastics Coaching – Batch Details
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Choose the batch that fits your schedule and training goals
+            </p>
+          </motion.div>
 
-     
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Batch 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 hover:border-[#f39318] transition-all duration-300 flex flex-col h-full"
+            >
+              <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-bold">Batch 1</h3>
+                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">12 Sessions</span>
+                </div>
+                <p className="text-lg opacity-90">Mon, Wed, Fri</p>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <div className="mb-6">
+                  <div className="flex items-center text-gray-700 mb-3">
+                    <FaClock className="text-[#f39318] mr-2" />
+                    <span className="font-semibold">Timings:</span>
+                  </div>
+                  <div className="space-y-2 ml-6">
+                    <p className="text-gray-600">5 PM to 6 PM</p>
+                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  </div>
+                </div>
+                <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
+                  <div className="mb-4 flex-1">
+                    <div className="flex items-center text-gray-700 mb-2">
+                      <span className="text-2xl mr-2">💰</span>
+                      <span className="font-semibold">Fees:</span>
+                    </div>
+                    <div className="ml-8 space-y-2">
+                      <div>
+                        <p className="text-gray-600">₹2700 + 18% GST</p>
+                        <p className="text-xl font-bold text-[#f39318]">= ₹3186</p>
+                      </div>
+                      <div className="mt-3 pt-3 border-t border-gray-100">
+                        <p className="text-gray-600 text-sm">8% GST option:</p>
+                        <p className="text-lg font-semibold text-gray-800">₹2124</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Link href="/contact" className="mt-auto">
+                  <button className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-4">
+                    Enroll Now
+                  </button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Batch 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 hover:border-[#f39318] transition-all duration-300 flex flex-col h-full"
+            >
+              <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-bold">Batch 2</h3>
+                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">8 Sessions</span>
+                </div>
+                <p className="text-lg opacity-90">Tue, Thu</p>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <div className="mb-6">
+                  <div className="flex items-center text-gray-700 mb-3">
+                    <FaClock className="text-[#f39318] mr-2" />
+                    <span className="font-semibold">Timings:</span>
+                  </div>
+                  <div className="space-y-2 ml-6">
+                    <p className="text-gray-600">5 PM to 6 PM</p>
+                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  </div>
+                </div>
+                <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
+                  <div className="mb-4 flex-1">
+                    <div className="flex items-center text-gray-700 mb-2">
+                      <span className="text-2xl mr-2">💰</span>
+                      <span className="font-semibold">Fees:</span>
+                    </div>
+                    <div className="ml-8">
+                      <p className="text-gray-600">₹1800 + 18% GST</p>
+                      <p className="text-xl font-bold text-[#f39318]">= ₹2124</p>
+                    </div>
+                  </div>
+                </div>
+                <Link href="/contact" className="mt-auto">
+                  <button className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-4">
+                    Enroll Now
+                  </button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Batch 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-[#f39318] relative flex flex-col h-full"
+            >
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                Most Popular
+              </div>
+              <div className="bg-gradient-to-r from-[#f39318] to-[#FF5500] p-6 text-white">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-bold">Batch 3</h3>
+                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">20 Sessions</span>
+                </div>
+                <p className="text-lg opacity-90">Mon to Fri</p>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <div className="mb-6">
+                  <div className="flex items-center text-gray-700 mb-3">
+                    <FaClock className="text-[#f39318] mr-2" />
+                    <span className="font-semibold">Timings:</span>
+                  </div>
+                  <div className="space-y-2 ml-6">
+                    <p className="text-gray-600">5 PM to 6 PM</p>
+                    <p className="text-gray-600">6 PM to 7 PM</p>
+                  </div>
+                </div>
+                <div className="border-t border-gray-200 pt-6 flex-1 flex flex-col">
+                  <div className="mb-4 flex-1">
+                    <div className="flex items-center text-gray-700 mb-2">
+                      <span className="text-2xl mr-2">💰</span>
+                      <span className="font-semibold">Fees:</span>
+                    </div>
+                    <div className="ml-8">
+                      <p className="text-gray-600">₹4500 + 18% GST</p>
+                      <p className="text-xl font-bold text-[#f39318]">= ₹5310</p>
+                    </div>
+                  </div>
+                </div>
+                <Link href="/contact" className="mt-auto">
+                  <button className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-4">
+                    Enroll Now
+                  </button>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">

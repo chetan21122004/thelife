@@ -141,26 +141,7 @@ export default function DancePage() {
 							you can dance."
 						</p>
 					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.4 }}
-						className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-					>
-						<Link
-							href="#enroll"
-							className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e08616] hover:to-[#e04d00] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-lg"
-						>
-							Enroll for Trial Session
-							<ChevronRight className="h-5 w-5" />
-						</Link>
-						<Link
-							href="#styles"
-							className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:bg-white/20 inline-flex items-center gap-2 border border-[#f39318]/30"
-						>
-							Explore Dance Styles
-						</Link>
-					</motion.div>
+				
 				</div>
 
 				{/* Floating Stats */}
@@ -352,13 +333,7 @@ export default function DancePage() {
 								Book Your Trial Session
 								<ChevronRight className="h-5 w-5" />
 							</Link>
-							<Link
-								href="/contact"
-								className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all inline-flex items-center gap-2"
-							>
-								Contact Us
-								<ChevronRight className="h-5 w-5" />
-							</Link>
+							
 						</div>
 					</motion.div>
 				</div>

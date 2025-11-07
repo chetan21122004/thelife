@@ -43,7 +43,7 @@ export default function MiniProTurfPage() {
             <div className="text-white space-y-8">
               <Badge
                 variant="secondary"
-                className="bg-gradient-to-r from-lime-400 to-emerald-600 text-white border-none"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none"
               >
                 <Award className="w-4 h-4 mr-2" />
                 Premium Synthetic Turf - Multi-Sport Facility
@@ -51,7 +51,7 @@ export default function MiniProTurfPage() {
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Experience
-                <span className="block bg-gradient-to-r from-lime-400 to-emerald-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Mini Pro Turf
                 </span>
               </h1>
@@ -64,7 +64,7 @@ export default function MiniProTurfPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-lime-400 to-emerald-600 hover:from-lime-500 hover:to-emerald-700 text-lg px-8 py-6"
+                  className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Your Session
@@ -81,15 +81,15 @@ export default function MiniProTurfPage() {
 
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-lime-400">500+</div>
+                  <div className="text-3xl font-bold text-[#f39318]">500+</div>
                   <div className="text-sm text-gray-300">Monthly Users</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-lime-400">2</div>
+                  <div className="text-3xl font-bold text-[#f39318]">2</div>
                   <div className="text-sm text-gray-300">Premium Turfs</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-lime-400">24/7</div>
+                  <div className="text-3xl font-bold text-[#f39318]">24/7</div>
                   <div className="text-sm text-gray-300">Available</div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function MiniProTurfPage() {
 
             <div className="hidden lg:block">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-2xl blur opacity-20"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
                 <img
                   src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&auto=format&fit=crop&q=60"
                   alt="Players on synthetic turf"
@@ -115,7 +115,7 @@ export default function MiniProTurfPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Premium Turf
-              <span className="bg-gradient-to-r from-lime-400 to-emerald-600 bg-clip-text text-transparent"> Features</span>
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> Features</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the perfect playing surface with our state-of-the-art synthetic turf technology
@@ -125,7 +125,7 @@ export default function MiniProTurfPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Premium Surface</CardTitle>
@@ -139,7 +139,7 @@ export default function MiniProTurfPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Droplets className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Weather Resistant</CardTitle>
@@ -153,7 +153,7 @@ export default function MiniProTurfPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Multi-Sport</CardTitle>
@@ -167,7 +167,7 @@ export default function MiniProTurfPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Safe Playing</CardTitle>
@@ -181,7 +181,7 @@ export default function MiniProTurfPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Sun className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">LED Lighting</CardTitle>
@@ -195,7 +195,7 @@ export default function MiniProTurfPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Flexible Booking</CardTitle>
@@ -216,7 +216,7 @@ export default function MiniProTurfPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Sports We
-              <span className="bg-gradient-to-r from-lime-400 to-emerald-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Support
               </span>
@@ -237,26 +237,26 @@ export default function MiniProTurfPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">Football</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Football</div>
                   <div className="text-sm text-gray-400">5v5 & 7v7</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">Cricket</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Cricket</div>
                   <div className="text-sm text-gray-400">Practice & Matches</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">Hockey</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Hockey</div>
                   <div className="text-sm text-gray-400">Field Hockey</div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">Training</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Training</div>
                   <div className="text-sm text-gray-400">Fitness & Drills</div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-2xl blur opacity-20"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
                 src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=500&auto=format&fit=crop&q=60"
                 alt="Multi-sport turf facility"
@@ -328,14 +328,14 @@ export default function MiniProTurfPage() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Why Choose Our
-                <span className="bg-gradient-to-r from-lime-400 to-emerald-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Mini Pro Turf
                 </span>
               </h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -347,7 +347,7 @@ export default function MiniProTurfPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -359,7 +359,7 @@ export default function MiniProTurfPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -371,7 +371,7 @@ export default function MiniProTurfPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -381,7 +381,7 @@ export default function MiniProTurfPage() {
                 </div>
               </div>
 
-              <Button className="mt-8 bg-gradient-to-r from-lime-400 to-emerald-600 hover:from-lime-500 hover:to-emerald-700 text-lg px-8 py-6">
+              <Button className="mt-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6">
                 Reserve Your Slot
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -398,19 +398,19 @@ export default function MiniProTurfPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 <Card className="text-center p-4 border-2 border-lime-400/20 hover:border-lime-400 transition-colors">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">FIFA</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">FIFA</div>
                   <div className="text-sm text-gray-600">Quality Standard</div>
                 </Card>
                 <Card className="text-center p-4 border-2 border-lime-400/20 hover:border-lime-400 transition-colors">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">24/7</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">24/7</div>
                   <div className="text-sm text-gray-600">Available</div>
                 </Card>
                 <Card className="text-center p-4 border-2 border-lime-400/20 hover:border-lime-400 transition-colors">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">LED</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">LED</div>
                   <div className="text-sm text-gray-600">Floodlights</div>
                 </Card>
                 <Card className="text-center p-4 border-2 border-lime-400/20 hover:border-lime-400 transition-colors">
-                  <div className="text-2xl font-bold text-lime-400 mb-1">Multi</div>
+                  <div className="text-2xl font-bold text-[#f39318] mb-1">Multi</div>
                   <div className="text-sm text-gray-600">Sports</div>
                 </Card>
               </div>
@@ -424,7 +424,7 @@ export default function MiniProTurfPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Play on
-            <span className="bg-gradient-to-r from-lime-400 to-emerald-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
               Premium Turf?
             </span>
           </h2>
@@ -439,7 +439,7 @@ export default function MiniProTurfPage() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-lime-400 to-emerald-600 hover:from-lime-500 hover:to-emerald-700 text-lg px-10 py-6"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book Your Turf Now

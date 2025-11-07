@@ -26,12 +26,13 @@ import Link from "next/link"
 export default function BoxingPage() {
   return (
     <div className="min-h-screen bg-background">
-  
+
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=500&auto=format&fit=crop&q=60"
+            src="https://images.unsplash.com/photo-1620123449946-30d6efd4b8ba?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJveGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+
             alt="Professional boxing training"
             className="w-full h-full object-cover"
           />
@@ -43,7 +44,7 @@ export default function BoxingPage() {
             <div className="text-white space-y-8">
               <Badge
                 variant="secondary"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white border-none"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white border-none"
               >
                 <Award className="w-4 h-4 mr-2" />
                 In Collaboration with Fittera The Boxing Gym
@@ -51,20 +52,20 @@ export default function BoxingPage() {
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Master the
-                <span className="block bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Art of Boxing
                 </span>
               </h1>
 
               <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                Experience the best 1-hour boxing fitness in town. Train with National and International 
+                Experience the best 1-hour boxing fitness in town. Train with National and International
                 level players under expert guidance at our premium facility.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-lg px-8 py-6"
+                  className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Start Training Today
@@ -95,13 +96,13 @@ export default function BoxingPage() {
               </div>
             </div>
 
-            <div className="hidden lg:block">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl blur opacity-20"></div>
+            <div className="hidden lg:flex items-center justify-center">
+              <div className="relative max-w-md w-full">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60"
+                  src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=500&auto=format&fit=crop&q=60"
                   alt="Boxing training session"
-                  className="relative rounded-2xl shadow-2xl"
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover max-h-[450px]"
                 />
               </div>
             </div>
@@ -115,7 +116,7 @@ export default function BoxingPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Powered by
-              <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent"> Fittera Boxing Gym</span>
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"> Fittera Boxing Gym</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience world-class boxing training in partnership with Pune's premier boxing fitness destination
@@ -126,7 +127,7 @@ export default function BoxingPage() {
             <div className="space-y-6">
               <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center">
                     <Trophy className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -134,7 +135,7 @@ export default function BoxingPage() {
                     <p className="text-gray-600">Boxing Fitness Excellence</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Instagram className="w-5 h-5 text-pink-500" />
@@ -143,12 +144,12 @@ export default function BoxingPage() {
                       <p className="text-sm text-gray-600">251 posts • 563 followers • 185 following</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-red-500" />
                     <p className="text-gray-700">Founder: <span className="font-medium">@ameykalambe</span></p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-red-500 mt-1" />
                     <div>
@@ -161,9 +162,9 @@ export default function BoxingPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl blur opacity-20"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
               <img
-                src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=500&auto=format&fit=crop&q=60"
+                src="https://images.unsplash.com/photo-1561532325-7d5231a2dede?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJveGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
                 alt="Fittera boxing gym"
                 className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
               />
@@ -178,7 +179,7 @@ export default function BoxingPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Choose Our
-              <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                 {" "}
                 Boxing Program
               </span>
@@ -191,7 +192,7 @@ export default function BoxingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">National Level Trainers</CardTitle>
@@ -205,7 +206,7 @@ export default function BoxingPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">1-Hour Sessions</CardTitle>
@@ -219,7 +220,7 @@ export default function BoxingPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Professional Equipment</CardTitle>
@@ -233,7 +234,7 @@ export default function BoxingPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Fitness Focused</CardTitle>
@@ -247,7 +248,7 @@ export default function BoxingPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">All Levels Welcome</CardTitle>
@@ -261,7 +262,7 @@ export default function BoxingPage() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-gray-800 text-white">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Multiple Locations</CardTitle>
@@ -283,14 +284,14 @@ export default function BoxingPage() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Transform Your Fitness with
-                <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
                   Boxing Training
                 </span>
               </h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -302,7 +303,7 @@ export default function BoxingPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -314,7 +315,7 @@ export default function BoxingPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -326,7 +327,7 @@ export default function BoxingPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -336,7 +337,7 @@ export default function BoxingPage() {
                 </div>
               </div>
 
-              <Button className="mt-8 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-lg px-8 py-6">
+              <Button className="mt-8 bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6">
                 Join Boxing Program
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -375,7 +376,7 @@ export default function BoxingPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Start Your
-            <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
               Boxing Journey?
             </span>
           </h2>
@@ -383,27 +384,20 @@ export default function BoxingPage() {
             Join Fittera The Boxing Gym at The Life Sports Academy and experience the best boxing fitness training in Pune
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="https://booking.thelifesports.in/bookings" 
-              target="_blank" 
+            <a
+              href="https://booking.thelifesports.in/bookings"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-lg px-10 py-6"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-10 py-6"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book Your Session
               </Button>
             </a>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-10 py-6 border-white text-white hover:bg-white hover:text-gray-900"
-            >
-              <Instagram className="w-6 h-6 mr-3" />
-              Follow @fitteraboxinggym
-            </Button>
+           
           </div>
           <p className="mt-6 text-sm text-gray-400">
             Bookings for all sports will be available through our website
@@ -411,7 +405,7 @@ export default function BoxingPage() {
         </div>
       </section>
 
-      
+
     </div>
   )
 }

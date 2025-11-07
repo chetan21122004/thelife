@@ -186,15 +186,15 @@ const TableTennisPage = () => {
               {/* Trust Indicators */}
               <div className="flex items-center gap-6 pt-6 border-t border-gray-700">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
                   <span className="text-sm text-gray-400">Certified Coaches</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
                   <span className="text-sm text-gray-400">Modern Facilities</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
                   <span className="text-sm text-gray-400">Flexible Timings</span>
                 </div>
               </div>
@@ -524,25 +524,25 @@ const TableTennisPage = () => {
                       <h4 className="font-semibold text-gray-900 mb-2">Booking Features:</h4>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 text-[#f39318]" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           Online booking available
                         </li>
                         <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 text-[#f39318]" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           Hourly slot bookings
                         </li>
                         <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 text-[#f39318]" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           Professional equipment included
                         </li>
                         <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 text-[#f39318]" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           Flexible cancellation policy
