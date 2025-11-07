@@ -439,12 +439,11 @@ export default function GymnasticsPage() {
                     </div>
                     <div className="ml-8 space-y-2">
                       <div>
-                        <p className="text-gray-600">₹2700 + 18% GST</p>
-                        <p className="text-xl font-bold text-[#f39318]">= ₹3186</p>
+                        <p className="text-xl font-bold text-[#f39318]">₹3186 (including GST)</p>
                       </div>
                       <div className="mt-3 pt-3 border-t border-gray-100">
                         <p className="text-gray-600 text-sm">8% GST option:</p>
-                        <p className="text-lg font-semibold text-gray-800">₹2124</p>
+                        <p className="text-lg font-semibold text-gray-800">₹2124 (including GST)</p>
                       </div>
                     </div>
                   </div>
@@ -489,8 +488,7 @@ export default function GymnasticsPage() {
                       <span className="font-semibold">Fees:</span>
                     </div>
                     <div className="ml-8">
-                      <p className="text-gray-600">₹1800 + 18% GST</p>
-                      <p className="text-xl font-bold text-[#f39318]">= ₹2124</p>
+                      <p className="text-xl font-bold text-[#f39318]">₹2124 (including GST)</p>
                     </div>
                   </div>
                 </div>
@@ -537,8 +535,7 @@ export default function GymnasticsPage() {
                       <span className="font-semibold">Fees:</span>
                     </div>
                     <div className="ml-8">
-                      <p className="text-gray-600">₹4500 + 18% GST</p>
-                      <p className="text-xl font-bold text-[#f39318]">= ₹5310</p>
+                      <p className="text-xl font-bold text-[#f39318]">₹5310 (including GST)</p>
                     </div>
                   </div>
                 </div>

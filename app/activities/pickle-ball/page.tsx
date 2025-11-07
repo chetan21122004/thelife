@@ -313,14 +313,14 @@ export default function PickleBallPage() {
                       <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                     <td className="px-6 py-4 font-medium text-gray-900">07:00 AM – 08:55 AM</td>
                     <td className="px-6 py-4 text-gray-600">Monday to Friday</td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors">
@@ -330,21 +330,21 @@ export default function PickleBallPage() {
                       <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                     <td className="px-6 py-4 font-medium text-gray-900">05:00 PM – 11:55 PM</td>
                     <td className="px-6 py-4 text-gray-600">Monday to Friday</td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors">
                     <td className="px-6 py-4 font-medium text-gray-900">07:00 AM – 11:55 AM</td>
                     <td className="px-6 py-4 text-gray-600">Saturday to Sunday</td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
@@ -354,14 +354,14 @@ export default function PickleBallPage() {
                       <Badge className="ml-2 bg-orange-100 text-orange-700 border-orange-300">Happy Hour</Badge>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹354</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹354 (including GST)</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-orange-50 transition-colors">
                     <td className="px-6 py-4 font-medium text-gray-900">04:00 PM – 11:55 PM</td>
                     <td className="px-6 py-4 text-gray-600">Saturday to Sunday</td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-2xl font-bold text-[#FF5500]">₹560</span>
+                      <span className="text-2xl font-bold text-[#FF5500]">₹560 (including GST)</span>
                     </td>
                   </tr>
                 </tbody>

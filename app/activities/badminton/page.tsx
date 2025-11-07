@@ -439,7 +439,6 @@ export default function BadmintonCourtPage() {
                         <th className="px-6 py-4 text-left font-semibold">Time</th>
                         <th className="px-6 py-4 text-left font-semibold">Days</th>
                         <th className="px-6 py-4 text-center font-semibold">Charges</th>
-                        <th className="px-6 py-4 text-center font-semibold">Total (incl. GST)</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -448,48 +447,41 @@ export default function BadmintonCourtPage() {
                         <td className="px-6 py-4">
                           <Badge className="bg-orange-100 text-orange-700">Monday to Sunday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                         <td className="px-6 py-4 font-medium">07:00 AM – 08:55 AM</td>
                         <td className="px-6 py-4">Monday to Friday</td>
-                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
                         <td className="px-6 py-4 font-medium">09:00 AM – 04:55 PM</td>
                         <td className="px-6 py-4">
                           <Badge className="bg-orange-100 text-orange-700">Monday to Friday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                         <td className="px-6 py-4 font-medium">05:00 PM – 11:55 PM</td>
                         <td className="px-6 py-4">Monday to Friday</td>
-                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
                         <td className="px-6 py-4 font-medium">07:00 AM – 11:55 AM</td>
                         <td className="px-6 py-4">Saturday to Sunday</td>
-                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
                         <td className="px-6 py-4 font-medium">12:00 PM – 03:55 PM</td>
                         <td className="px-6 py-4">
                           <Badge className="bg-orange-100 text-orange-700">Saturday to Sunday (Happy Hour)</Badge>
                         </td>
-                        <td className="px-6 py-4 text-center">₹300 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors">
                         <td className="px-6 py-4 font-medium">04:00 PM – 11:55 PM</td>
                         <td className="px-6 py-4">Saturday to Sunday</td>
-                        <td className="px-6 py-4 text-center">₹475 + 18% GST</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹560 (including GST)</td>
                       </tr>
                     </tbody>
                   </table>

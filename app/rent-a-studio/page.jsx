@@ -289,17 +289,17 @@ export default function RentAStudio() {
                       <tr className="hover:bg-orange-50/50 transition-colors">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 4:00 PM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50/50 transition-colors bg-gray-50">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">4:00 PM – 12:00 AM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,062/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,062 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50/50 transition-colors">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 12:00 AM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Saturday & Sunday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,416/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹1,416 (including GST)</td>
                       </tr>
                     </tbody>
                   </table>
@@ -397,17 +397,17 @@ export default function RentAStudio() {
                       <tr className="hover:bg-orange-50/50 transition-colors">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 4:00 PM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50/50 transition-colors bg-gray-50">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">4:00 PM – 12:00 AM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Monday to Friday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹708 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50/50 transition-colors">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">6:00 AM – 12:00 AM</td>
                         <td className="px-4 py-3 text-xs text-gray-700">Saturday & Sunday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹944/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹944 (including GST)</td>
                       </tr>
                     </tbody>
                   </table>
@@ -502,7 +502,7 @@ export default function RentAStudio() {
                     <tbody className="divide-y divide-gray-100">
                       <tr className="hover:bg-orange-50/50 transition-colors">
                         <td className="px-4 py-3 text-xs font-medium text-gray-900">Monday to Sunday</td>
-                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354/-</td>
+                        <td className="px-4 py-3 text-xs font-bold text-[#FF5500] text-right">₹354 (including GST)</td>
                       </tr>
                     </tbody>
                   </table>
