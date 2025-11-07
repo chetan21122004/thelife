@@ -82,7 +82,7 @@ const TableTennisPage = () => {
       title: "Tournament Play",
     },
     {
-      src: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c",
+      src: "/images/ttcourt.jpg",
       alt: "Table Tennis Practice",
       title: "Regular Practice",
     },
@@ -624,7 +624,7 @@ const TableTennisPage = () => {
                 <div className="relative">
                   <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-2xl blur opacity-20"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&auto=format&fit=crop&q=60"
+                    src="/images/ttcourt.jpg"
                     alt="Table Tennis Booking"
                     className="relative rounded-2xl shadow-2xl w-full h-64 sm:h-80 object-cover"
                   />
