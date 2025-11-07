@@ -77,7 +77,7 @@ function AutoplayCarousel() {
       href: "/activities/dance",
     },
     {
-      title: "Cricket Net with Auto-Machine",
+      title: "Cricket Net with Bowling-Machine",
       description: "Professional cricket nets with auto bowling machines for practice. Perfect for improving batting techniques with consistent ball delivery and expert coaching support.",
       image: "/images/cricket-net2.jpg",
       href: "/activities/cricketNet",
