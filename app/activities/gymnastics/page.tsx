@@ -480,39 +480,7 @@ export default function GymnasticsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-r from-[#f39318] to-[#FF5500] relative overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=600&fit=crop"
-            alt="Gymnastics Training"
-            fill
-            className="object-cover opacity-20"
-          />
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Begin Your
-              <span className="block text-yellow-300">Gymnastics Journey?</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of students who have transformed their lives through gymnastics at The Life Sport
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-           
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#f39318] transition-all duration-300"
-              >
-                Call: +91 98765 43210
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    
 
     
     </div>
