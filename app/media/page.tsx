@@ -40,48 +40,13 @@ const images = [
     width: 800,
     height: 533,
   },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img16-.jpg",
-    alt: "Boy with disability playing tennis",
-    width: 800,
-    height: 1036,
-  },
+  
   {
     src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img15-.jpg",
     alt: "Gymnastic boy climbing rope",
     width: 400,
     height: 538,
   }, 
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img5-1-1.jpg",
-    alt: "Tennis Coach Giving Instruction to Beginners",
-    width: 800,
-    height: 885,
-  },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img6-.jpg",
-    alt: "Young tennis star sets sight on becoming a professional player",
-    width: 800,
-    height: 844,
-  },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img7-.jpg",
-    alt: "Junior tennis program",
-    width: 800,
-    height: 543,
-  },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img8-.jpg",
-    alt: "Meet tennis new prodigy",
-    width: 800,
-    height: 533,
-  },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img9-.jpg",
-    alt: "Young tennis player",
-    width: 800,
-    height: 533,
-  },
   {
     src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img10-.jpg",
     alt: "Rope skills training",
