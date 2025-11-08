@@ -51,13 +51,7 @@ const images = [
     alt: "Gymnastic boy climbing rope",
     width: 400,
     height: 538,
-  },
-  {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img4.jpg",
-    alt: "Teaching Tennis to Young Beginners",
-    width: 934,
-    height: 1150,
-  },
+  }, 
   {
     src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img5-1-1.jpg",
     alt: "Tennis Coach Giving Instruction to Beginners",

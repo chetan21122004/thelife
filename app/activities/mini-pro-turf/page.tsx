@@ -419,6 +419,89 @@ export default function MiniProTurfPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Mini Pro Turf
+              <span className="bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent">
+                {" "}
+                Booking Charges
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Flexible half-hour booking slots available throughout the day from Monday to Sunday.
+            </p>
+          </div>
+
+          <Card className="border-0 shadow-xl overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
+              <CardTitle className="text-2xl">Half-Hour Session Pricing</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-white/90 text-gray-900">
+                      <th className="py-4 px-6 text-left text-sm sm:text-base font-semibold">Days</th>
+                      <th className="py-4 px-6 text-left text-sm sm:text-base font-semibold">Timings</th>
+                      <th className="py-4 px-6 text-right text-sm sm:text-base font-semibold">Charges</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-orange-50 transition-colors">
+                      <td className="px-6 py-4 text-gray-700 text-sm sm:text-base">Monday to Sunday</td>
+                      <td className="px-6 py-4 text-gray-700 text-sm sm:text-base">06:00 AM – 06:00 PM</td>
+                      <td className="px-6 py-4 text-right text-sm sm:text-base font-bold text-[#f39318]">
+                        ₹350 (including GST)
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                      <td className="px-6 py-4 text-gray-700 text-sm sm:text-base">Monday to Sunday</td>
+                      <td className="px-6 py-4 text-gray-700 text-sm sm:text-base">06:00 PM – 12:00 AM</td>
+                      <td className="px-6 py-4 text-right text-sm sm:text-base font-bold text-[#f39318]">
+                        ₹500 (including GST)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          <p className="text-sm text-gray-500 mt-4 text-center">
+            Each slot is for a 30-minute session. Longer durations can be booked by reserving consecutive slots.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://booking.thelifesports.in/bookings"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:from-[#e8840f] hover:to-[#e54d00] text-lg px-8 py-6"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Online
+              </Button>
+            </a>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 border-[#f39318] text-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Enquire Now
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gray-900 text-white">
         <div className="container mx-auto max-w-4xl text-center">

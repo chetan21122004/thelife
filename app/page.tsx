@@ -77,7 +77,7 @@ function AutoplayCarousel() {
       href: "/activities/dance",
     },
     {
-      title: "Cricket Net with Bowling-Machine",
+      title: "Cricket Net and Cricket Net with Bowling Machine",
       description: "Professional cricket nets with auto bowling machines for practice. Perfect for improving batting techniques with consistent ball delivery and expert coaching support.",
       image: "/images/cricket-net2.jpg",
       href: "/activities/cricketNet",
@@ -685,7 +685,7 @@ export default function HomePage() {
                 >
                   <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src="https://www.thelifesports.in/wp-content/uploads/2020/02/best-football-club-in-pune-1.jpg"
+                      src="https://www.thelifesports.in/wp-content/uploads/2020/06/img10-.jpg"
                       alt="Sports Training at Life Sports"
                       fill
                       className="object-cover"

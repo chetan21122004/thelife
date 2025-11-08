@@ -39,7 +39,7 @@ export default function CricketNetPage() {
           {/* Breadcrumb */}
           <div className="mb-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
            
-            <span className="text-sm font-medium tracking-wide">Cricket Net</span>
+            <span className="text-sm font-medium tracking-wide">cricket net and cricket net with bowling machine</span>
           </div>
 
           {/* Main Heading - SEO Optimized H1 */}
