@@ -41,7 +41,7 @@ const socialLinks = [
     name: "Instagram",
     color: "hover:bg-pink-600",
   },
-  { icon: Youtube, href: "https://youtube.com/thelifesportsacademy", name: "YouTube", color: "hover:bg-red-600" },
+  { icon: Youtube, href: "https://youtube.com/@thelifesports6787?si=4aJhQQgNfS_h3xVd", name: "YouTube", color: "hover:bg-red-600" },
 ]
 
 const stats = [

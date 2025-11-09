@@ -65,7 +65,7 @@ function AutoplayCarousel() {
       href: "/activities/table-tennis",
     },
     {
-        title: "Gymnastics Classes",
+      title: "Gymnastics Classes",
       description: "The Life Sport is one of the best academy for Gymnastics Coaching in Pune. At Life Sports Gymnastics Academy in Pune, each student is trained diversion better and without limitations.",
       image: "/images/gymnastics1.jpg",
       href: "/activities/gymnastics",
@@ -116,7 +116,7 @@ function AutoplayCarousel() {
       <CarouselContent className="-ml-2 md:-ml-4">
         {activities.map((activity, index) => (
           <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
               custom={index % 3}
               transition={{ delay: (index % 3) * 0.1 }}
@@ -134,7 +134,7 @@ function AutoplayCarousel() {
                       priority={index < 3}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    
+
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-white/90 hover:bg-white text-[#f39318] backdrop-blur-sm border-0 text-xs font-medium px-2.5 py-0.5 tracking-wide">
@@ -156,13 +156,13 @@ function AutoplayCarousel() {
                       <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                         {activity.description}
                       </p>
-                      
+
                       {/* Features List - simplified */}
                       <div className="flex flex-wrap gap-2 pt-2">
-                        {['Professional Coaching', 'All Age Groups', 'Modern Facilities'].map((feature, idx) => (
-                          <Badge 
+                        {['All Age Groups', 'Modern Facilities'].map((feature, idx) => (
+                          <Badge
                             key={idx}
-                            variant="secondary" 
+                            variant="secondary"
                             className="bg-[#f39318]/10 text-[#f39318] hover:bg-[#f39318]/20"
                           >
                             {feature}
@@ -179,7 +179,7 @@ function AutoplayCarousel() {
                       className="flex-1"
                     >
                       <Link href="/contact">
-                        <Button 
+                        <Button
                           className="w-full bg-gradient-to-r from-[#f39318] to-[#FF5500] hover:opacity-90 text-white transition-all duration-300 shadow-lg font-medium"
                         >
                           <span className="relative z-10">Enquire Now</span>
@@ -193,8 +193,8 @@ function AutoplayCarousel() {
                       className="flex-[0.6]"
                     >
                       <Link href={activity.href}>
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           className="w-full border border-[#f39318]/30 hover:border-[#f39318] hover:bg-gradient-to-r hover:from-[#f39318] hover:to-[#FF5500] hover:text-white transition-all duration-300 font-medium"
                         >
                           Details
@@ -217,8 +217,8 @@ function AutoplayCarousel() {
 // Animation variants for scroll effects
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
   }
@@ -226,8 +226,8 @@ const fadeInUp = {
 
 const slideInLeft = {
   hidden: { opacity: 0, x: -50 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
     transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
   }
@@ -235,8 +235,8 @@ const slideInLeft = {
 
 const slideInRight = {
   hidden: { opacity: 0, x: 50 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
     transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
   }
@@ -255,7 +255,7 @@ const staggerContainer = {
 
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
     transition: { duration: 0.5 }
   }
@@ -263,19 +263,19 @@ const fadeIn = {
 
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
     transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
   }
 }
 
 const clipReveal = {
-  hidden: { 
+  hidden: {
     clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
     opacity: 0
   },
-  visible: { 
+  visible: {
     clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
     opacity: 1,
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
@@ -295,8 +295,8 @@ function AnimatedText({ text, className, once = true }: { text: string, classNam
       className={className}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ 
-        duration: 0.5, 
+      transition={{
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1]
       }}
     >
@@ -336,8 +336,8 @@ function CountUpAnimation({ end, duration = 2000, label }: { end: number, durati
   }, [end, duration, inView])
 
   return (
-    <motion.div 
-      ref={ref} 
+    <motion.div
+      ref={ref}
       className="text-center transform transition-all duration-500 hover:scale-105"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -356,32 +356,32 @@ function CountUpAnimation({ end, duration = 2000, label }: { end: number, durati
 // Function to throttle scroll events
 function useThrottledScrollY(delay = 50) {
   const [scrollY, setScrollY] = useState(0);
-  
+
   useEffect(() => {
     let lastCall = 0;
-    
+
     const handleScroll = () => {
       const now = Date.now();
-      
+
       if (now - lastCall >= delay) {
         setScrollY(window.scrollY);
         lastCall = now;
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [delay]);
-  
+
   return scrollY;
 }
 
 export default function HomePage() {
   const [showScrollTop, setShowScrollTop] = useState(false)
-  
+
   // Use throttled scroll position instead of raw scroll events
   const scrollY = useThrottledScrollY(30);
-  
+
   // Animation hooks for different sections with proper thresholds
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true })
   const [activitiesRef, activitiesInView] = useInView({ threshold: 0.1, triggerOnce: true })
@@ -430,7 +430,7 @@ export default function HomePage() {
           {/* Background Image and Overlay */}
           <div className="absolute inset-0">
             <div className="relative h-full w-full">
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 will-change-transform"
                 style={{ y: calculateParallax(-0.05) }}
               >
@@ -444,31 +444,31 @@ export default function HomePage() {
               </motion.div>
               <div className="absolute inset-0 bg-black/50"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
-              
+
               {/* Reduced decorative elements - only keep one animation */}
               <div className="absolute inset-0">
-                <motion.div 
+                <motion.div
                   className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#f39318]/30 rounded-full blur-3xl"
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.1, 1],
                     opacity: [0.2, 0.3, 0.2],
                   }}
-                  transition={{ 
-                    duration: 2 ,
+                  transition={{
+                    duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut" 
+                    ease: "easeInOut"
                   }}
                 ></motion.div>
               </div>
             </div>
           </div>
-          
+
           {/* 3D Shuttlecock Model - no parallax for better performance */}
           <Hero3DScene />
 
           {/* Content */}
           <div className="container relative z-10 mx-auto flex h-[90vh] flex-col items-center justify-center px-4">
-            <motion.div 
+            <motion.div
               ref={heroRef}
               className="max-w-5xl text-center"
               initial="hidden"
@@ -476,7 +476,7 @@ export default function HomePage() {
               variants={staggerContainer}
             >
               {/* Subtitle */}
-              <motion.div 
+              <motion.div
                 className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/20 px-4 py-2 backdrop-blur-sm"
                 variants={fadeIn}
               >
@@ -486,18 +486,18 @@ export default function HomePage() {
 
               {/* Main Title - simplified animation */}
               <div className="mb-6">
-                <AnimatedText 
-                  text="Invest One Hour a Day" 
+                <AnimatedText
+                  text="Invest One Hour a Day"
                   className="mb-2 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl drop-shadow-lg"
                 />
-                <AnimatedText 
-                  text="Transform Your Life" 
+                <AnimatedText
+                  text="Transform Your Life"
                   className="bg-gradient-to-r from-[#f39318] via-yellow-400 to-[#f39318] bg-clip-text text-transparent drop-shadow-lg text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
                 />
               </div>
 
               {/* Description */}
-              <motion.p 
+              <motion.p
                 className="mb-8 max-w-2xl mx-auto text-lg text-white md:text-xl drop-shadow-md"
                 variants={fadeInUp}
               >
@@ -505,7 +505,7 @@ export default function HomePage() {
               </motion.p>
 
               {/* CTA Buttons */}
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 variants={fadeInUp}
               >
@@ -516,8 +516,8 @@ export default function HomePage() {
                 >
                   <Link href="/contact">
                     <Button className="group relative overflow-hidden bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white font-bold px-8 py-6 text-lg min-w-[200px] transition-all duration-300 shadow-lg">
-                      <motion.span 
-                        className="absolute inset-0 bg-white/20" 
+                      <motion.span
+                        className="absolute inset-0 bg-white/20"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "100%" }}
                         transition={{ duration: 0.7, ease: "easeInOut" }}
@@ -526,18 +526,18 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </motion.div>
-               
+
               </motion.div>
             </motion.div>
           </div>
 
-        
+
         </section>
 
         {/* Activities Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div 
+            <motion.div
               ref={activitiesRef}
               className="mb-12 text-center"
               initial="hidden"
@@ -546,27 +546,27 @@ export default function HomePage() {
             >
               <div className="text-center max-w-3xl mx-auto mb-4">
                 <div className="inline-flex items-center justify-center">
-                  <motion.div 
+                  <motion.div
                     className="h-px w-8 bg-gradient-to-r from-[#f39318] to-[#FF5500]"
                     variants={slideInLeft}
                   ></motion.div>
-                  <motion.span 
+                  <motion.span
                     className="mx-4 text-3xl uppercase tracking-wider font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] bg-clip-text text-transparent"
                     variants={scaleIn}
                   >Activities</motion.span>
-                  <motion.div 
+                  <motion.div
                     className="h-px w-8 bg-gradient-to-r from-[#FF5500] to-[#f39318]"
                     variants={slideInRight}
                   ></motion.div>
                 </div>
               </div>
-              <AnimatedText 
+              <AnimatedText
                 text="TOP SPORTS COACHING IN PUNE"
                 className="text-3xl font-bold text-gray-900 md:text-4xl"
               />
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate={activitiesInView ? "visible" : "hidden"}
               variants={fadeInUp}
@@ -578,7 +578,7 @@ export default function HomePage() {
 
         {/* Corporate Events Section */}
         <div id="corporate-events">
-        <CorporateEventsSection />
+          <CorporateEventsSection />
         </div>
 
         {/* About Section */}
@@ -590,7 +590,7 @@ export default function HomePage() {
 
           <div className="container mx-auto px-4">
             {/* Section Header */}
-            <motion.div 
+            <motion.div
               className="text-center max-w-3xl mx-auto mb-4"
               ref={aboutRef}
               initial="hidden"
@@ -598,15 +598,15 @@ export default function HomePage() {
               variants={fadeInUp}
             >
               <div className="inline-flex items-center justify-center">
-                <motion.div 
+                <motion.div
                   className="h-px w-8 bg-[#f39318]"
                   variants={slideInLeft}
                 ></motion.div>
-                <motion.span 
+                <motion.span
                   className="mx-4 text-3xl uppercase tracking-wider font-semibold text-[#f39318]"
                   variants={scaleIn}
                 >About Us</motion.span>
-                <motion.div 
+                <motion.div
                   className="h-px w-8 bg-[#f39318]"
                   variants={slideInRight}
                 ></motion.div>
@@ -615,7 +615,7 @@ export default function HomePage() {
 
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
               {/* Left Content */}
-              <motion.div 
+              <motion.div
                 className="flex-1 max-w-2xl"
                 initial="hidden"
                 animate={aboutInView ? "visible" : "hidden"}
@@ -628,16 +628,16 @@ export default function HomePage() {
                 </motion.div>
 
                 <div className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
-                  <AnimatedText 
-                    text="Pune's Premier" 
+                  <AnimatedText
+                    text="Pune's Premier"
                     className="inline-block"
                   />
                   <span className="relative inline-block px-2">
-                    <AnimatedText 
-                      text="Sports Academy" 
+                    <AnimatedText
+                      text="Sports Academy"
                       className="relative z-10 bg-gradient-to-r from-[#f39318] to-yellow-500 bg-clip-text text-transparent"
                     />
-                    <motion.div 
+                    <motion.div
                       className="absolute bottom-2 left-0 w-full h-3 bg-gradient-to-r from-yellow-500/30 to-[#f39318]/30 -rotate-2"
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
@@ -647,7 +647,7 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <motion.div 
+                <motion.div
                   className="space-y-6 text-lg text-gray-600"
                   variants={fadeInUp}
                 >
@@ -659,7 +659,7 @@ export default function HomePage() {
                   </p>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8"
                   variants={fadeInUp}
                 >
@@ -670,14 +670,14 @@ export default function HomePage() {
               </motion.div>
 
               {/* Right Images - simplified animation */}
-              <motion.div 
+              <motion.div
                 className="flex-1 relative w-full max-w-xl aspect-square"
                 initial="hidden"
                 animate={aboutInView ? "visible" : "hidden"}
                 variants={scaleIn}
               >
                 {/* Main Image */}
-                <motion.div 
+                <motion.div
                   className="absolute w-[80%] h-[80%] top-0 right-0 transform transition-all duration-700 hover:scale-105"
                   initial={{ x: 50, opacity: 0 }}
                   animate={aboutInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
@@ -685,7 +685,7 @@ export default function HomePage() {
                 >
                   <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src="https://www.thelifesports.in/wp-content/uploads/2020/06/img10-.jpg"
+                      src="/images/badminton-p-2.jpg"
                       alt="Sports Training at Life Sports"
                       fill
                       className="object-cover"
@@ -695,7 +695,7 @@ export default function HomePage() {
                 </motion.div>
 
                 {/* Secondary Image */}
-                <motion.div 
+                <motion.div
                   className="absolute w-[60%] h-[60%] bottom-0 left-0 transform transition-all duration-700 hover:scale-105"
                   initial={{ x: -50, opacity: 0 }}
                   animate={aboutInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
@@ -703,7 +703,7 @@ export default function HomePage() {
                 >
                   <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src="https://www.thelifesports.in/wp-content/uploads/2020/02/WhatsApp-Image-2022-05-10-at-5.52.45-PM.jpg"
+                      src="/images/badminton-p-1.jpg"
                       alt="Indoor Sports Facility"
                       fill
                       className="object-cover"
@@ -713,16 +713,16 @@ export default function HomePage() {
                 </motion.div>
 
                 {/* Decorative Elements - only one subtle animation */}
-                <motion.div 
+                <motion.div
                   className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-yellow-500/10 to-[#f39318]/10 rounded-full blur-2xl"
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.1, 1],
                     opacity: [0.1, 0.2, 0.1],
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 4,
                     repeat: Infinity,
-                    ease: "easeInOut" 
+                    ease: "easeInOut"
                   }}
                 ></motion.div>
               </motion.div>
@@ -732,7 +732,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div id="testimonials">
-        <TestimonialsSection  maxItems={4} />
+          <TestimonialsSection maxItems={4} />
         </div>
       </main>
 
@@ -748,14 +748,14 @@ export default function HomePage() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Button 
+          <Button
             onClick={scrollToTop}
             className="h-14 w-14 rounded-full bg-[#f39318] p-0 shadow-lg hover:bg-[#f39318]/90 transition-all duration-300"
           >
             <ArrowUp className="h-6 w-6" />
           </Button>
         </motion.div>
-        
+
       </div>
     </div>
   )

@@ -1,6 +1,46 @@
+'use client'
+
+import { ChangeEvent, FormEvent, useState } from "react"
 import { Clock, Calendar, IndianRupee, Star, Info } from "lucide-react"
 
 export default function FeeStructure() {
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    age: "",
+    sport: "",
+    batchTime: "",
+    date: "",
+    day: "",
+  })
+
+  const handleInputChange = (field: keyof typeof formData) => (event: ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: event.target.value,
+    }))
+  }
+
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const details = `Gymnastics Demo Class Registration\nName: ${formData.name}\nContact Number: ${formData.contact}\nAge: ${formData.age}\nSports: ${formData.sport}\nPreferred Batch Time: ${formData.batchTime}\nDate: ${formData.date}\nDay: ${formData.day}`
+    const whatsappNumber = "919767755977"
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(details)}`
+
+    window.open(whatsappUrl, "_blank")
+
+    setFormData({
+      name: "",
+      contact: "",
+      age: "",
+      sport: "",
+      batchTime: "",
+      date: "",
+      day: "",
+    })
+  }
+
   const feeData = [
     {
       category: "Badminton Coaching - Beginner",
@@ -141,7 +181,7 @@ export default function FeeStructure() {
         {
           schedule: "Monday to Sunday",
           timings: ["06:00 AM – 06:55 AM"],
-          rate: "225",
+          rate: "354",
           type: "happy-hour",
           unit: "Happy Hour (including GST)",
           label: "Happy Hour",
@@ -149,14 +189,14 @@ export default function FeeStructure() {
         {
           schedule: "Monday to Friday",
           timings: ["07:00 AM – 08:55 AM"],
-          rate: "450",
+          rate: "560",
           type: "regular",
           unit: "Per session (including GST)",
         },
         {
           schedule: "Monday to Friday",
           timings: ["09:00 AM – 04:55 PM"],
-          rate: "225",
+          rate: "354",
           type: "happy-hour",
           unit: "Happy Hour (including GST)",
           label: "Happy Hour",
@@ -164,21 +204,21 @@ export default function FeeStructure() {
         {
           schedule: "Monday to Friday",
           timings: ["05:00 PM – 11:55 PM"],
-          rate: "600",
+          rate: "560",
           type: "regular",
           unit: "Per session (including GST)",
         },
         {
           schedule: "Saturday to Sunday",
           timings: ["07:00 AM – 11:55 AM"],
-          rate: "450",
+          rate: "560",
           type: "regular",
           unit: "Per session (including GST)",
         },
         {
           schedule: "Saturday to Sunday",
           timings: ["12:00 PM – 03:55 PM"],
-          rate: "225",
+          rate: "354",
           type: "happy-hour",
           unit: "Happy Hour (including GST)",
           label: "Happy Hour",
@@ -186,7 +226,7 @@ export default function FeeStructure() {
         {
           schedule: "Saturday to Sunday",
           timings: ["04:00 PM – 11:55 PM"],
-          rate: "600",
+          rate: "560",
           type: "regular",
           unit: "Per session (including GST)",
         },
@@ -336,15 +376,107 @@ export default function FeeStructure() {
               <div className="space-y-2 text-blue-800">
                 <div className="flex items-start space-x-2">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                  <p>Trial sessions are available at ₹300/- per session for kids and adults.</p>
+                  <p>Badminton Trial Session: ₹354 (Including GST) — Paid</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                  <p>Weekend trial sessions for adults are ₹350/- per session.</p>
+                  <p>Gymnastics Trial Session: Free Demo Class Registration</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="mt-6 bg-white rounded-xl border border-blue-200 shadow-sm p-6 space-y-4">
+          <h3 className="text-lg font-semibold text-gray-900">Gymnastics Demo Registration</h3>
+          <p className="text-sm text-gray-700">
+            Thank you for your interest in our Gymnastics demo class! To confirm your spot, please provide the following
+            details:
+          </p>
+          <form onSubmit={handleFormSubmit} className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Name
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={handleInputChange("name")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Contact Number
+                <input
+                  type="tel"
+                  value={formData.contact}
+                  onChange={handleInputChange("contact")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Age
+                <input
+                  type="number"
+                  min="1"
+                  value={formData.age}
+                  onChange={handleInputChange("age")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Sports
+                <input
+                  type="text"
+                  value={formData.sport}
+                  onChange={handleInputChange("sport")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Preferred Batch Time
+                <input
+                  type="text"
+                  value={formData.batchTime}
+                  onChange={handleInputChange("batchTime")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700">
+                Date
+                <input
+                  type="date"
+                  value={formData.date}
+                  onChange={handleInputChange("date")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-gray-700 md:col-span-2">
+                Day
+                <input
+                  type="text"
+                  value={formData.day}
+                  onChange={handleInputChange("day")}
+                  required
+                  className="mt-2 rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="w-full rounded-lg bg-gradient-to-r from-[#f39318] to-[#FF5500] px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:from-[#e8840f] hover:to-[#e54d00]"
+            >
+              Submit &amp; Send Details
+            </button>
+          </form>
+          <p className="text-sm text-gray-700">
+            Kindly fill out these details to secure your registration. All submitted details for the Gymnastics demo will be
+            sent directly to 9767755977.
+          </p>
         </div>
 
         {/* Booking CTA */}

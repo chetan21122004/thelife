@@ -42,7 +42,7 @@ const activities = [
     href: "/activities/dance"
   },
   {
-    name: "Cricket Net",
+    name: "Cricket Net with Bowling Machine",
     image: "/images/cricket-net.jpg",
     description: "Professional practice nets with auto machine",
     features: ["Professional nets", "Auto bowling machines", "Expert coaching"],
@@ -201,7 +201,7 @@ export function Navbar() {
     <>
       {/* Main Navigation */}
       <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-[#f39318]">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4 gap-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -220,7 +220,7 @@ export function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 pr-32">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item, index) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -402,6 +402,15 @@ export function Navbar() {
             ))}
           </nav>
 
+          <Link
+            href="https://booking.thelifesports.in/bookings"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex items-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#f39318] shadow-md transition hover:bg-gray-100"
+          >
+            Book Now
+          </Link>
+
           <button
             className="lg:hidden text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -527,6 +536,15 @@ export function Navbar() {
                       )}
                     </div>
                   ))}
+                  <Link
+                    href="https://booking.thelifesports.in/bookings"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center rounded-lg bg-gradient-to-r from-[#f39318] to-[#FF5500] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:from-[#e8840f] hover:to-[#e54d00]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Book Now
+                  </Link>
                 </div>
 
 
