@@ -243,8 +243,7 @@ export default function CricketNetPage() {
               </div>
               <h2 className="text-5xl font-bold text-white mb-6 leading-tight">The Life Sports</h2>
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                Located at Sus, near Sunny's World, our state-of-the-art facility offers three premium astroturf cricket
-                nets for professional practice sessions.
+              Located at baner, Near Hotel Green Park, Someshwarwadi Road.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-4">
@@ -268,7 +267,7 @@ export default function CricketNetPage() {
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                  src="/images/cricket-net2.jpg"
                   alt="The Life Sports premium cricket facility"
                   className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
                 />
@@ -287,7 +286,7 @@ export default function CricketNetPage() {
             </div>
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Cricket Net Pricing</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from hourly or half-hourly sessions. All prices include GST.
+              Choose from flexible half-hour sessions across both facility options. All prices include GST.
             </p>
           </div>
 
@@ -298,6 +297,7 @@ export default function CricketNetPage() {
                   <table className="w-full">
                     <thead className="bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white">
                       <tr>
+                        <th className="px-6 py-4 text-left font-semibold">Facility</th>
                         <th className="px-6 py-4 text-left font-semibold">Time</th>
                         <th className="px-6 py-4 text-left font-semibold">Days</th>
                         <th className="px-6 py-4 text-center font-semibold">Duration</th>
@@ -306,24 +306,28 @@ export default function CricketNetPage() {
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">Cricket Net with Bowling Machine</td>
                         <td className="px-6 py-4 font-medium">6:00 AM – 6:00 PM</td>
                         <td className="px-6 py-4">Monday to Sunday</td>
-                        <td className="px-6 py-4 text-center">1 Hour</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹450 (including GST)</td>
+                        <td className="px-6 py-4 text-center">Half Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹350 (including GST)</td>
                       </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">Cricket Net with Bowling Machine</td>
+                        <td className="px-6 py-4 font-medium">6:00 PM – 12:00 AM</td>
+                        <td className="px-6 py-4">Monday to Sunday</td>
+                        <td className="px-6 py-4 text-center">Half Hour</td>
+                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹500 (including GST)</td>
+                      </tr>
+                      <tr className="hover:bg-orange-50 transition-colors">
+                        <td className="px-6 py-4 font-medium">Cricket Net</td>
                         <td className="px-6 py-4 font-medium">6:00 AM – 6:00 PM</td>
                         <td className="px-6 py-4">Monday to Sunday</td>
                         <td className="px-6 py-4 text-center">Half Hour</td>
                         <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹225 (including GST)</td>
                       </tr>
-                      <tr className="hover:bg-orange-50 transition-colors">
-                        <td className="px-6 py-4 font-medium">6:00 PM – 12:00 AM</td>
-                        <td className="px-6 py-4">Monday to Sunday</td>
-                        <td className="px-6 py-4 text-center">1 Hour</td>
-                        <td className="px-6 py-4 text-center font-bold text-[#f39318]">₹600 (including GST)</td>
-                      </tr>
                       <tr className="hover:bg-orange-50 transition-colors bg-gray-50">
+                        <td className="px-6 py-4 font-medium">Cricket Net</td>
                         <td className="px-6 py-4 font-medium">6:00 PM – 12:00 AM</td>
                         <td className="px-6 py-4">Monday to Sunday</td>
                         <td className="px-6 py-4 text-center">Half Hour</td>

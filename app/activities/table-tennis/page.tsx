@@ -655,47 +655,7 @@ const TableTennisPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="container mx-auto">
-          <motion.h2
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
-          >
-            Frequently Asked Questions
-          </motion.h2>
-          <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
-            {[
-              {
-                question: "How do I Find the Best Table Tennis Coaching in Pune?",
-                answer:
-                  "If you are passionate about table tennis and would like to hone your skills with help from experienced coaches, then we recommend you look no further than The Life Sports, situated in Someshwar, near Sunny's world for the best table tennis coaching center in Pune.",
-              },
-              {
-                question: "What is the Fee Charge for Table Tennis Coaching Classes in Pune?",
-                answer:
-                  "The fees charged for table tennis classes in Pune will vary from place to place. If you wish to train at a table tennis academy in Pune at a fee that is reasonable and easy on your pockets, then we suggest you approach us at The Life Sports.",
-              },
-            ].map((faq, index) => (
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                key={index}
-                className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ring-2 ring-transparent hover:ring-[#f39318]/20"
-              >
-                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
-                  {faq.question}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Image Modal */}
       <AnimatePresence>

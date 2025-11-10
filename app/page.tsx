@@ -491,8 +491,8 @@ export default function HomePage() {
                   className="mb-2 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl drop-shadow-lg"
                 />
                 <AnimatedText
-                  text="Transform Your Life"
-                  className="bg-gradient-to-r from-[#f39318] via-yellow-400 to-[#f39318] bg-clip-text text-transparent drop-shadow-lg text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
+                  text="Bas Ek Ghanta. Zindagi Badal Jaayegi."
+                  className="bg-gradient-to-r from-[#f39318] via-yellow-400 to-[#f39318] bg-clip-text text-transparent drop-shadow-lg text-2xl font-bold leading-tight md:text-3xl lg:text-4xl"
                 />
               </div>
 
