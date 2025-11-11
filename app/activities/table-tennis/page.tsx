@@ -69,7 +69,7 @@ const TableTennisPage = () => {
     {
       src: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
       alt: "Table Tennis Training",
-      title: "Professional Coaching",
+      title: "Professional ",
     },
     {
       src: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
@@ -176,16 +176,14 @@ const TableTennisPage = () => {
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                   <span className="block text-white mb-2">Master Table Tennis</span>
-                  <span className="block bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text">
-                    With Expert Coaching
-                  </span>
+                  
                 </h1>
                 <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full"></div>
               </div>
 
               {/* Professional Description */}
               <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
-                Transform your game with professional table tennis coaching in Pune. Our certified coaches provide
+                Transform your game with professional table tennis in Pune. Our certified coaches provide
                 personalized training programs designed to elevate your skills from beginner to championship level.
               </p>
 
@@ -479,7 +477,7 @@ const TableTennisPage = () => {
               transition={{ delay: 0.2 }}
               className="text-lg sm:text-xl mb-6 sm:mb-8 text-orange-100"
             >
-              Join hundreds of students who have improved their game with our expert coaching
+              Join hundreds of students who have improved their game with our expert 
             </motion.p>
             <motion.div
               initial={{ y: 30, opacity: 0 }}

@@ -246,10 +246,7 @@ export default function CricketNetPage() {
               Located at baner, Near Hotel Green Park, Someshwarwadi Road.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-4">
-                  <CheckCircle className="w-6 h-6 text-[#f39318] flex-shrink-0" />
-                  <span className="text-gray-200">Three astroturf cricket nets</span>
-                </div>
+                
                 <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-4">
                   <CheckCircle className="w-6 h-6 text-[#f39318] flex-shrink-0" />
                   <span className="text-gray-200">Hourly rental basis</span>

@@ -13,12 +13,9 @@ import { useRef } from "react"
 const testimonials = [
   {
     name: "Parvez",
-    text: "The Life Sports is a very vibrant and active place with a friendly atmosphere. And it was great knowing Mr. Ganesh Nimhan –The Founder of The Life Sports. His Dedication towards Sports and Health for the society is a very commendable factor.",
+    text: "The Life Sports is a very vibrant and active place with a friendly atmosphere. And it was great knowing Mr. Ganesh Nimhan The Founder of The Life Sports. His Dedication towards Sports and Health for the society is a very commendable factor.",
   },
-  {
-    name: "Siddharth Pantvaidy",
-    text: "The Life Sports is one of the finest sports academies in and around Baner/Pashan/Aundh area. After a lot of searching for the best tennis coaching in Pune, I came across The Life Sports through a lot of recommendations from people.",
-  },
+ 
   {
     name: "Arvind Yadav",
     text: "This place is equivalent to mental peace. After home, I feel this is the place for me to find the peace I want. Love the Badminton Court…!",

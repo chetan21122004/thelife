@@ -40,8 +40,7 @@ export default function FootballAcademy() {
   ]
 
   const features = [
-    "Well-Conceived Coaching Programs",
-    "Coaching for Children and Adults",
+  
     "Experienced and Certified Coaches",
     "Natural Grass Football Ground",
     "In-house Nutritionist",

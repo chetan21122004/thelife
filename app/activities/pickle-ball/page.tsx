@@ -55,7 +55,7 @@ export default function PickleBallPage() {
 
               <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
                 Experience the fastest-growing paddle sport at our premium pickle ball courts. Professional equipment, 
-                expert coaching, and a welcoming community for all skill levels.
+                 and a welcoming community for all skill levels.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -181,7 +181,7 @@ export default function PickleBallPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  Beginner-friendly environment with coaching available for players of all ages and abilities
+                  Beginner-friendly environment with players of all ages and abilities
                 </p>
               </CardContent>
             </Card>
