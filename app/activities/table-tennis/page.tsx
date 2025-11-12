@@ -68,7 +68,7 @@ const TableTennisPage = () => {
   const galleryImages = [
     {
       src: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
-      alt: "Table Tennis Training",
+      alt: "Table Tennis Court Booking",
       title: "Professional ",
     },
     {
@@ -91,47 +91,26 @@ const TableTennisPage = () => {
   const benefits = [
     {
       icon: <MdSportsHandball className="w-10 h-10" />,
-      title: "Improved Hand-Eye Coordination",
-      description: "Enhance your reflexes and coordination through regular practice",
+      title: "Premium Equipment",
+      description: "Professional-grade tables and quality equipment for the best playing experience",
       image: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c",
     },
     {
       icon: <FaBrain className="w-10 h-10" />,
-      title: "Improved Brain Functioning",
-      description: "Boost cognitive abilities and mental alertness",
+      title: "Easy Online Booking",
+      description: "Book your court slot instantly with our 24/7 online booking system",
       image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
     },
     {
       icon: <FaWeight className="w-10 h-10" />,
-      title: "Weight Loss",
-      description: "Effective cardio workout for maintaining fitness",
+      title: "Flexible Timing",
+      description: "Choose from multiple time slots that fit your schedule, available 7 days a week",
       image: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
     },
     {
       icon: <FaUsers className="w-10 h-10" />,
-      title: "Improved Social Life",
-      description: "Connect with fellow players and build lasting friendships",
-      image: "https://images.unsplash.com/photo-1584813539806-2538b8d918c6",
-    },
-  ]
-
-  const levels = [
-    {
-      title: "Beginners",
-      description: "Perfect for those just starting their table tennis journey",
-      features: ["Basic techniques", "Proper grip and stance", "Fundamental rules"],
-      image: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827",
-    },
-    {
-      title: "Intermediate",
-      description: "For players with basic knowledge looking to improve",
-      features: ["Advanced techniques", "Game strategies", "Tournament preparation"],
-      image: "https://images.unsplash.com/photo-1611251135345-18c56206b863",
-    },
-    {
-      title: "Advanced",
-      description: "Professional training for competitive players",
-      features: ["Professional techniques", "Mental conditioning", "Competition strategies"],
+      title: "Great Facilities",
+      description: "Well-maintained courts in a vibrant atmosphere perfect for practice and matches",
       image: "https://images.unsplash.com/photo-1584813539806-2538b8d918c6",
     },
   ]
@@ -168,14 +147,14 @@ const TableTennisPage = () => {
                 className="inline-block"
               >
                 <span className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white shadow-lg">
-                  ⭐ Professional Table Tennis Academy
+                  ⭐ Premium Table Tennis Court Booking
                 </span>
               </motion.div>
 
               {/* Main Heading */}
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-                  <span className="block text-white mb-2">Master Table Tennis</span>
+                  <span className="block text-white mb-2">Book Your Table Tennis Court</span>
                   
                 </h1>
                 <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full"></div>
@@ -183,48 +162,52 @@ const TableTennisPage = () => {
 
               {/* Professional Description */}
               <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
-                Transform your game with professional table tennis in Pune. Our certified coaches provide
-                personalized training programs designed to elevate your skills from beginner to championship level.
+                Reserve your table tennis court in Pune with ease. Our premium facilities offer professional-grade tables and equipment for your practice sessions, matches, and recreational play. Book online 24/7!
               </p>
 
               {/* Key Features */}
               <div className="grid grid-cols-3 gap-4 sm:gap-6 py-4 sm:py-6">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">500+</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Students Trained</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">24/7</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Online Booking</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">15+</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Years Experience</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">Premium</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Equipment</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">98%</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Success Rate</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#f39318]">Flexible</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Timing Slots</div>
                 </div>
               </div>
 
               {/* Professional CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Link href="/contact" className="w-full sm:w-auto">
+                <a 
+                  href="https://booking.thelifesports.in/bookings" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="group relative w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-white text-sm sm:text-base font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-xl hover:shadow-2xl"
                   >
                     <span className="relative z-10 flex items-center gap-2">
-                      Book Free Assessment
+                      Book Your Court Now
                       <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </span>
                   </motion.button>
-                </Link>
+                </a>
 
-                <Link href="#ttprogram" className="w-full sm:w-auto">
+                <Link href="#booking" className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-white text-sm sm:text-base font-semibold rounded-lg border-2 border-gray-600 hover:border-[#f39318] hover:bg-[#f39318]/10 transition-all duration-300 gap-2"
                   >
-                    View Programs
+                    View Booking Info
                     <FaArrowRight className="text-sm" />
                   </motion.button>
                 </Link>
@@ -234,7 +217,7 @@ const TableTennisPage = () => {
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 sm:pt-6 border-t border-gray-700">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
-                  <span className="text-sm text-gray-400">Certified Coaches</span>
+                  <span className="text-sm text-gray-400">Professional Tables</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-[#f39318] rounded-full"></div>
@@ -259,7 +242,7 @@ const TableTennisPage = () => {
                 <div className="relative h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827"
-                    alt="Professional Table Tennis Training"
+                    alt="Professional Table Tennis Court"
                     fill
                     className="object-cover"
                   />
@@ -278,8 +261,8 @@ const TableTennisPage = () => {
                       <MdSportsHandball className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div>
-                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Expert Training</div>
-                      <div className="text-xs text-gray-600">Professional Coaches</div>
+                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Premium Courts</div>
+                      <div className="text-xs text-gray-600">Professional Equipment</div>
                     </div>
                   </div>
                 </motion.div>
@@ -295,8 +278,8 @@ const TableTennisPage = () => {
                       <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div>
-                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Community</div>
-                      <div className="text-xs text-gray-600">Join 500+ Players</div>
+                      <div className="text-xs sm:text-sm font-semibold text-gray-900">Easy Booking</div>
+                      <div className="text-xs text-gray-600">24/7 Online</div>
                     </div>
                   </div>
                 </motion.div>
@@ -376,8 +359,8 @@ const TableTennisPage = () => {
 
   
 
-      {/* Training Levels with Images */}
-      <section id="ttprogram" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
+      {/* Booking Features with Images */}
+      <section id="booking" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container mx-auto">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
@@ -385,11 +368,11 @@ const TableTennisPage = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
-            Training Levels
+            Why Book With Us?
           </motion.h2>
           {/* Desktop Grid */}
           <div className="hidden md:grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-            {levels.map((level, index) => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -400,59 +383,50 @@ const TableTennisPage = () => {
               >
                 <div className="relative h-40 sm:h-48">
                   <Image
-                    src={level.image || "/placeholder.svg"}
-                    alt={level.title}
+                    src={benefit.image || "/placeholder.svg"}
+                    alt={benefit.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 via-[#FF5500]/30 to-transparent" />
-                  <h3 className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 text-xl sm:text-2xl font-bold text-white">{level.title}</h3>
+                  <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 text-white">
+                    <div className="mb-2">{benefit.icon}</div>
+                    <h3 className="text-xl sm:text-2xl font-bold">{benefit.title}</h3>
+                  </div>
                 </div>
                 <div className="p-4 sm:p-6">
-                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">{level.description}</p>
-                  <ul className="space-y-2 sm:space-y-3">
-                    {level.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm sm:text-base text-gray-700">
-                        <FaArrowRight className="text-[#f39318] mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
           </div>
           {/* Mobile Carousel */}
           <div className="md:hidden px-8">
-           
-              {levels.map((level, index) => (
+            <CardCarousel>
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 ring-2 ring-transparent hover:ring-[#f39318] flex-[0_0_85%] sm:flex-[0_0_75%]"
                 >
                   <div className="relative h-48">
                     <Image
-                      src={level.image || "/placeholder.svg"}
-                      alt={level.title}
+                      src={benefit.image || "/placeholder.svg"}
+                      alt={benefit.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#f39318]/70 via-[#FF5500]/30 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">{level.title}</h3>
+                    <div className="absolute bottom-4 left-6 text-white">
+                      <div className="mb-2">{benefit.icon}</div>
+                      <h3 className="text-2xl font-bold">{benefit.title}</h3>
+                    </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-gray-600 mb-6">{level.description}</p>
-                    <ul className="space-y-3">
-                      {level.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-700">
-                          <FaArrowRight className="text-[#f39318] mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 </div>
               ))}
+            </CardCarousel>
           </div>
         </div>
       </section>
@@ -468,7 +442,7 @@ const TableTennisPage = () => {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8"
             >
-              Ready to Start Your Journey?
+              Ready to Book Your Court?
             </motion.h2>
             <motion.p
               initial={{ y: 30, opacity: 0 }}
@@ -477,7 +451,7 @@ const TableTennisPage = () => {
               transition={{ delay: 0.2 }}
               className="text-lg sm:text-xl mb-6 sm:mb-8 text-orange-100"
             >
-              Join hundreds of students who have improved their game with our expert 
+              Join hundreds of players who enjoy our premium table tennis facilities. Book your slot today and experience professional-grade courts with top-quality equipment.
             </motion.p>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
@@ -486,14 +460,19 @@ const TableTennisPage = () => {
               transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
             >
-              <Link href="/contact" className="w-full sm:w-auto">
+              <a 
+                href="https://booking.thelifesports.in/bookings" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <button className="w-full sm:w-auto bg-white text-[#f39318] px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg">
-                  Book Free Trial
+                  Book Your Court Now
                 </button>
-              </Link>
-              <Link href="/contact" className="w-full sm:w-auto">
+              </a>
+              <Link href="#booking" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold hover:bg-white hover:text-[#f39318] transition-all duration-300">
-                  Contact Us
+                  View Booking Details
                 </button>
               </Link>
             </motion.div>
@@ -510,7 +489,7 @@ const TableTennisPage = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] text-transparent bg-clip-text"
           >
-            What Our Students Say
+            What Our Players Say
           </motion.h2>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -524,9 +503,7 @@ const TableTennisPage = () => {
               </div>
               <div className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-xl relative z-10 ring-2 ring-[#f39318]/10">
                 <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 italic leading-relaxed mb-6 sm:mb-8">
-                  The Life Sports is a very vibrant and active place with a friendly atmosphere. And it was great
-                  knowing Mr. Ganesh Nimhan –The Founder of The Life Sports. His Dedication towards Sports and Health
-                  for the society is a very commendable factor.
+                  The Life Sports is a very vibrant and active place with a friendly atmosphere. The booking process is seamless and the facilities are excellent. It was great knowing Mr. Ganesh Nimhan – The Founder of The Life Sports. His dedication towards sports and health for the society is a very commendable factor.
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#f39318] to-[#FF5500] rounded-full flex items-center justify-center text-white font-bold text-xl sm:text-2xl">
@@ -534,7 +511,7 @@ const TableTennisPage = () => {
                   </div>
                   <div className="ml-3 sm:ml-4">
                     <p className="font-semibold text-base sm:text-lg">Parvez</p>
-                    <p className="text-sm sm:text-base text-gray-500">Advanced Level Student</p>
+                    <p className="text-sm sm:text-base text-gray-500">Regular Player</p>
                   </div>
                 </div>
               </div>
