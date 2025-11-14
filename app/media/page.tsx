@@ -84,12 +84,6 @@ const images = [
     height: 417,
   },
   {
-    src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img5-.jpg",
-    alt: "Professional sports training",
-    width: 800,
-    height: 885,
-  },
-  {
     src: "https://www.thelifesports.in/wp-content/uploads/2020/06/img1.jpg",
     alt: "Girl doing yoga pose",
     width: 626,

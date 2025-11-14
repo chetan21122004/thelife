@@ -29,7 +29,7 @@ const contactInfo = [
   { type: "phone", value: "+91 97677 55977", href: "tel:+919767755977", label: "Primary" },
   { type: "phone", value: "+91 99220 84730", href: "tel:+919922084730", label: "Secondary" },
   { type: "phone", value: "+91 97672 72100", href: "tel:+919767272100", label: "Support" },
-  { type: "email", value: "lifesportsenquiry@gmail.com", href: "mailto:lifesportsenquiry@gmail.com", label: "General Inquiry"},
+  { type: "email", value: "thelifesports77@gmail.com", href: "mailto:thelifesports77@gmail.com", label: "General Inquiry"},
 ]
 
 const socialLinks = [

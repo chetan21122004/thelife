@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"   
 import { usePathname } from "next/navigation"
 
 const activities = [
@@ -18,10 +18,10 @@ const activities = [
     href: "/activities/badminton"
   },
   {
-    name: "Table Tennis",
+    name: "Table Tennis", 
     image: "/images/ttcourt.jpg",
-    description: "Expert training",
-    features: ["Professional tables", "Tournament training", "Beginners welcome"],
+    description: "Book your table tennis session",
+    features: ["Professional tables", "Beginners welcome"],
     color: "from-blue-400 to-indigo-600",
     href: "/activities/table-tennis"
   },

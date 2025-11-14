@@ -70,7 +70,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+            src="/images/gymnastics2.jpg"
             alt="Sports facility"
             className="w-full h-full object-cover"
           />
@@ -198,19 +198,19 @@ export default function ContactPage() {
             {/* Sports Images */}
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/images/cricket-net2.jpg"
                 alt="Modern gym with equipment"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
               />
               <img
-                src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/images/badminton_plyr1.jpg"
                 alt="Swimming pool facility"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
               />
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+              src="/images/dance-1.jpg"
               alt="Sports coaching and training"
               className="w-full h-64 object-cover rounded-lg shadow-md"
             />
@@ -254,12 +254,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            {/* Additional Sports Image */}
-            <img
-              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-              alt="Group fitness class"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
+           
           </div>
         </div>
       </div>

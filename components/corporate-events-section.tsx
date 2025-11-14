@@ -141,7 +141,7 @@ export function CorporateEventsSection() {
             transition={{ duration: 0.5 }}
           >
             <Image
-              src="https://www.thelifesports.in/wp-content/uploads/2020/06/img12-.jpg"
+              src="/images/office-1.jpg"
               alt="Corporate Events"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
